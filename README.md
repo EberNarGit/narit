@@ -42,7 +42,7 @@ export const CONFIG = {
   sitio: '',                 // dirección de GitHub Pages; el QR del volante apunta aquí
   marca: 'NarIT',
   nombre: 'Tu Nombre',
-  email: 'hola@tudominio.mx',
+  email: 'NarIT@gmail.com',
   ciudad: 'Ciudad de México',
 };
 ```

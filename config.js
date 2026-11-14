@@ -7,6 +7,6 @@ export const CONFIG = {
   sitio: 'https://ebernargit.github.io/narit/',
   marca: 'NarIT',
   nombre: 'Tu Nombre',
-  email: 'hola@tudominio.mx',
+  email: 'NarIT@gmail.com',
   ciudad: 'Ciudad de México',
 };

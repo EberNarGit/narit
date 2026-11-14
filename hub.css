@@ -103,3 +103,13 @@ summary::after{content:"+";position:absolute;right:0;top:50%;translate:0 -50%;fo
 .benef div{display:grid;gap:6px;margin-top:auto;padding-top:12px;border-top:1px dashed var(--l);font-size:.9rem}.benef span{color:var(--m);text-decoration:line-through;text-decoration-color:#B4533A88}.benef div b{color:var(--a)}
 .benef-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .pie-marca{display:flex;align-items:center;gap:8px;width:100%;color:var(--t)}.pie-marca img{height:34px;width:auto}
+
+/* Portada: demos primero (hero compacto) y sección "Antes y ahora" */
+.hero{min-height:0;padding-block:clamp(22px,3.5vw,48px) 6px;grid-template-columns:1fr}.hero-m{display:none}.hero-t{gap:16px}.hero h1{font-size:clamp(2.3rem,5.2vw,4.2rem)}.hero .lead{max-width:62ch}
+.sec-1{padding-top:18px}
+.evo-i{max-width:70ch;margin-bottom:28px}.evo{display:grid;gap:18px}
+.evo article{display:grid;gap:14px;padding:24px;background:#fff;border:1px solid var(--l);border-radius:22px}
+.evo ol{list-style:none;display:grid;gap:10px}@media(min-width:800px){.evo ol{grid-template-columns:repeat(3,1fr)}}
+.evo li{display:grid;gap:6px;align-content:start;padding:16px;border-radius:16px;background:var(--p2)}.evo li b{font-family:var(--fd)}.evo li p{color:var(--m)}
+.evo li:last-child{background:var(--t);color:#fff}.evo li:last-child b{color:var(--a2)}.evo li:last-child p{color:#DCEBDD}
+.evo a{font-weight:700;color:var(--a)}.evo-t{margin:44px 0 20px;font-family:var(--fd);font-size:clamp(1.3rem,2.6vw,1.9rem)}

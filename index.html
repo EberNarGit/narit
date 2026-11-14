@@ -21,7 +21,7 @@
 <a class="skip" href="#demos">Saltar a las demos</a>
 <header class="top">
   <a class="marca" href="index.html"><img src="assets/favicon.svg" alt="" width="33" height="48"> <b data-marca>NarIT</b></a>
-  <nav aria-label="Principal"><a href="#servicios">Qué hago</a><a href="#beneficios">Beneficios</a><a href="#demos">Demos</a><a href="#como">Cómo funciona</a><a href="#faq">Preguntas</a></nav>
+  <nav aria-label="Principal"><a href="#demos">Demos</a><a href="#proceso">Antes y ahora</a><a href="#beneficios">Beneficios</a><a href="#servicios">Qué hago</a><a href="#faq">Preguntas</a></nav>
   <button class="b b-linea" data-presenta title="Recorre todas las demos automáticamente (tecla P)">▶ Modo presentación</button>
   <a class="b b-wa" data-wa href="#contacto">WhatsApp</a>
 </header>
@@ -30,15 +30,64 @@
 <section class="hero">
   <div class="hero-t">
     <p class="eti" data-h>NarIT · Digitalización de negocios en México</p>
-    <h1 data-h>Digitalizamos<br>tu <em>negocio.</em><br>Sin complicaciones.</h1>
-    <p class="lead" data-h>Diseño y construyo el sistema que tu negocio necesita para dejar la libreta, el Excel y el WhatsApp desordenado: citas, ventas, inventario, clientes y reportes en un solo lugar, desde tu celular.</p>
-    <div class="hero-a" data-h><a class="b b-ink" href="#servicios">Qué puedo hacer por ti ↓</a><a class="b b-wa" data-wa href="#contacto">Platicar por WhatsApp</a></div>
-    <ul class="hero-n" data-h><li><b>Menos</b> tiempo apuntando</li><li><b>Más</b> ventas y citas cumplidas</li><li><b>Cero</b> cuentas perdidas</li></ul>
+    <h1 data-h>Tu negocio, sin libreta ni <em>Excel.</em></h1>
+    <p class="lead" data-h>Elige tu tipo de negocio y prueba un ejemplo con el dedo: así se verían tus citas, tus ventas y tu inventario en un sistema hecho para ti.</p>
+    <div class="hero-a" data-h><a class="b b-ink" href="#demos">Buscar mi negocio ↓</a><a class="b b-wa" data-wa href="#contacto">Platicar por WhatsApp</a></div>
   </div>
   <div class="hero-m" aria-hidden="true"></div>
 </section>
 
+<section id="demos" class="sec sec-1">
+  <h2 class="sr">Demos para tu negocio</h2>
+  <div class="filtros" data-rv>
+    <div class="chips" role="group" aria-label="Filtrar por giro"></div>
+    <label class="busca"><span class="sr">Buscar demo</span><input type="search" placeholder="Buscar: barbería, inventario, citas…" autocomplete="off"></label>
+  </div>
+  <p class="cuenta" aria-live="polite"></p>
+  <div class="grid"></div>
+  <p class="nada" hidden>No encontramos demos con ese filtro. <button class="lnk" data-limpia>Ver todas</button></p>
+</section>
+
 <div class="cinta" aria-hidden="true"><div></div></div>
+
+<section id="proceso" class="sec">
+  <p class="eti" data-rv>Antes y ahora</p>
+  <h2 data-rv>De la libreta al Excel, y del Excel a tu sistema. <span>Así cambia tu día.</span></h2>
+  <p class="lead evo-i" data-rv>La libreta se pierde y solo la entiende quien la escribió. El Excel ordena, pero hay que capturar todo a mano y casi nunca está al día. Con un sistema, cada cosa se registra una sola vez, en el momento, y lo demás pasa solo. Mira cinco ejemplos de todos los días:</p>
+  <div class="evo">
+    <article data-rv><h3>1. Un cliente te pide una cita</h3><ol>
+      <li><b>📒 Con libreta</b><p>La apuntas a mano. Si otra persona contesta el teléfono, se enciman dos citas, y el cliente no llega porque nadie le recordó.</p></li>
+      <li><b>📊 Con Excel</b><p>Ya está en la computadora, pero solo tú abres el archivo y los recordatorios los mandas uno por uno.</p></li>
+      <li><b>📱 Con tu sistema</b><p>El cliente aparta solo desde su celular, el horario queda bloqueado y un día antes le llega su recordatorio por WhatsApp.</p></li>
+    </ol><a href="proyectos/barberia/index.html#demo">Pruébalo en la demo de barbería →</a></article>
+    <article data-rv><h3>2. Cobras una venta</h3><ol>
+      <li><b>📒 Con libreta</b><p>Anotas cada venta y en la noche sumas con calculadora. Si la caja no cuadra, no sabes por qué.</p></li>
+      <li><b>📊 Con Excel</b><p>Capturas las notas al cerrar. Tienes totales, pero un día tarde y con errores de dedo.</p></li>
+      <li><b>📱 Con tu sistema</b><p>Tocas los productos, cobras y la venta queda guardada. El corte de caja sale solo, por turno y por empleado.</p></li>
+    </ol><a href="proyectos/taqueria/index.html#demo">Pruébalo en la demo de taquería →</a></article>
+    <article data-rv><h3>3. Se está acabando un producto</h3><ol>
+      <li><b>📒 Con libreta</b><p>Te enteras cuando el cliente lo pide y ya no hay.</p></li>
+      <li><b>📊 Con Excel</b><p>Tienes la lista, pero hay que descontar cada venta a mano y casi nunca coincide con el anaquel.</p></li>
+      <li><b>📱 Con tu sistema</b><p>Cada venta descuenta del inventario y te avisa antes de que algo se termine o caduque.</p></li>
+    </ol><a href="proyectos/inventario/index.html#demo">Pruébalo en la demo de inventario →</a></article>
+    <article data-rv><h3>4. Un cliente te queda a deber</h3><ol>
+      <li><b>📒 Con libreta</b><p>Está en una hoja que hay que buscar. A veces se pierde y a veces se olvida cobrar.</p></li>
+      <li><b>📊 Con Excel</b><p>Hay una lista de adeudos, pero nadie te avisa cuando uno ya se venció.</p></li>
+      <li><b>📱 Con tu sistema</b><p>Ves quién debe, cuánto y desde cuándo, y el recordatorio de pago se manda solo.</p></li>
+    </ol><a href="proyectos/abarrotes/index.html#demo">Pruébalo en la demo de abarrotes →</a></article>
+    <article data-rv><h3>5. Quieres saber cómo te fue en el mes</h3><ol>
+      <li><b>📒 Con libreta</b><p>Juntas hojas y haces cuentas todo un fin de semana.</p></li>
+      <li><b>📊 Con Excel</b><p>Armas fórmulas y gráficas, si tienes tiempo y sabes cómo.</p></li>
+      <li><b>📱 Con tu sistema</b><p>Abres tu celular y ves ventas, ganancia y lo más vendido, al día y sin hacer cuentas.</p></li>
+    </ol><a href="proyectos/restaurante/index.html#panel">Míralo en el panel del restaurante →</a></article>
+  </div>
+  <h3 class="evo-t" data-rv>Tu nuevo proceso, en tres pasos</h3>
+  <ol class="pasos">
+    <li data-rv><h3>Se registra una vez</h3><p>Tu cliente aparta desde su celular, o tú anotas la venta con un toque. Nadie vuelve a pasar nada en limpio.</p></li>
+    <li data-rv><h3>El sistema hace lo demás</h3><p>Guarda, suma, descuenta del inventario, bloquea el horario y manda los avisos por WhatsApp.</p></li>
+    <li data-rv><h3>Tú solo revisas</h3><p>Desde tu celular ves cómo va el día: cuánto se vendió, qué falta y quién debe.</p></li>
+  </ol>
+</section>
 
 <section id="servicios" class="sec">
   <p class="eti" data-rv>Qué puedo hacer por tu negocio</p>
@@ -55,17 +104,6 @@
   </div>
 </section>
 
-<section id="problema" class="sec">
-  <p class="eti" data-rv>El problema</p>
-  <h2 data-rv>Así trabaja hoy la mayoría de los negocios. <span>Y esto es lo que pierden.</span></h2>
-  <div class="prob">
-    <article data-rv><b>📒</b><h3>Libreta y memoria</h3><p>Citas que se enciman, pedidos que se olvidan y cuentas que "luego apuntamos".</p><strong>1 de cada 5 citas se pierde</strong></article>
-    <article data-rv><b>💬</b><h3>WhatsApp desordenado</h3><p>Pedidos, quejas y cotizaciones mezclados en el mismo chat que usas con tu familia.</p><strong>Horas diarias contestando lo mismo</strong></article>
-    <article data-rv><b>📊</b><h3>Excel que solo entiende uno</h3><p>Si esa persona falta, nadie sabe cuánto hay en inventario ni quién debe.</p><strong>Decisiones a ciegas</strong></article>
-    <article data-rv><b>💸</b><h3>Fugas que no se ven</h3><p>Merma, fiado sin cobrar, cortes que no cuadran y facturas que nunca se hicieron.</p><strong>Hasta 12% de la venta</strong></article>
-  </div>
-</section>
-
 <section id="beneficios" class="sec">
   <p class="eti" data-rv>Cómo te ayuda la digitalización</p>
   <h2 data-rv>No es tecnología por moda. <span>Es más tiempo, más ventas y menos fugas.</span></h2>
@@ -78,18 +116,6 @@
     <li data-rv><h3>Tu negocio no depende de una persona</h3><p>La información ya no vive en la cabeza o el cuaderno de alguien. Si esa persona falta, el negocio sigue; si abres otra sucursal, el sistema ya está.</p><div><span>Antes: "solo ella le entiende a ese Excel"</span><b>Después: todo el equipo ve lo que le toca</b></div></li>
   </ul>
   <p class="benef-cta" data-rv><a class="b b-ink" href="#demos">Ver ejemplos por giro ↓</a><a class="b b-wa" data-wa href="#contacto">Quiero digitalizar mi negocio</a></p>
-</section>
-
-<section id="demos" class="sec">
-  <p class="eti" data-rv>Catálogo de demos</p>
-  <h2 data-rv>Encuentra tu giro y <span>mira cómo lo digitalizamos.</span></h2>
-  <div class="filtros" data-rv>
-    <div class="chips" role="group" aria-label="Filtrar por giro"></div>
-    <label class="busca"><span class="sr">Buscar demo</span><input type="search" placeholder="Buscar: barbería, inventario, citas…" autocomplete="off"></label>
-  </div>
-  <p class="cuenta" aria-live="polite"></p>
-  <div class="grid"></div>
-  <p class="nada" hidden>No encontramos demos con ese filtro. <button class="lnk" data-limpia>Ver todas</button></p>
 </section>
 
 <section id="como" class="sec">
