@@ -1,0 +1,36 @@
+/* Colegio Colibrí — Memphis / pop. Contornos gruesos, sombras de trama, figuras geométricas flotando, colores primarios, meneos juguetones. */
+:root{--bg:#FFF9EC;--card:#FFFFFF;--ink:#1B1B3A;--mut:#4A4A6A;--line:#1B1B3A;--c1:#FF5C8A;--c2:#06D6A0;--c3:#FFD166;--c4:#118AB2;--c5:#9B5DE5;--c6:#F77F00;--on:#1B1B3A;--ok:#06956F;--pend:#B8860B;--bad:#D7263D;
+  --r:18px;--rb:99px;--bd:3px solid #1B1B3A;--sh:7px 7px 0 #1B1B3A;--fd:'Fredoka',sans-serif;--fb:'Lexend',sans-serif;--hw:600;--hls:0;--max:1180px;--pad:20px;--gap:22px;
+  --rv-y:30px;--rv-sc:.9;--rv-t:.55s;--rv-e:cubic-bezier(.34,1.8,.5,1);--rv-s:70ms}
+body{background:radial-gradient(#1B1B3A22 1.5px,transparent 2px) 0 0/22px 22px,var(--bg);font-weight:300}
+h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.08}h1 mark,h2 mark{background:var(--c3);color:inherit;padding:0 .15em;border:3px solid var(--ink);border-radius:14px;display:inline-block;rotate:-2deg}h1 mark:nth-of-type(2){background:var(--c2);rotate:2deg}
+h2::before{content:"";display:inline-block;width:.6em;height:.6em;margin-right:.3em;background:var(--c1);border:3px solid var(--ink);border-radius:50%}
+.nav{background:var(--c3);border-bottom:3px solid var(--ink)}
+.logo{background:#fff;border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);font-size:1.3rem;rotate:-8deg}.brand-t b{font-family:var(--fd);font-size:1.3rem}
+.volver,.ib{background:#fff}.tabs a{font-family:var(--fd);font-weight:600;border:3px solid transparent}.tabs a[aria-current]{background:#fff;border-color:var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.btn{font-family:var(--fd);font-size:1.05rem;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);transition:translate .15s,box-shadow .15s,rotate .3s}.btn:hover{rotate:-2deg;translate:-2px -2px;box-shadow:7px 7px 0 var(--ink);filter:none}.btn:active{translate:5px 5px;box-shadow:none;scale:1}
+.btn-2{background:#fff}.btn-wa{background:var(--c2)}
+.art{min-height:340px}.memphis{position:absolute;inset:0}
+.memphis i{position:absolute;border:3px solid var(--ink);animation:menea 4s ease-in-out infinite}
+.circ{width:130px;height:130px;border-radius:50%;background:var(--c1);left:6%;top:6%;box-shadow:8px 8px 0 var(--ink)}
+.tri{width:0;height:0;border:0!important;border-left:60px solid transparent!important;border-right:60px solid transparent!important;border-bottom:104px solid var(--c4)!important;right:8%;top:2%;animation-delay:-1s!important}
+.zig{width:150px;height:26px;border:0!important;left:2%;bottom:8%;background:linear-gradient(135deg,var(--ink) 25%,transparent 25%) -13px 0/26px 26px,linear-gradient(225deg,var(--ink) 25%,transparent 25%) -13px 0/26px 26px,linear-gradient(315deg,var(--ink) 25%,transparent 25%) 0 0/26px 26px,linear-gradient(45deg,var(--ink) 25%,transparent 25%) 0 0/26px 26px;animation-delay:-2s!important}
+.cuad{width:84px;height:84px;background:var(--c3);right:4%;bottom:6%;rotate:14deg;box-shadow:6px 6px 0 var(--ink);animation-delay:-3s!important}
+@keyframes menea{50%{translate:0 -12px;rotate:6deg}}
+.bolet{position:absolute;left:50%;top:50%;translate:-50% -50%;display:grid;gap:2px;justify-items:center;padding:24px 34px;background:#fff;border:3px solid var(--ink);border-radius:22px;box-shadow:9px 9px 0 var(--c2),9px 9px 0 3px var(--ink)}
+.bolet b{font-family:var(--fd);background:var(--c5);color:#fff;padding:2px 14px;border-radius:99px;border:3px solid var(--ink)}.bolet strong{font-family:var(--fd);font-size:3rem;line-height:1}
+.problema li{background:#fff;border:3px solid var(--ink);border-radius:14px;font-weight:400}
+.feats li,.errores li,.impacto li{transition:rotate .3s cubic-bezier(.34,1.8,.5,1),translate .3s}.feats li:hover{rotate:-1.5deg;translate:0 -4px}
+.feats li:nth-child(4n+1){box-shadow:7px 7px 0 var(--c1),7px 7px 0 3px var(--ink)}.feats li:nth-child(4n+2){box-shadow:7px 7px 0 var(--c2),7px 7px 0 3px var(--ink)}.feats li:nth-child(4n+3){box-shadow:7px 7px 0 var(--c3),7px 7px 0 3px var(--ink)}.feats li:nth-child(4n){box-shadow:7px 7px 0 var(--c4),7px 7px 0 3px var(--ink)}
+.feats li b,.errores li b{font-family:var(--fd);font-size:1.2rem}
+.errores li::before{content:counter(e);font-family:var(--fd);display:grid;place-items:center;width:36px;height:36px;background:var(--c3);border:3px solid var(--ink);border-radius:50%}
+.antes{background:#FFE3EA!important}.despues{background:#D5F8EE!important}.vs-grid li{border-color:#1B1B3A33}
+.impacto li{text-align:center}.impacto li:nth-child(1){background:var(--c1)}.impacto li:nth-child(2){background:var(--c2)}.impacto li:nth-child(3){background:var(--c3)}.impacto li:nth-child(4){background:#A9D8EA}.impacto li span{color:var(--ink);font-weight:400}
+.chips li{background:#fff;border:3px solid var(--ink);font-family:var(--fd)}.cta{background:var(--c5)!important;color:#fff}.cta p{color:#fff}.cta .btn{background:var(--c3)}
+.kpi-v{font-family:var(--fd)}.kpi:nth-child(4n+1){border-top:12px solid var(--c1)}.kpi:nth-child(4n+2){border-top:12px solid var(--c2)}.kpi:nth-child(4n+3){border-top:12px solid var(--c3)}.kpi:nth-child(4n){border-top:12px solid var(--c4)}.spark{color:var(--ink)}
+.bd-i{border-width:3px;border-radius:50% 50% 18px 18px;min-height:92px;font-weight:400;transition:rotate .3s cubic-bezier(.34,1.8,.5,1)}.bd-i:hover{rotate:-4deg}
+.f input,.f select,.seg{border-width:3px}.seg button{font-family:var(--fd)}.kb-col{box-shadow:none}.calc-out{background:var(--c3)}.chk-i{background:#fff;border:2px dashed var(--ink)}
+.badge{border:2px solid var(--ink);font-weight:600;background:color-mix(in srgb,var(--k) 35%,#fff)}th button{font-family:var(--fd);color:var(--ink)}
+.toast{background:var(--c2);color:var(--ink);border:3px solid var(--ink);border-radius:18px;box-shadow:5px 5px 0 var(--ink);font-weight:600}
+.w h3,.chart figcaption b,.tb-bar h3{font-family:var(--fd);font-size:1.3rem}
+@media(min-width:1100px){.chart-bars{grid-column:span 8}.chart-gauge{grid-column:span 4}.chart-line{grid-column:span 7}.chart-donut{grid-column:span 5}.chart-tree{grid-column:span 4}.chart-polar{grid-column:span 3}.chart-heat{grid-column:span 5}}

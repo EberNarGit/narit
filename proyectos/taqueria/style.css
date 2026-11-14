@@ -1,0 +1,36 @@
+/* Taco Jefe — Kiosco / POS táctil. Botones enormes, borde negro grueso, sombra dura, "squash" al presionar. */
+:root{--bg:#FFD23F;--card:#FFFFFF;--ink:#1B1B1B;--mut:#4A4233;--line:#1B1B1B;--c1:#E4572E;--c2:#1B1B1B;--c3:#2E86AB;--c4:#5FA82E;--c5:#F29E0C;--c6:#8E44AD;--on:#1B1B1B;--ok:#2F8F2F;--pend:#D98200;--bad:#C62828;
+  --r:22px;--rb:18px;--bd:4px solid #1B1B1B;--sh:0 7px 0 #1B1B1B;--fd:'Bowlby One',sans-serif;--fb:'Rubik',sans-serif;--hw:400;--hls:0;--pad:20px;--gap:18px;--toast-b:92px;--cv-h:270px;
+  --rv-y:0px;--rv-sc:.8;--rv-t:.35s;--rv-e:cubic-bezier(.3,1.7,.5,1);--rv-s:45ms}
+body{font-weight:500;font-size:1.05rem}
+h1{font-size:clamp(2.4rem,7vw,5rem);line-height:.98}h1 mark{background:var(--c1);color:#fff;padding:0 .15em;border-radius:14px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.nav{border-bottom:4px solid var(--ink);background:var(--bg)}
+.logo{background:#fff;border:4px solid var(--ink);font-size:1.3rem;width:48px;height:48px}.brand-t b{font-family:var(--fd);font-size:1.25rem}
+.tabs{position:fixed;z-index:35;left:0;right:0;bottom:0;width:100%;gap:0;border-top:4px solid var(--ink);background:#fff;order:0}
+.tabs a{flex:1;justify-content:center;min-height:72px;border-radius:0;font-family:var(--fd);font-size:1.15rem;font-weight:400;border-right:4px solid var(--ink)}.tabs a:last-child{border:0}
+.tabs a[aria-current]{background:var(--c1);color:#fff}
+.btn,.ib,.pos-p,.kb-card,.seg{box-shadow:0 5px 0 var(--ink);transition:translate .08s,box-shadow .08s}
+.btn:active,.ib:active,.pos-p:active{translate:0 5px;box-shadow:0 0 0 var(--ink);scale:1}
+.btn{min-height:60px;font-size:1.1rem;font-weight:700;border:4px solid var(--ink)}.btn-wa{background:var(--ok);color:#fff}.btn-2{background:#fff}
+.art{display:grid;place-items:center}
+.ticketazo{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:22px;background:#fff;border:4px solid var(--ink);border-radius:30px;box-shadow:0 12px 0 var(--ink);rotate:-4deg;width:min(330px,80%)}
+.ticketazo b{display:grid;place-items:center;aspect-ratio:1;font-size:2.4rem;background:var(--bg);border:4px solid var(--ink);border-radius:18px;animation:brinca 1.6s infinite}.ticketazo b:nth-child(2){animation-delay:.2s}.ticketazo b:nth-child(3){animation-delay:.4s}
+.ticketazo span{grid-column:span 2;font-family:var(--fd);align-self:center}.ticketazo strong{background:var(--ok);color:#fff;border-radius:12px;padding:8px;text-align:center;font-family:var(--fd)}
+@keyframes brinca{0%,60%,100%{translate:0 0}30%{translate:0 -10px}}
+.problema li{background:#fff;border:4px solid var(--ink);border-radius:16px;font-weight:700}
+.feats ul{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.feats li b{font-family:var(--fd);font-size:1.1rem}
+.errores li{background:var(--ink);color:#fff}.errores li span{color:#E8E0C8}.errores li b{color:var(--bg);font-family:var(--fd)}
+.antes{background:#fff}.despues{background:#DFF5D8!important}
+.impacto li{background:var(--c1);color:#fff;text-align:center}.impacto li span{color:#fff}.impacto li b{font-size:3.2rem}
+.chips li{background:#fff;border:3px solid var(--ink);font-weight:700}
+.pos-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px}
+.pos-p{min-height:128px;justify-items:center;text-align:center;align-content:center;background:#fff;font-size:1rem}.pos-e{font-size:2.4rem}.pos-p em{font-weight:700;color:var(--c1);font-size:1.05rem}
+.pos-cart{background:var(--ink);color:#fff;border-radius:22px;--campo:#fff}.pos-cart .f{color:#DDD}.pos-cart .f input,.pos-cart select{color:var(--ink)}.pos-cart .tot{border-color:#fff;font-size:1.7rem;font-family:var(--fd)}
+.pos-cart .vacio,.pos-cart .vacio b{color:#fff}.qty button{width:44px;height:44px;color:var(--ink);background:var(--bg);font-weight:700;font-size:1.2rem}.pos-li{border-color:#555}
+.cobrar{min-height:72px;font-size:1.3rem;background:var(--ok);color:#fff;border-color:#fff}
+.kb-col{background:#fff}.kb-col[data-k="ok"]{background:#DFF5D8}.kb-card{background:var(--bg);font-weight:700}.kb-mv button{min-width:52px;height:44px}
+.kpi-v{font-family:var(--fd);font-weight:400}.kpi{background:#fff}.kpi:nth-child(3n+1){background:var(--ink);color:#fff;--mut:#DDD}.kpi:nth-child(3n+1) .spark{color:var(--bg)}
+.seg button{min-height:48px;font-weight:700}.f input,.f select{min-height:50px;font-weight:500}
+th button{color:var(--ink)}td{border-top:2px solid var(--ink)}.badge{border-width:2px;font-weight:700}
+.toast{font-weight:700;border:3px solid #fff;border-radius:16px}.pie{padding-bottom:110px}.notifs{top:76px}
+@media(min-width:1100px){.chart-bars{grid-column:span 7}.chart-line{grid-column:span 5}.chart-donut,.chart-polar,.chart-gauge{grid-column:span 4}.chart-heat{grid-column:span 8}.chart-water{grid-column:span 8}}

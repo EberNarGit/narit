@@ -1,0 +1,41 @@
+/* Gran Salón — Maximalismo colorido. Colores que chocan a propósito, patrones, stickers girados, serif italiana junto a grotesca gorda, marquesinas y giros. */
+:root{--bg:#6A00F4;--card:#FFD60A;--ink:#14002E;--mut:#3A1466;--line:#14002E;--c1:#FF3D00;--c2:#00C2A8;--c3:#6A00F4;--c4:#FF4D9D;--c5:#14002E;--c6:#2D7DFF;--on:#FFFFFF;--ok:#00805F;--pend:#B33600;--bad:#C4003A;--k-t:#14002E;
+  --r:40px 6px;--rb:99px;--bd:3px solid #14002E;--sh:8px 8px 0 #FF4D9D;--fd:'Syne',sans-serif;--fb:'Syne',sans-serif;--hw:800;--hls:-.04em;--max:1240px;--pad:22px;--gap:22px;
+  --rv-y:60px;--rv-sc:.8;--rv-t:.7s;--rv-e:cubic-bezier(.34,1.9,.5,1);--rv-s:70ms}
+body{font-weight:500;color:#fff;background:radial-gradient(circle at 20px 20px,#ffffff22 3px,transparent 4px) 0 0/40px 40px,repeating-linear-gradient(45deg,#7B1BFF 0 60px,#6A00F4 60px 120px)}
+h1{font-size:clamp(2.6rem,7.4vw,6rem);line-height:.95;color:#fff}h1 em{font-family:'Bodoni Moda',serif;font-style:italic;font-weight:500;color:var(--card);letter-spacing:0}h1 mark{background:var(--c1);color:#fff;padding:0 .12em;border-radius:20px 4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+h2{font-size:clamp(2rem,5vw,3.6rem);color:var(--card)}h2::after{content:" ✦";color:var(--c4)}
+.nav{background:var(--card);color:var(--ink);border-bottom:3px solid var(--ink)}
+.logo{background:var(--c4);border:3px solid var(--ink);border-radius:50%;font-size:1.2rem;animation:giro 9s linear infinite}@keyframes giro{to{rotate:360deg}}
+.brand-t b{font-size:1.4rem;font-weight:800}.volver,.ib{background:#fff;color:var(--ink)}
+.tabs a{font-weight:800;border:3px solid transparent}.tabs a[aria-current]{background:var(--c1);color:#fff;border-color:var(--ink);rotate:-3deg}
+.kicker{color:var(--c2);font-weight:800;filter:brightness(1.5)}.lead{color:#EBDDFF;font-family:'Bodoni Moda',serif;font-size:1.3rem}
+.btn{font-weight:800;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);transition:rotate .3s cubic-bezier(.34,1.9,.5,1),scale .3s}.btn:hover{rotate:-3deg;scale:1.05;filter:none}
+.btn-2{background:var(--c2);color:var(--ink)}.btn-wa{background:var(--card);color:var(--ink)}
+.art{min-height:380px}.collage{position:absolute;inset:0}
+.collage span{position:absolute;font-weight:800;border:3px solid var(--ink);color:var(--ink);padding:10px 20px;box-shadow:6px 6px 0 var(--ink);animation:baila 3s ease-in-out infinite}
+.s1{left:4%;top:6%;font-size:4.4rem;background:var(--c4);border-radius:50%;padding:22px 26px!important;rotate:-12deg}.s2{right:2%;top:14%;font-size:2rem;background:var(--card);rotate:8deg;animation-delay:-.6s!important}
+.s3{left:40%;top:36%;font-size:5rem;background:var(--c2);border-radius:50%;line-height:1;padding:6px 26px!important;animation-delay:-1.2s!important}.s4{left:2%;bottom:14%;font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.9rem;background:#fff;rotate:-5deg;animation-delay:-1.8s!important}
+.s5{right:6%;bottom:6%;font-size:1.5rem;background:var(--c1);color:#fff!important;border-radius:40px 6px;rotate:6deg;animation-delay:-2.4s!important}
+.disco{position:absolute;right:30%;top:0;width:70px;height:70px;border-radius:50%;border:3px solid var(--ink);background:conic-gradient(#fff 0 12%,#C9B6FF 0 25%,#fff 0 37%,#C9B6FF 0 50%,#fff 0 62%,#C9B6FF 0 75%,#fff 0 87%,#C9B6FF 0);animation:giro 4s linear infinite}
+@keyframes baila{50%{translate:0 -10px;scale:1.04}}
+.w,.kpi,.chart,.tabla,.feats li,.errores li,.vs-grid>div,.impacto li,.cta{color:var(--ink)}
+.problema p{font-family:'Bodoni Moda',serif;font-size:1.4rem;color:#fff;max-width:60ch}.problema li{background:#fff;color:var(--ink);border:3px solid var(--ink);border-radius:6px 30px;font-weight:700}
+.feats li{transition:rotate .35s cubic-bezier(.34,1.9,.5,1),scale .35s}.feats li:hover{rotate:2deg;scale:1.03}
+.feats li:nth-child(4n+1){background:var(--card)}.feats li:nth-child(4n+2){background:var(--c2);border-radius:6px 40px;box-shadow:8px 8px 0 var(--c1)}.feats li:nth-child(4n+3){background:#fff;box-shadow:8px 8px 0 var(--c2)}.feats li:nth-child(4n){background:var(--c4);border-radius:6px 40px;box-shadow:8px 8px 0 var(--card)}
+.feats li b,.errores li b{font-weight:800;font-size:1.25rem}.errores li{background:#fff}.errores li::before{content:counter(e);font-family:'Bodoni Moda',serif;font-style:italic;font-size:2.6rem;line-height:.9;color:var(--c1)}
+.antes{background:#fff!important}.despues{background:var(--c2)!important;rotate:1.5deg}.vs-grid li{border-top:2px dashed var(--ink)}.vs-grid li::before{color:var(--ink)!important}
+.impacto li{text-align:center;border-radius:50%!important;aspect-ratio:1;align-content:center}.impacto li:nth-child(2){background:var(--c4)}.impacto li:nth-child(3){background:var(--c2)}.impacto li:nth-child(4){background:#fff}.impacto li b{font-weight:800}.impacto li span{padding-inline:14px;font-weight:700;color:var(--ink)}
+.chips li{background:#fff;color:var(--ink);border:3px solid var(--ink);font-weight:800}.chips li:nth-child(odd){rotate:-2deg;background:var(--card)}.tiempo{color:#fff}
+.cta{background:var(--c1)!important;color:#fff;rotate:-1deg}.cta h2{color:#fff}.cta p{color:#fff}
+.sec-head h2{color:var(--card)}.sec-head p{color:#EBDDFF}
+.w:nth-child(odd){background:#fff;box-shadow:8px 8px 0 var(--c2)}
+.kpi:nth-child(3n+1){background:var(--card)}.kpi:nth-child(3n+2){background:#fff;border-radius:6px 40px;box-shadow:8px 8px 0 var(--c2)}.kpi:nth-child(3n){background:var(--c2);box-shadow:8px 8px 0 var(--card)}.kpi-v{font-weight:800}.spark{color:var(--c1)}
+.chart,.tabla{background:#fff}.chart:nth-child(even){box-shadow:8px 8px 0 var(--card)}
+.filtros .f{color:#EBDDFF}.f input,.f select,.seg{background:#fff;color:var(--ink);border:3px solid var(--ink)}.seg button{color:var(--ink);font-weight:700}.seg button[aria-pressed="true"]{background:var(--c1);color:#fff}
+.w .f,.modal .f{color:var(--mut)}.alertas li,.notifs li{background:#fff;color:var(--ink);border:3px solid var(--ink);border-left-width:10px}
+.kb-col{background:#F3E8FF;box-shadow:none}.kb-card{background:#fff;border-radius:6px 22px}.calc-out{background:var(--c4)}.bd-i{border-width:3px;border-radius:50%;aspect-ratio:1;font-weight:800}
+.badge{border:2px solid var(--ink);font-weight:800;background:color-mix(in srgb,var(--k) 35%,#fff)}th button{color:var(--ink)}.rango-txt{color:#EBDDFF!important}
+.toast{background:var(--card);color:var(--ink);border:3px solid var(--ink);border-radius:40px 6px;font-weight:800;box-shadow:6px 6px 0 var(--c4)}dialog.modal{color:var(--ink);background:#fff}.notifs{background:var(--card);color:var(--ink)}
+.pie{color:#EBDDFF}.pie .lnk{color:#fff}.w h3,.chart figcaption b,.tb-bar h3{font-weight:800;font-size:1.25rem}
+@media(min-width:1100px){.chart-bars{grid-column:span 7}.chart-donut{grid-column:span 5}.chart-line{grid-column:span 8}.chart-funnel{grid-column:span 4}.chart-polar,.chart-radar{grid-column:span 6}.chart-cal{grid-column:span 12;--cv-h:190px}}

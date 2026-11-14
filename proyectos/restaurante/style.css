@@ -1,0 +1,35 @@
+/* Mesa Franca — Art déco dorado. Simetría, líneas finas de oro, mayúsculas espaciadas, fundidos lentos. */
+:root{--bg:#0E1A16;--card:#14241D;--ink:#F3E9D2;--mut:#B9B19A;--line:#34463C;--c1:#C9A24B;--c2:#7FA08C;--c3:#E8D5A3;--c4:#B8705F;--c5:#5E8C7A;--c6:#8C7A4B;--on:#0E1A16;--ok:#8FBF9A;--pend:#C9A24B;--bad:#DC8573;--osc:1;
+  --r:0px;--rb:0px;--bd:1px solid #6B5A2E;--fd:'Poiret One',serif;--fb:'Josefin Sans',sans-serif;--hw:400;--htt:uppercase;--hls:.14em;--max:1120px;--gap:18px;--pad:22px;
+  --rv-y:26px;--rv-t:1.1s;--rv-e:cubic-bezier(.19,1,.22,1);--rv-s:120ms;--ico-w:1.3}
+body{font-weight:300;background:radial-gradient(1200px 600px at 50% -10%,#1C3329 0,transparent 70%),var(--bg)}
+h1 em{font-style:normal;color:var(--c1);display:block}
+h2{text-align:center;display:flex;align-items:center;gap:18px;margin-bottom:1em}
+h2::before,h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--c1))}h2::after{transform:scaleX(-1)}
+.nav{justify-content:center;border-bottom:1px solid #6B5A2E;background:rgba(14,26,22,.92);backdrop-filter:blur(8px)}
+.logo{background:none;color:var(--c1);border:1px solid var(--c1);outline:1px solid var(--c1);outline-offset:3px;font-size:.9rem;letter-spacing:.05em}
+.brand-t b{font-family:var(--fd);letter-spacing:.2em;text-transform:uppercase;font-weight:400}
+.tabs a{text-transform:uppercase;letter-spacing:.18em;font-size:.74rem;font-weight:400;border-bottom:1px solid transparent}
+.tabs a[aria-current]{background:none;color:var(--c1);border-bottom-color:var(--c1)}
+.hero{grid-template-columns:1fr;text-align:center;justify-items:center;min-height:auto;padding-top:20px}
+.hero-t{display:grid;justify-items:center}.hero-cta{justify-content:center}.lead{margin-inline:auto}
+.kicker{color:var(--c1);letter-spacing:.4em}
+.art{order:-1;width:min(360px,70vw);min-height:0;color:var(--c1)}
+.deco path{stroke-dasharray:600;animation:traza 2.6s cubic-bezier(.19,1,.22,1) both}@keyframes traza{from{stroke-dashoffset:600}}
+.btn{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:600;padding:14px 26px;outline:1px solid var(--c1);outline-offset:3px;transition:outline-offset .4s,background .4s}
+.btn:hover{outline-offset:6px;filter:none}.btn-2{outline-color:transparent;color:var(--c1)}.btn-2:hover{outline-color:var(--c1)}
+.w,.kpi,.chart,.tabla,.feats li,.errores li,.vs-grid>div,.impacto li,.cta{position:relative}
+.w::before,.chart::before,.tabla::before,.cta::before,.vs-grid>div::before{content:"";position:absolute;inset:5px;border:1px solid #6B5A2E55;pointer-events:none}
+.problema{text-align:center}.problema p{max-width:68ch;margin-inline:auto;color:var(--mut)}.problema li{border-left:0;border-top:1px solid var(--c4);text-align:center}
+.feats li b,.errores li b{font-family:var(--fd);font-size:1.2rem;letter-spacing:.06em;color:var(--c3);font-weight:400}
+.feats li{border-top:2px solid var(--c1)}
+.errores li::before{content:counter(e,upper-roman);font-family:var(--fd);color:var(--c1);font-size:1.5rem}
+.impacto li{text-align:center}.impacto li b{color:var(--c1);font-weight:400}
+.chips{justify-content:center}.chips li{border-color:#6B5A2E;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem}.tiempo{text-align:center;color:var(--mut)}
+.kpi{text-align:center;justify-items:center}.kpi-v{color:var(--c3);font-weight:400}.kpi-l{text-transform:uppercase;letter-spacing:.14em;font-size:.68rem}
+.chart figcaption b,.w h3,.tb-bar h3{font-family:var(--fd);font-weight:400;letter-spacing:.12em;text-transform:uppercase}
+.bd-plano{background:repeating-linear-gradient(45deg,transparent 0 22px,#ffffff06 22px 23px);border:1px solid #6B5A2E}
+.bd-i{border-width:1px;font-family:var(--fd);font-size:1.1rem}
+.kb-card{background:var(--bg)}.sec-head{justify-content:center;text-align:center}.sec-head h2{justify-content:center}
+th button{color:var(--c1)}.toast{background:var(--c3);color:#0E1A16}
+@media(min-width:1100px){.chart-line{grid-column:span 8}.chart-gauge{grid-column:span 4}.chart-heat{grid-column:span 7}.chart-donut{grid-column:span 5}.chart-bars{grid-column:span 12}.chart-funnel,.chart-radar{grid-column:span 6}}

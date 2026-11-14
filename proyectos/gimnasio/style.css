@@ -1,0 +1,40 @@
+/* Fuerza MX — Deportivo / atlético. Condensada enorme en itálica, cortes diagonales, lima sobre negro, entradas veloces con sesgo. */
+:root{--bg:#0B0B0B;--card:#151515;--ink:#FFFFFF;--mut:#A3A3A3;--line:#2A2A2A;--c1:#C6FF00;--c2:#FFFFFF;--c3:#00D1FF;--c4:#FF3D71;--c5:#8A8A8A;--c6:#FFB020;--on:#0B0B0B;--ok:#C6FF00;--pend:#FFB020;--bad:#FF3D71;--osc:1;--k-t:var(--k);
+  --r:0px;--rb:0px;--bd:1px solid var(--line);--sh:none;--fd:'Barlow Condensed',sans-serif;--fb:'Barlow',sans-serif;--hw:800;--htt:uppercase;--hls:0;--max:1320px;--gap:10px;--hm-r:0;
+  --rv-x:-60px;--rv-y:0px;--rv-t:.45s;--rv-e:cubic-bezier(.1,.9,.2,1);--rv-s:45ms;--ico-w:2.6;--ico-cap:square;--ico-join:miter}
+h1,h2,h3,h4{font-style:italic}
+h1{font-size:clamp(4rem,14vw,10.5rem);line-height:.82;margin:0}h1 em{color:var(--c1);-webkit-text-stroke:0}
+h2{font-size:clamp(2.4rem,6vw,4.6rem);line-height:.9}
+.nav{background:var(--bg);border-bottom:4px solid var(--c1);padding-block:0;gap:0 16px;align-items:stretch;min-height:60px}
+.volver,.brand,.tools{align-self:center}.logo{transform:skewX(-10deg);font-style:italic;font-size:1.5rem}.brand-t b{font-family:var(--fd);font-size:1.7rem;font-style:italic;text-transform:uppercase;line-height:1}
+.tabs{gap:0}.tabs a{font-family:var(--fd);font-style:italic;font-size:1.35rem;font-weight:800;text-transform:uppercase;padding:0 26px;transform:skewX(-12deg);border-left:1px solid var(--line);min-height:56px}
+.tabs a[aria-current]{background:var(--c1)}
+.hero{position:relative;min-height:auto;padding-block:24px 10px}@media(min-width:900px){.hero{grid-template-columns:1.4fr .6fr;align-items:end}}
+.hero::before{content:"";position:absolute;right:-10%;top:0;bottom:0;width:38%;background:repeating-linear-gradient(-70deg,transparent 0 26px,#C6FF0012 26px 30px);pointer-events:none}
+.kicker{color:var(--c1);font-weight:600}.lead{font-size:1.2rem;color:#D4D4D4}
+.btn{font-family:var(--fd);font-style:italic;font-size:1.3rem;font-weight:800;text-transform:uppercase;padding:10px 30px;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);transition:translate .15s,background .15s}.btn:hover{translate:6px 0;filter:none}
+.btn-2{border:0;background:#fff;color:#0B0B0B}.btn-wa{background:var(--c1)}
+.marcador{display:grid;gap:6px;padding:26px;background:var(--c1);color:#0B0B0B;clip-path:polygon(0 0,100% 0,100% calc(100% - 30px),calc(100% - 30px) 100%,0 100%);font-family:var(--fd);font-weight:800;font-style:italic}
+.marcador b{font-size:clamp(5rem,12vw,8rem);line-height:.8}.marcador span{letter-spacing:.14em;font-size:.95rem}.marcador div{height:10px;background:#0B0B0B33}.marcador i{display:block;height:100%;width:var(--w);background:#0B0B0B;animation:carga 1.4s cubic-bezier(.1,.9,.2,1)}
+.marcador em{justify-self:start;background:#0B0B0B;color:var(--c1);padding:2px 12px;font-size:1.1rem}@keyframes carga{from{width:0}}
+.blk{border-top:1px solid var(--line);padding-top:28px}
+.problema li{background:var(--card);border-left:6px solid var(--bad);font-weight:600}
+.feats ul{gap:2px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.feats li{transition:background .15s,color .15s,translate .15s}.feats li:hover{background:var(--c1);color:#0B0B0B;--mut:#1A1A1A;translate:0 -4px}
+.feats li b,.errores li b{font-family:var(--fd);font-style:italic;font-size:1.6rem;text-transform:uppercase;line-height:1}
+.errores li{grid-template-columns:auto 1fr;column-gap:18px}.errores li::before{content:counter(e,decimal-leading-zero);grid-row:span 2;font-family:var(--fd);font-style:italic;font-weight:800;font-size:3.4rem;line-height:.8;color:transparent;-webkit-text-stroke:1.5px var(--c1)}
+.despues{background:var(--c1)!important;color:#0B0B0B;--mut:#1A1A1A;--line:#0B0B0B33;--ok:#0B0B0B}
+.impacto ul{gap:2px}.impacto li b{font-style:italic;font-size:clamp(3.4rem,7vw,5.6rem);color:var(--c1);line-height:.85}.impacto li span{text-transform:uppercase;font-weight:600;letter-spacing:.06em}
+.chips li{border-radius:0;transform:skewX(-10deg);text-transform:uppercase;font-weight:600;border-color:var(--c1)}
+.cta{background:repeating-linear-gradient(-70deg,#151515 0 26px,#1C1C1C 26px 30px)!important}
+.w h3,.chart figcaption b,.tb-bar h3{font-size:1.6rem;line-height:1}
+.kpis{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:2px;padding-bottom:8px}.kpi{flex:0 0 220px;scroll-snap-align:start;border-top:4px solid var(--c1)}
+.kpi-v{font-style:italic;font-size:2.8rem;line-height:.9}.kpi-l{text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+.seg button{font-family:var(--fd);font-style:italic;font-weight:800;text-transform:uppercase;font-size:1.1rem}.f{text-transform:uppercase;letter-spacing:.08em;font-weight:600;font-size:.72rem}.f input,.f select{background:#0B0B0B}
+.scan-res{min-height:190px;font-family:var(--fd);font-style:italic}.scan-res b{font-size:2.2rem;line-height:1}.scan-res span{font-size:1.15rem;font-style:normal;font-family:var(--fb)}
+.scan-res.ok{background:var(--c1);color:#0B0B0B;border-color:var(--c1)}.scan-res.err{background:var(--bad);color:#fff}
+.bd-i{font-family:var(--fd);font-style:italic;font-weight:800;font-size:1.3rem;transform:skewX(-6deg)}.bd-i[data-s="1"]{background:var(--c1);color:#0B0B0B}.bd-i[data-s="1"] span{color:#0B0B0B}
+.badge{border-radius:0;text-transform:uppercase;font-weight:700;background:none;border:1px solid var(--k);transform:skewX(-10deg)}
+th button{font-family:var(--fd);font-style:italic;font-size:1.05rem;color:var(--c1)}.toast{background:var(--c1);color:#0B0B0B;font-weight:700;border-radius:0;border-left:8px solid #0B0B0B;transform:skewX(-6deg)}
+dialog.modal{border-top:6px solid var(--c1)!important}
+@media(min-width:1100px){.chart-line{grid-column:span 9}.chart-gauge{grid-column:span 3}.chart-heat{grid-column:span 12}.chart-bars{grid-column:span 7}.chart-donut{grid-column:span 5}.chart-funnel,.chart-scatter{grid-column:span 6}}
+@media(max-width:720px){.tabs a{padding:0 10px;font-size:1.15rem}.nav{border-bottom-width:3px}}

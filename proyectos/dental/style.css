@@ -1,0 +1,35 @@
+/* Sonríe Dental — Clínico limpio azul/blanco. Barra lateral, tarjetas suaves, píldoras, deslizamientos cortos. */
+:root{--bg:#F4F8FD;--card:#FFFFFF;--ink:#0B2A5B;--mut:#5B7093;--line:#DCE8F7;--c1:#2F6FED;--c2:#7DB3FF;--c3:#14B8A6;--c4:#F59E0B;--c5:#8B5CF6;--c6:#0B2A5B;--on:#FFFFFF;--ok:#0E9F6E;--pend:#D97706;--bad:#DC2626;--osc:0;
+  --r:18px;--rb:99px;--bd:1px solid var(--line);--sh:0 10px 34px -14px rgba(11,42,91,.18);--fd:'Plus Jakarta Sans',sans-serif;--fb:'Plus Jakarta Sans',sans-serif;--hw:800;--hls:-.03em;--max:1180px;
+  --rv-y:14px;--rv-t:.45s;--rv-e:cubic-bezier(.2,.8,.2,1);--rv-s:40ms;--ico-w:1.8}
+[data-tema="osc"]{--bg:#071326;--card:#0E1F3B;--ink:#E6EEFB;--mut:#93A8CB;--line:#1D3358;--c6:#C7D8F5;--sh:none;--osc:1}
+h1{font-size:clamp(2.1rem,5vw,3.6rem)}h1 em{font-style:normal;color:var(--c1)}
+.nav{background:var(--card);border-bottom:var(--bd)}
+.logo{background:color-mix(in srgb,var(--c1) 14%,var(--card));border-radius:14px;font-size:1.2rem}
+.tabs a{color:var(--mut)}.tabs a[aria-current]{background:color-mix(in srgb,var(--c1) 12%,var(--card));color:var(--c1)}
+@media(min-width:960px){
+  .nav{position:fixed;inset:0 auto 0 0;width:236px;flex-direction:column;flex-wrap:nowrap;align-items:stretch;padding:22px 16px;border:0;border-right:var(--bd)}
+  .brand{margin:14px 0 22px}.tabs{flex-direction:column;gap:6px}.tabs a{border-radius:14px;padding:12px 16px}.tabs a[aria-current]::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--c1);margin-right:10px}
+  .tools{margin-top:auto}main,.pie{margin-left:236px}.volver{justify-content:center}
+}
+.hero{min-height:auto;padding-block:20px}
+.kicker{display:inline-block;padding:6px 14px;border-radius:99px;background:color-mix(in srgb,var(--c1) 12%,var(--card));color:var(--c1);font-weight:700;letter-spacing:.04em;text-transform:none;font-size:.82rem}
+.btn{padding:8px 8px 8px 22px;gap:14px;box-shadow:0 10px 24px -10px var(--c1)}.btn .ico:last-child,.btn-wa .ico{order:2;width:36px;height:36px;padding:9px;border-radius:50%;background:#fff;color:var(--c1)}
+.btn-2{box-shadow:none;background:var(--card)}.btn-2 .ico:last-child{background:var(--c1);color:#fff}.modal .btn,.tabla .btn,.calc .btn,.acciones .btn{padding:8px 20px}.modal .btn .ico,.tabla .btn .ico,.calc .btn .ico,.acciones .btn .ico{all:unset;width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:2}
+.art{min-height:340px}
+.tj{position:absolute;display:grid;gap:4px;padding:18px 20px;background:var(--card);border:var(--bd);border-radius:22px;box-shadow:var(--sh);font-size:.9rem;animation:flota 6s ease-in-out infinite}
+.tj small{color:var(--mut)}.tj b{font-size:1.1rem}.tj span{color:var(--mut);font-size:.82rem}.tj em{font-style:normal;font-weight:500;color:var(--mut);font-size:.85rem}
+.tj1{left:0;top:6%;width:min(270px,78%)}.tj1 i{justify-self:start;font-style:normal;font-size:.75rem;font-weight:700;padding:3px 12px;border-radius:99px;background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.tj2{right:0;top:44%;width:min(250px,74%);animation-delay:-2s}.barra{height:8px;border-radius:9px;background:var(--line);overflow:hidden}.barra i{display:block;width:66%;height:100%;background:linear-gradient(90deg,var(--c2),var(--c1));border-radius:9px}
+.tj3{left:16%;bottom:0;font-size:2.6rem;width:92px;height:92px;place-items:center;border-radius:28px;background:linear-gradient(135deg,var(--c1),var(--c2));animation-delay:-4s}
+@keyframes flota{50%{translate:0 -10px}}
+.problema li{background:var(--card);border-radius:14px;border:var(--bd);border-left:4px solid var(--bad)}
+.feats li{transition:translate .25s,box-shadow .25s}.feats li:hover{translate:0 -4px}
+.feats li::before{content:"";width:38px;height:38px;border-radius:12px;background:color-mix(in srgb,var(--c1) 14%,var(--card));margin-bottom:8px;background-image:radial-gradient(circle,var(--c1) 30%,transparent 32%)}
+.errores li{grid-template-columns:auto 1fr;column-gap:14px}.errores li::before{content:"✓";grid-row:span 2;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok);font-weight:800}
+.despues{background:linear-gradient(160deg,var(--c1),#1B4FC4)!important;color:#fff;border:0!important}.despues li{border-color:#ffffff33}.despues li::before{color:#fff}
+.impacto li b{color:var(--c1)}.chips li{background:var(--card)}.cta{background:linear-gradient(160deg,color-mix(in srgb,var(--c1) 10%,var(--card)),var(--card))}
+.kpi{border-radius:22px}.kpi:first-child{background:linear-gradient(160deg,var(--c1),#1B4FC4);color:#fff;--mut:#D5E3FF;border:0}.kpi:first-child .spark,.kpi:first-child .kpi-d{color:#fff}
+.bd-dental .bd-i{border-width:2px;font-weight:700}.ag-ev{border-radius:12px}
+.seg{padding:4px}.badge{border:0}
+@media(min-width:1100px){.chart-line{grid-column:span 8}.chart-gauge{grid-column:span 4}.chart-bars{grid-column:span 7}.chart-donut{grid-column:span 5}.chart-heat{grid-column:span 12}.chart-radar,.chart-tree{grid-column:span 6}}

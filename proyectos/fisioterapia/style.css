@@ -1,0 +1,37 @@
+/* Kinesis — Neumorfismo suave. Un solo gris azulado, relieves con doble sombra, controles hundidos, turquesa como único acento, pulsaciones que se "hunden". */
+:root{--bg:#E6EBF1;--card:#E6EBF1;--ink:#33414F;--mut:#5F6F80;--line:#CBD3DD;--c1:#1F9E90;--c2:#7C93AD;--c3:#F2A65A;--c4:#9A8CD9;--c5:#5BB6D6;--c6:#E07A8B;--on:#FFFFFF;--ok:#178A6A;--pend:#B5701E;--bad:#C84B5F;
+  --up:8px 8px 18px #C3CBD6,-8px -8px 18px #FFFFFF;--in:inset 5px 5px 10px #C3CBD6,inset -5px -5px 10px #FFFFFF;
+  --r:24px;--rb:16px;--bd:0;--sh:var(--up);--fd:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--hw:600;--hls:-.02em;--max:1160px;--pad:24px;--gap:24px;
+  --rv-y:16px;--rv-sc:.97;--rv-t:.7s;--rv-e:cubic-bezier(.3,.7,.3,1);--rv-s:60ms;--ico-w:1.8}
+body{font-weight:300}
+h1{font-size:clamp(2.2rem,5.4vw,3.8rem)}h1 em{font-style:normal;color:var(--c1)}
+.nav{background:var(--bg);justify-content:center;padding-block:16px}
+.logo{box-shadow:var(--up);background:var(--bg);color:var(--c1);border-radius:16px;font-size:1.2rem}.brand-t b{font-weight:600}
+.volver,.ib{box-shadow:var(--up);background:var(--bg);transition:box-shadow .2s}.volver:active,.ib:active{box-shadow:var(--in)}
+.tabs{box-shadow:var(--in);border-radius:18px;padding:6px;gap:6px}.tabs a{min-height:40px;border-radius:14px;font-weight:500;color:var(--mut);transition:box-shadow .3s,color .3s}.tabs a[aria-current]{background:var(--bg);color:var(--c1);box-shadow:5px 5px 10px #C3CBD6,-5px -5px 10px #fff}
+.kicker{color:var(--c1);font-weight:500}
+.btn{background:var(--bg);color:var(--c1);box-shadow:var(--up);font-weight:600;min-height:52px;padding:12px 26px;transition:box-shadow .2s,color .2s}.btn:hover{filter:none;color:#157A6F}.btn:active{box-shadow:var(--in);scale:1}
+.btn-wa{background:var(--c1);color:#fff;box-shadow:8px 8px 18px #C3CBD6,-8px -8px 18px #fff,inset 2px 2px 4px #ffffff55}.btn-wa:hover{color:#fff}.btn-wa:active{box-shadow:inset 5px 5px 10px #157A6F}
+.btn-2{border:0;color:var(--ink)}
+.art{min-height:360px;display:grid;place-items:center}
+.dial{position:relative;width:250px;height:250px;border-radius:50%;box-shadow:var(--up);display:grid;place-items:center}
+.dial svg{position:absolute;inset:18px;rotate:-90deg}.dial circle{fill:none;stroke-width:10;stroke-linecap:round}.pista{stroke:#D3DAE3}.avance{stroke:var(--c1);stroke-dasharray:70 100;animation:gira 1.8s cubic-bezier(.3,.7,.3,1)}@keyframes gira{from{stroke-dasharray:0 100}}
+.dial div{display:grid;justify-items:center;width:150px;height:150px;border-radius:50%;box-shadow:var(--in);align-content:center}.dial b{font-size:2.6rem;font-weight:600;line-height:1}.dial span{color:var(--mut);font-size:.85rem}
+.pastilla{position:absolute;padding:12px 18px;border-radius:18px;box-shadow:var(--up);background:var(--bg);font-size:.86rem;animation:respira 5s ease-in-out infinite}.pastilla b{color:var(--c1);margin-left:6px;font-weight:600}
+.p1{left:0;top:10%}.p2{right:0;bottom:12%;animation-delay:-2.5s}@keyframes respira{50%{translate:0 -8px}}
+.problema li{border:0;box-shadow:var(--in);border-radius:16px;padding:14px 18px}
+.feats li{transition:box-shadow .35s}.feats li:hover{box-shadow:var(--in)}.feats li b,.errores li b{font-weight:600}
+.feats li::before{content:"";width:40px;height:40px;border-radius:14px;box-shadow:var(--in);margin-bottom:8px;background:radial-gradient(circle,var(--c1) 22%,transparent 24%)}
+.errores li::before{content:counter(e);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;box-shadow:var(--up);color:var(--c1);font-weight:600}
+.despues{box-shadow:var(--in)!important}.vs-grid li{border-color:var(--line)}
+.impacto li{text-align:center;border-radius:50%;aspect-ratio:1;align-content:center;max-width:220px;margin-inline:auto;width:100%}.impacto li b{color:var(--c1);font-weight:600;font-size:clamp(1.8rem,3.4vw,2.6rem)}.impacto li span{font-size:.82rem;padding-inline:12px}
+.chips li{border:0;box-shadow:var(--up);border-radius:14px}.cta{box-shadow:var(--in)!important}
+.f input,.f select,.pos-tot select{border:0;box-shadow:var(--in);background:var(--bg);border-radius:14px}.seg{border:0;box-shadow:var(--in);padding:6px;border-radius:18px}.seg button{border-radius:13px}.seg button[aria-pressed="true"]{background:var(--bg);color:var(--c1);box-shadow:4px 4px 8px #C3CBD6,-4px -4px 8px #fff;font-weight:600}
+.kpi-v{font-weight:600}.spark{color:var(--c1)}.kpi{transition:box-shadow .35s}.kpi:hover{box-shadow:var(--in)}
+.ag-h{background:var(--bg)}.ag-ev{border-left:0;border-radius:14px;background:var(--bg);box-shadow:4px 4px 8px #C3CBD6,-4px -4px 8px #fff}.ag-ev b{color:var(--c1)}.ag-slot{border:0;box-shadow:var(--in);border-radius:14px;opacity:.7}
+.chk-bar{border:0;box-shadow:var(--in);height:26px}.chk-bar i{background:var(--c1);border-radius:99px;margin:4px;inset:0 auto 0 0}.chk-bar b{mix-blend-mode:normal;color:var(--ink)}.chk-i{box-shadow:var(--up);margin:6px}.chk-i:has(:checked){box-shadow:var(--in)}
+.scan-res,.calc-out,.pos-cart,.kb-col{box-shadow:var(--in)}.badge{border:0;box-shadow:var(--in);background:none;color:var(--k);font-weight:600}
+td{border-color:var(--line)}.toast{background:var(--bg);color:var(--ink);box-shadow:var(--up);border-radius:18px;border-left:0;text-align:center}
+dialog.modal{box-shadow:0 30px 80px #7C8A9A88}.notifs{box-shadow:var(--up),0 30px 60px #7C8A9A66}
+.w h3,.chart figcaption b,.tb-bar h3{font-weight:600}
+@media(min-width:1100px){.chart-gauge{grid-column:span 4}.chart-line{grid-column:span 8}.chart-donut{grid-column:span 4}.chart-bars{grid-column:span 8}.chart-heat{grid-column:span 6}.chart-radar,.chart-scatter{grid-column:span 3}}

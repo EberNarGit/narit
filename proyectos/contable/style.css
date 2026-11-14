@@ -1,0 +1,33 @@
+/* Fisco al Día — Fintech oscuro premium. Negro azulado, violeta con brillo, cifras monoespaciadas, riel de iconos, datos densos. */
+:root{--bg:#0A0B10;--card:#12141C;--ink:#E7E9F3;--mut:#8D93A8;--line:#22263A;--c1:#7C5CFF;--c2:#22C55E;--c3:#38BDF8;--c4:#F59E0B;--c5:#F472B6;--c6:#A3A8BD;--on:#FFFFFF;--ok:#22C55E;--pend:#F59E0B;--bad:#F43F5E;--osc:1;--k-t:var(--k);
+  --r:14px;--rb:10px;--bd:1px solid var(--line);--sh:none;--fd:'Sora',sans-serif;--fb:'Sora',sans-serif;--fn:'JetBrains Mono',monospace;--hw:600;--hls:-.03em;--max:1360px;--pad:18px;--gap:12px;
+  --rv-y:10px;--rv-t:.5s;--rv-e:cubic-bezier(.2,.8,.2,1);--rv-s:35ms;--ico-w:1.6}
+[data-tema="claro"]{--bg:#F6F7FB;--card:#FFFFFF;--ink:#12141C;--mut:#5B6178;--line:#E3E6F0;--c6:#5B6178;--osc:0}
+body{font-weight:300;font-size:.94rem;background:radial-gradient(900px 500px at 85% -10%,color-mix(in srgb,var(--c1) 22%,transparent),transparent 70%),var(--bg);background-attachment:fixed}
+h1{font-size:clamp(2.1rem,5vw,3.8rem);font-weight:600}h1 em{font-style:normal;background:linear-gradient(90deg,#A78BFA,#7C5CFF 40%,#38BDF8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav{background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(14px);border-bottom:var(--bd)}
+.logo{border-radius:10px;background:linear-gradient(135deg,#7C5CFF,#38BDF8);box-shadow:0 0 24px #7C5CFF88}.brand-t b{font-weight:600}
+.tabs{background:var(--card);border:var(--bd);border-radius:12px;padding:3px}.tabs a{min-height:34px;font-size:.84rem;font-weight:400;color:var(--mut);border-radius:9px}.tabs a[aria-current]{background:color-mix(in srgb,var(--c1) 22%,transparent);color:var(--ink);box-shadow:inset 0 0 0 1px #7C5CFF88}
+@media(min-width:1000px){.nav{position:fixed;inset:0 auto 0 0;width:84px;flex-direction:column;flex-wrap:nowrap;padding:16px 10px;border:0;border-right:var(--bd)}.volver span,.brand-t{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.brand{margin:8px 0 16px}
+  .tabs{flex-direction:column;background:none;border:0;gap:6px}.tabs a{writing-mode:vertical-rl;rotate:180deg;min-height:84px;padding:6px;justify-content:center}.tools{flex-direction:column;margin-top:auto}main,.pie{margin-left:84px}.notifs{left:96px;right:auto;top:auto;bottom:14px}}
+.kicker{font-family:var(--fn);color:var(--c1);font-size:.74rem}.kicker::before{content:"// "}
+.btn{font-weight:600;font-size:.9rem;box-shadow:0 0 0 1px #A78BFA inset,0 8px 30px -8px #7C5CFF;transition:box-shadow .3s,translate .3s}.btn:hover{box-shadow:0 0 0 1px #A78BFA inset,0 12px 40px -6px #7C5CFF;translate:0 -2px;filter:none}
+.btn-2{box-shadow:none;background:var(--card)}.btn-wa{background:var(--ok);color:#04130A;box-shadow:0 8px 30px -8px #22C55E}
+.tk{background:var(--card);border:var(--bd);border-radius:18px;padding:20px;box-shadow:0 30px 80px -30px #7C5CFF66;display:grid;gap:12px}
+.tk-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.tk-h span{font-family:var(--fn);font-size:.7rem;color:var(--mut);width:100%}.tk-h b{font-family:var(--fn);font-size:2.4rem;font-weight:600}.tk-h i{font-style:normal;color:var(--ok);font-family:var(--fn);font-size:.85rem}
+.tk svg{width:100%;height:90px}.tk svg path:nth-child(2){stroke-dasharray:500;animation:trazo 2s ease-out}@keyframes trazo{from{stroke-dashoffset:500}}
+.tk li{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:var(--bd);font-size:.86rem}.tk li b{margin-left:auto;font-family:var(--fn);font-weight:400;font-size:.76rem;color:var(--mut)}
+.tk li i{width:8px;height:8px;border-radius:50%}.v{background:var(--ok);box-shadow:0 0 10px var(--ok)}.a{background:var(--pend);box-shadow:0 0 10px var(--pend)}.r{background:var(--bad);box-shadow:0 0 10px var(--bad);animation:late2 1.2s infinite}@keyframes late2{50%{opacity:.3}}
+.problema li{border-left:2px solid var(--bad);background:var(--card);border-radius:0 10px 10px 0}
+.feats ul{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}.feats li{transition:border-color .3s,box-shadow .3s}.feats li:hover{border-color:#7C5CFF;box-shadow:0 0 0 1px #7C5CFF,0 20px 50px -20px #7C5CFF88}
+.feats li b,.errores li b{font-weight:600}.errores li::before{content:"0" counter(e);font-family:var(--fn);color:var(--c1);font-size:.8rem}
+.despues{border-color:#22C55E66!important;background:linear-gradient(160deg,#22C55E14,transparent),var(--card)!important}
+.impacto li b{font-family:var(--fn);font-weight:600;font-size:clamp(1.9rem,3.6vw,2.8rem);color:var(--c2)}
+.chips li{font-family:var(--fn);font-size:.78rem;border-radius:8px;background:var(--card)}.cta{background:linear-gradient(160deg,#7C5CFF22,transparent),var(--card)!important}
+.kpis{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.kpi-v{font-weight:600;letter-spacing:-.04em}.kpi-l{text-transform:uppercase;letter-spacing:.08em;font-size:.68rem}.kpi-d{font-family:var(--fn)}
+.kpi:first-child{background:linear-gradient(160deg,#7C5CFF33,transparent 70%),var(--card);border-color:#7C5CFF66}
+td.num,td b{font-family:var(--fn);font-weight:400}th button{font-size:.66rem}.badge{border-radius:6px;font-family:var(--fn);font-size:.7rem}
+.bd-i{border-width:1px;border-radius:10px;min-height:70px;font-size:.8rem;box-shadow:0 0 18px -6px var(--sc)}
+.f input,.f select,.seg{background:var(--bg)}.kb-col{background:var(--bg)}.toast{background:var(--card);color:var(--ink);border:var(--bd);border-left:4px solid var(--ok);box-shadow:0 20px 50px #000a}
+.w h3,.chart figcaption b,.tb-bar h3{font-weight:600;font-size:1rem}
+@media(min-width:1100px){.chart-line{grid-column:span 6}.chart-gauge{grid-column:span 3}.chart-donut{grid-column:span 3}.chart-bars{grid-column:span 5}.chart-tree{grid-column:span 4}.chart-radar{grid-column:span 3}.chart-heat{grid-column:span 12;--cv-h:210px}}

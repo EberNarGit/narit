@@ -1,0 +1,36 @@
+/* Casa Añil — Mexicano contemporáneo (Barragán). Planos de color a sangre: rosa mexicano, añil, amarillo; cal blanca; papel picado; muros que se deslizan. */
+:root{--bg:#FFF7EC;--card:#FFFFFF;--ink:#2B1A12;--mut:#6B5547;--line:#EAD9C4;--c1:#E4007C;--c2:#1F3A93;--c3:#F6B40E;--c4:#C75B39;--c5:#3E8E7E;--c6:#7A3E9D;--on:#FFFFFF;--ok:#2E7D5B;--pend:#B8790A;--bad:#C0271E;
+  --r:0px;--rb:0px;--bd:0;--sh:none;--fd:'Marcellus',serif;--fb:'Karla',sans-serif;--hw:400;--hls:.01em;--max:none;--pad:24px;--gap:4px;--hm-r:0;
+  --rv-x:-70px;--rv-y:0px;--rv-t:1s;--rv-e:cubic-bezier(.77,0,.18,1);--rv-s:90ms;--ico-w:1.5;--ico-cap:square}
+h1{font-size:clamp(2.6rem,7vw,5.6rem);line-height:1.02}h1 em{font-style:normal;color:var(--c3)}
+h2{font-size:clamp(2rem,4.6vw,3.6rem)}
+.nav{background:var(--c2);color:#fff;padding-block:14px}
+.nav::after{content:"";position:absolute;left:0;right:0;top:100%;height:18px;background:var(--c2);-webkit-mask:radial-gradient(circle at 12px 0,#000 11px,#0000 12px) 0 0/24px 18px repeat-x;mask:radial-gradient(circle at 12px 0,#000 11px,#0000 12px) 0 0/24px 18px repeat-x;pointer-events:none}
+.logo{background:var(--c3);color:var(--ink);border-radius:50% 50% 0 0;font-size:1.3rem}.brand-t b{font-family:var(--fd);font-size:1.4rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase}.brand-t small{color:#C9D3F2}
+.volver,.ib{border:1px solid #ffffff55;background:none;color:#fff}.tabs a{color:#fff;text-transform:uppercase;letter-spacing:.14em;font-size:.76rem}.tabs a[aria-current]{background:var(--c3);color:var(--ink)}
+.view{padding:0}
+.hero{background:var(--c1);color:#fff;padding:clamp(40px,7vw,96px) clamp(18px,5vw,72px);min-height:min(78vh,700px);gap:0}@media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr}}
+.kicker{color:#FFD9EC;letter-spacing:.3em}.lead{color:#FFE9F4;font-size:1.2rem}
+.btn{text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:700;min-height:54px;padding:12px 28px;background:var(--c2);transition:background .5s cubic-bezier(.77,0,.18,1),color .5s,padding .5s}.btn:hover{background:var(--c3);color:var(--ink);padding-inline:36px;filter:none}
+.btn-2{border:1px solid #fff;color:#fff;background:none}.btn-wa{background:var(--c3);color:var(--ink)}.btn-wa:hover{background:#fff}
+.art{min-height:340px;align-self:stretch}.muros{position:absolute;inset:0;overflow:hidden}
+.muros i{position:absolute;animation:muro 1.4s cubic-bezier(.77,0,.18,1) backwards}
+.m1{left:0;right:42%;top:18%;bottom:0;background:var(--c3)}.m2{left:44%;right:0;top:0;bottom:30%;background:var(--c2);animation-delay:.2s!important}.m3{left:30%;right:22%;top:52%;bottom:0;background:var(--c4);animation-delay:.4s!important}
+.sol{right:10%;top:9%;width:64px;height:64px;border-radius:50%;background:var(--bg);animation-delay:.6s!important}.esc{left:6%;bottom:0;width:38%;height:44%;background:repeating-linear-gradient(0deg,#00000022 0 4px,transparent 4px 22px);clip-path:polygon(0 100%,100% 100%,100% 0);animation-delay:.5s!important}
+@keyframes muro{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0)}}
+.blk{margin:0;padding:clamp(36px,6vw,84px) clamp(18px,5vw,72px)}
+.problema{background:var(--bg)}.problema p{font-family:var(--fd);font-size:clamp(1.2rem,2.2vw,1.7rem);max-width:56ch;line-height:1.35}.problema li{border-left:8px solid var(--c1);background:#fff}
+.feats{background:var(--c2);color:#fff;--mut:#C9D3F2}.feats li{background:#ffffff14}.feats li:nth-child(3n+1){background:var(--c3);color:var(--ink);--mut:#4A3A10}.feats li b,.errores li b{font-family:var(--fd);font-weight:400;font-size:1.3rem}
+.errores{background:var(--c3)}.errores li::before{content:counter(e,decimal-leading-zero);font-family:var(--fd);font-size:2rem;color:var(--c1)}
+.vs{background:var(--bg)}.antes{background:#F1E3D0!important}.despues{background:var(--c1)!important;color:#fff;--mut:#FFE9F4}.despues li{border-color:#ffffff40}.despues li::before{color:var(--c3)}
+.impacto{background:var(--c4);color:#fff}.impacto li{background:none!important;border-left:1px solid #ffffff66!important}.impacto li b{font-weight:400;font-size:clamp(2.6rem,6vw,4.6rem)}.impacto li span{color:#FFE8DC}
+.modulos{background:var(--bg)}.chips li{border-radius:0;border:1px solid var(--ink);text-transform:uppercase;letter-spacing:.1em;font-size:.74rem}
+.cta{background:var(--c2)!important;color:#fff;padding:clamp(40px,7vw,90px)!important}.cta p{color:#C9D3F2}.cta .btn{background:var(--c1)}
+#demo,#panel{padding:clamp(36px,6vw,72px) clamp(18px,5vw,72px)}#demo{background:#FBEBD8}
+.w h3,.chart figcaption b,.tb-bar h3{font-family:var(--fd);font-weight:400;font-size:1.4rem}
+.bd-grid{gap:4px;grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}.bd-i{border:0;min-height:96px;background:var(--sc);color:#fff;font-family:var(--fd);font-size:1.3rem;transition:scale .5s cubic-bezier(.77,0,.18,1)}.bd-i span{color:#fff;font-family:var(--fb);opacity:.9}.bd-i[data-s="2"]{color:var(--ink)}.bd-i[data-s="2"] span{color:var(--ink)}
+.kpis{gap:4px}.kpi{border-top:8px solid var(--c1)!important}.kpi:nth-child(3n+2){border-color:var(--c2)!important}.kpi:nth-child(3n){border-color:var(--c3)!important}.kpi-v{font-weight:400}
+.f input,.f select,.seg{border:1px solid var(--ink)}.seg button[aria-pressed="true"]{background:var(--c1)}.kb-col{background:#fff}.kb-card{background:var(--bg);border-left:6px solid var(--c1)}
+.badge{border-radius:0;border:0;text-transform:uppercase;letter-spacing:.06em;font-size:.7rem}th button{letter-spacing:.12em}.calc-out{background:var(--c3)}
+.toast{background:var(--c2);border-radius:0;border-left:10px solid var(--c3)}dialog.modal{border-top:10px solid var(--c1)!important}.pie{max-width:none;background:var(--ink);color:#EAD9C4;padding-inline:clamp(18px,5vw,72px)}
+@media(min-width:1100px){.chart-cal{grid-column:span 9;--cv-h:210px}.chart-gauge{grid-column:span 3;--cv-h:210px}.chart-line{grid-column:span 7}.chart-donut{grid-column:span 5}.chart-bars{grid-column:span 6}.chart-polar,.chart-funnel{grid-column:span 3}}

@@ -1,0 +1,42 @@
+/* Óptica Lumen — Suizo / tipográfico. Retícula estricta, filetes, rojo único, numerales gigantes, barridos lineales. */
+:root{--bg:#FFFFFF;--card:#FFFFFF;--ink:#111111;--mut:#5C5C5C;--line:#D9D9D9;--c1:#E30613;--c2:#111111;--c3:#8C8C8C;--c4:#C4C4C4;--c5:#7A0A10;--c6:#444444;--on:#FFFFFF;--ok:#111111;--pend:#8C6A00;--bad:#E30613;--k-t:#111;
+  --r:0px;--rb:0px;--bd:0;--sh:none;--fd:'Archivo',sans-serif;--fb:'Archivo',sans-serif;--hw:800;--hls:-.045em;--max:1360px;--pad:18px 0;--gap:0px;--hm-r:0;
+  --rv-y:0px;--rv-t:.01s;--rv-e:linear;--rv-s:40ms;--ico-cap:butt}
+body{font-size:1rem}
+/* El barrido se hace con una animación al revelar: un clip-path inicial deja el elemento sin área y el observador nunca lo detecta. */
+.rv.in{animation:barrido .6s cubic-bezier(.7,0,.2,1) calc(var(--i,0)*40ms) backwards}@keyframes barrido{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+h1{font-size:clamp(3.4rem,13vw,10.5rem);line-height:.86;margin:0}h1 em{font-style:normal;color:var(--c1)}
+h2{font-size:clamp(1.9rem,5vw,4.2rem);line-height:.92}
+.nav{border-bottom:1px solid var(--ink);padding-block:0;gap:0 24px;min-height:56px}
+.logo{background:var(--c1);border-radius:50%;width:30px;height:30px;font-size:.9rem}.brand-t small{font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.1em}
+.tabs{gap:0;align-self:stretch}.tabs a{border-left:1px solid var(--ink);padding:0 22px;font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;min-height:56px}
+.tabs a[aria-current]{background:var(--ink);color:#fff}
+.volver,.ib{border:1px solid var(--ink);font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.08em;font-size:.76rem}
+.hero{grid-template-columns:1fr;min-height:auto;gap:0;border-bottom:1px solid var(--ink);padding-bottom:28px;position:relative}
+@media(min-width:900px){.hero{grid-template-columns:8fr 4fr;align-items:end}}
+.kicker{font-family:'Archivo Narrow';color:var(--c1);margin-bottom:18px}.kicker::before{content:"● "}
+.lead{color:var(--ink);font-size:1.15rem;max-width:38ch;margin-top:26px}
+.btn{font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.1em;font-size:.86rem;min-height:52px;transition:background .15s linear,color .15s linear}.btn:hover{background:var(--ink);filter:none}.btn:active{scale:1}
+.btn-2{border:1px solid var(--ink)}.btn-2:hover{color:#fff}
+.optotipo{display:grid;gap:8px;justify-items:center;font-weight:800;line-height:1;padding:20px 0;position:relative}
+.optotipo span:nth-child(1){font-size:6rem}.optotipo span:nth-child(2){font-size:3.6rem}.optotipo span:nth-child(3){font-size:2.4rem}.optotipo span:nth-child(4){font-size:1.6rem}.optotipo span:nth-child(5){font-size:1.05rem}.optotipo span:nth-child(6){font-size:.7rem;letter-spacing:.3em}
+.optotipo i{position:absolute;left:0;right:0;height:2px;background:var(--c1);animation:escaneo 5s cubic-bezier(.7,0,.2,1) infinite alternate}@keyframes escaneo{from{top:8%}to{top:92%}}
+.blk{display:grid;gap:20px;border-top:1px solid var(--ink);padding-top:18px;counter-increment:sec}
+#ficha{counter-reset:sec}
+@media(min-width:900px){.blk{grid-template-columns:4fr 8fr}.blk>h2{grid-row:span 3}}
+.blk>h2::before{content:"0" counter(sec);display:block;font-family:'Archivo Narrow';font-weight:400;font-size:.9rem;letter-spacing:.1em;color:var(--c1);margin-bottom:10px}
+.problema li{border-left:0;border-top:1px solid var(--ink);padding:10px 0;font-weight:600}.problema ul{gap:0 24px}
+.feats ul,.errores ol{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));column-gap:28px}.feats li,.errores li{border-top:1px solid var(--ink)!important;padding:14px 0}
+.feats li b,.errores li b{font-size:1.1rem;letter-spacing:-.02em}.errores li::before{content:counter(e);color:var(--c1);font-weight:800;font-size:2rem;line-height:1}
+.vs-grid{gap:28px}.vs-grid>div{border-top:6px solid var(--ink)!important}.despues{border-color:var(--c1)!important}.vs-grid h3{font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:.9rem}
+.impacto ul{gap:0 28px}.impacto li{border-top:1px solid var(--ink)!important}.impacto li b{font-size:clamp(3rem,7vw,5.4rem);letter-spacing:-.06em;font-weight:800}.impacto li:first-child b{color:var(--c1)}
+.chips li{border-color:var(--ink);font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.06em;font-size:.82rem}
+.cta{text-align:left;background:var(--c1)!important;color:#fff;padding:clamp(24px,5vw,56px)!important;display:block}.cta p{color:#fff}.cta .btn{background:#fff;color:var(--ink)}.cta h2::before{color:#fff}
+.w,.tabla,.chart,.kpi{border-top:1px solid var(--ink)!important}.w{padding:18px 0 0}
+.w h3,.chart figcaption b,.tb-bar h3{font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:.86rem}
+.kb-col,.pos-cart,.calc-out,.scan-res{border:1px solid var(--ink)!important;padding:14px}.kb-card,.f input,.f select,.seg{border:1px solid var(--ink)}.kb-mv button{border:1px solid var(--ink)}
+.kpis{gap:0 24px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.kpi-v{font-size:clamp(2rem,3.6vw,3rem);letter-spacing:-.05em;font-weight:800}.kpi-l{font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.1em;font-size:.76rem}.spark{color:var(--ink)}
+.kpi-d.bien{color:var(--ink)}.charts{gap:0 24px}.chart{margin-bottom:24px}
+.badge{border-radius:0;border:1px solid var(--ink);background:none;font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.06em}.badge[data-k="bad"]{background:var(--c1);color:#fff;border-color:var(--c1)}.badge[data-k="ok"]{background:var(--ink);color:#fff}
+td{border-top:1px solid var(--ink)}.toast{border-radius:0;border-left:8px solid var(--c1)}dialog.modal{border:1px solid var(--ink)!important}.notifs{border:1px solid var(--ink)!important;padding:16px}
+@media(min-width:1100px){.chart-bars{grid-column:span 6}.chart-line{grid-column:span 6}.chart-donut,.chart-scatter,.chart-polar{grid-column:span 4}.chart-funnel{grid-column:span 5}.chart-cal{grid-column:span 7}}

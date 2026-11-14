@@ -1,0 +1,31 @@
+/* RutaYa — Isométrico. Ciudad de cubos en 3D, tarjetas con canto extruido, azul noche y amarillo señal, elevación al pasar. */
+:root{--bg:#1F2A44;--card:#2A3759;--ink:#F8F9FA;--mut:#A9B6D3;--line:#3B4B75;--c1:#FFB703;--c2:#8ECAE6;--c3:#FB8500;--c4:#90E0AA;--c5:#C8B6FF;--c6:#219EBC;--on:#1F2A44;--ok:#7BDC9A;--pend:#FFB703;--bad:#FF7A7A;--osc:1;--k-t:var(--k);
+  --r:12px;--rb:10px;--bd:0;--sh:0 1px 0 #3F5080 inset,6px 6px 0 #172038;--fd:'Red Hat Display',sans-serif;--fb:'Red Hat Display',sans-serif;--fn:'Red Hat Mono',monospace;--hw:800;--hls:-.03em;--max:1280px;--pad:20px;--gap:20px;
+  --rv-y:40px;--rv-x:-20px;--rv-t:.6s;--rv-e:cubic-bezier(.2,.9,.3,1.2);--rv-s:60ms;--ico-w:2.2}
+body{background:linear-gradient(30deg,#1b2540 12%,transparent 12.5% 87%,#1b2540 87.5%) 0 0/60px 104px,linear-gradient(150deg,#1b2540 12%,transparent 12.5% 87%,#1b2540 87.5%) 0 0/60px 104px,var(--bg)}
+h1{font-size:clamp(2.4rem,6vw,4.6rem)}h1 em{font-style:normal;color:var(--c1)}
+.nav{background:#172038;box-shadow:0 6px 0 #111930}
+.logo{transform:rotate(45deg) skew(-8deg,-8deg);border-radius:8px;box-shadow:4px 4px 0 var(--c3)}.brand-t b{font-size:1.3rem;font-weight:800}
+.volver,.ib{background:var(--card);box-shadow:3px 3px 0 #111930}.tabs a{font-weight:800}.tabs a[aria-current]{box-shadow:4px 4px 0 var(--c3)}
+.kicker{font-family:var(--fn);color:var(--c2)}
+.btn{font-weight:800;box-shadow:0 6px 0 var(--c3);transition:translate .12s,box-shadow .12s}.btn:hover{translate:0 -3px;box-shadow:0 9px 0 var(--c3);filter:none}.btn:active{translate:0 6px;box-shadow:0 0 0 var(--c3);scale:1}
+.btn-2{background:var(--card);color:var(--ink);box-shadow:0 6px 0 #111930}.btn-2:hover{box-shadow:0 9px 0 #111930}.btn-wa{background:var(--ok);box-shadow:0 6px 0 #3E9E5E}
+.art{min-height:380px;display:grid;place-items:center;perspective:1200px}
+.iso{display:grid;grid-template-columns:repeat(4,58px);gap:12px;transform:rotateX(58deg) rotateZ(-45deg);transform-style:preserve-3d}
+.iso i{height:58px;background:#34446C;border-radius:6px;box-shadow:-1px 1px 0 #2B395C,-2px 2px 0 #2B395C,-3px 3px 0 #2B395C,-4px 4px 0 #2B395C,-5px 5px 0 #2B395C,-6px 6px 0 #2B395C,-16px 16px 20px #0006;animation:sube2 3.6s ease-in-out infinite;animation-delay:var(--d)}
+.iso .c1{background:var(--c1);--t:-26px}.iso .c2{background:var(--c2);--t:-16px}.iso .c3{background:var(--c3);--t:-36px}
+@keyframes sube2{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(calc(var(--t,-4px)*-.5),calc(var(--t,-4px)*.5),0)}}
+.feats li,.errores li,.impacto li,.kpi,.chart,.bd-i,.kb-card{transition:translate .25s cubic-bezier(.2,.9,.3,1.2),box-shadow .25s}
+.feats li:hover,.kpi:hover,.chart:hover{translate:-4px -4px;box-shadow:0 1px 0 #3F5080 inset,10px 10px 0 #172038}
+.problema li{background:var(--card);border-left:6px solid var(--bad);border-radius:8px}
+.feats li b,.errores li b{font-weight:800;font-size:1.1rem}.feats li::before{content:"";width:20px;height:20px;background:var(--c1);transform:rotate(45deg) skew(-8deg,-8deg);box-shadow:3px 3px 0 var(--c3);margin:4px 0 10px 4px}
+.errores li::before{content:"#" counter(e);font-family:var(--fn);color:var(--c2)}
+.despues{background:var(--c1)!important;color:var(--on);--mut:#3B3200;--ok:#1F2A44;box-shadow:6px 6px 0 var(--c3)!important}.despues li{border-color:#1F2A4433}
+.impacto li b{color:var(--c1);font-weight:800}.chips li{border:0;background:var(--card);box-shadow:3px 3px 0 #172038;font-family:var(--fn);font-size:.8rem}
+.kpi-v{font-weight:500}.kpi-l{font-family:var(--fn);font-size:.7rem;text-transform:uppercase}.kpi:nth-child(odd){border-top:4px solid var(--c1)}.kpi:nth-child(even){border-top:4px solid var(--c2)}
+.f input,.f select,.seg{background:#172038;border:1px solid var(--line)}.kb-col{background:#172038;box-shadow:none}.kb-card{background:var(--card);border:0;box-shadow:4px 4px 0 #111930}
+.scan-res,.calc-out,.pos-cart{background:#172038}.badge{border-radius:6px;font-family:var(--fn);font-size:.72rem}th button{font-family:var(--fn)}td b{font-family:var(--fn);font-weight:500}
+.toast{background:var(--c1);color:var(--on);font-weight:800;border-left:0;box-shadow:6px 6px 0 var(--c3)}dialog.modal{box-shadow:12px 12px 0 #111930}
+.mp{background:#172038}.w h3,.chart figcaption b,.tb-bar h3{font-weight:800}
+@media(min-width:1100px){.chart-map{grid-column:span 8}.chart-gauge{grid-column:span 4}.chart-line{grid-column:span 6}.chart-bars{grid-column:span 6}.chart-heat{grid-column:span 5}.chart-radar{grid-column:span 4}.chart-polar{grid-column:span 3}}
+@media(max-width:560px){.iso{grid-template-columns:repeat(4,44px);gap:9px}.iso i{height:44px}}

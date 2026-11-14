@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 92" role="img" aria-label="NarIT">
+  <!-- Cuerno de narval: colmillo largo en espiral que sale de la parte superior del círculo -->
+  <clipPath id="c"><path d="M25.5 40 38.5 40 45 2z"/></clipPath>
+  <path d="M25.5 40 38.5 40 45 2z" fill="#0E8A45"/>
+  <g clip-path="url(#c)" fill="none" stroke="#B6F09C" stroke-width="2.2">
+    <path d="M22 37l20-9M22 30l20-9M22 23l22-10M22 16l24-11M22 9l26-12"/>
+  </g>
+  <circle cx="32" cy="63" r="28" fill="#0F2A1D"/>
+  <circle cx="32" cy="63" r="23.5" fill="none" stroke="#B6F09C" stroke-width="1.2"/>
+  <path d="M22 74V52h4.6l10.8 14.4V52H42v22h-4.6L26.6 59.6V74z" fill="#EEF4EC"/>
+</svg>

@@ -1,0 +1,73 @@
+import { montar } from '../../shared/engine.js';
+
+// Tarifa mensual ISR (art. 96 LISR): [límite inferior, cuota fija, % sobre excedente]. Cálculo ilustrativo.
+const ISR = [[0.01, 0, 1.92], [746.05, 14.32, 6.4], [6332.06, 371.83, 10.88], [11128.02, 893.63, 16], [12935.83, 1182.88, 17.92], [15487.72, 1640.18, 21.36], [31236.5, 5004.12, 23.52], [49233.01, 9236.89, 30], [93993.91, 22665.17, 32], [125325.21, 32691.18, 34], [375975.62, 117912.32, 35]];
+const isr = (base) => { const t = [...ISR].reverse().find((x) => base >= x[0]) || ISR[0]; return t[1] + (base - t[0]) * t[2] / 100; };
+
+montar({
+  slug: 'rh', lib: 'apex', iconos: 'svg', vistas: 'scroll', oscuro: true, logo: 'N',
+  chart: { smooth: true, area: true, r: 10, w: 3, cut: '72%' },
+  titular: 'Nómina sin sustos. <em>Equipo sin pendientes.</em>',
+  bajada: 'Asistencia, vacaciones, incidencias y cálculo de nómina con ISR e IMSS en un solo sistema. Cada quincena sale a tiempo y cada empleado sabe lo que se le pagó y por qué.',
+  art: `<div class="bento-art"><div class="ba a1"><small>Nómina quincenal</small><b>$412,860</b><span>48 colaboradores</span></div><div class="ba a2"><b>96%</b><small>asistencia</small></div><div class="ba a3"><i></i><i></i><i></i><i></i><i></i></div><div class="ba a4"><small>Vacaciones</small><b>3</b><span>por aprobar</span></div></div>`,
+  problema: 'La asistencia se lleva en una hoja, las vacaciones en correos y la nómina en un Excel con fórmulas que solo entiende una persona. Cada quincena hay errores, reclamos y horas extra del área administrativa.',
+  antes: ['Errores de captura en la nómina', 'Vacaciones aprobadas "de palabra"', 'Altas al IMSS fuera de tiempo', 'Recibos entregados tarde o nunca'],
+  feats: [
+    ['Alta de empleados', 'Expediente con RFC, CURP, NSS, contrato y documentos.'],
+    ['Asistencia', 'Checador desde el celular con ubicación; retardos y faltas automáticos.'],
+    ['Vacaciones e incidencias', 'Solicitud, aprobación y saldo de días conforme a la ley.'],
+    ['Cálculo de nómina', 'Percepciones, ISR, IMSS, INFONAVIT y neto por empleado.'],
+    ['Recibos de nómina', 'CFDI de nómina timbrado y enviado al correo o WhatsApp.'],
+    ['Aguinaldo y PTU', 'Proyección y cálculo sin sorpresas en diciembre y mayo.'],
+    ['Clima laboral', 'Encuestas NOM-035 con resultados por área.'],
+    ['Organigrama', 'Quién reporta a quién, siempre actualizado.'],
+    ['Rotación y ausentismo', 'Indicadores para actuar antes de perder gente.'],
+  ],
+  errores: [
+    ['Errores de captura', 'La asistencia alimenta la nómina: nada se teclea dos veces.'],
+    ['Multas por altas tardías', 'Checklist de alta con fechas límite ante IMSS.'],
+    ['Reclamos por pagos', 'Cada recibo desglosa percepciones y deducciones.'],
+    ['Vacaciones mal contadas', 'Saldo por antigüedad calculado automáticamente.'],
+    ['Dependencia de una persona', 'El proceso vive en el sistema, no en un Excel personal.'],
+  ],
+  vs: [['Excel de nómina', 'Cálculo automático y auditable'], ['Lista de asistencia en papel', 'Checador digital'], ['Vacaciones por correo', 'Flujo de aprobación con saldos'], ['Recibos impresos', 'CFDI de nómina por WhatsApp o correo']],
+  impacto: [['−90%', 'errores de nómina'], ['6 h', 'menos por quincena'], ['0', 'multas por altas tardías'], ['+12 pts', 'en clima laboral']],
+  modulos: ['Empleados', 'Asistencia', 'Vacaciones', 'Incidencias', 'Nómina', 'Recibos CFDI', 'Clima NOM-035', 'Organigrama', 'Reportes'],
+  tiempo: '4 a 6 semanas, con una quincena en paralelo para validar.',
+  datos: {
+    folio: 'MV', porDia: 9, horas: [7, 19], vivo: true, pool: 48, semana: [0.1, 1, 1, 1, 1, 1.4, 0.3],
+    cats: [['Nómina quincenal', 9200, 5], ['Horas extra', 850, 3], ['Bono de puntualidad', 600, 2.5], ['Prima vacacional', 3100, 1], ['Incapacidad IMSS', 1800, 0.7], ['Finiquito', 14500, 0.2]],
+    staff: ['Operaciones', 'Ventas', 'Administración', 'Almacén'], sucs: ['Matriz CDMX', 'Sucursal Querétaro', 'Sucursal Monterrey'],
+    estados: [['Por aprobar', 'pend', 2], ['Aprobada', 'pend', 1], ['Pagada', 'ok', 14], ['Rechazada', 'bad', 0.7]],
+    pagos: [['Transferencia SPEI', 8], ['Vales de despensa', 1.5], ['Efectivo', 0.5]],
+    labels: { reg: 'movimiento', regs: 'movimientos', nuevo: 'Nuevo movimiento', cli: 'Empleado', cat: 'Concepto', staff: 'Área' },
+  },
+  kpis: [['ing', { l: 'Nómina pagada' }], ['n', { l: 'Movimientos' }], { l: 'Costo patronal (IMSS, INFONAVIT)', f: (s) => s.ing * 0.27, fmt: 'mxn', inv: 1 },
+    ['cli', { l: 'Empleados con movimientos' }], ['pend', { l: 'Solicitudes por aprobar' }],
+    { l: 'Horas extra pagadas', f: (s) => s.ok.filter((r) => r.cat === 'Horas extra').reduce((a, r) => a + r.monto, 0), fmt: 'mxn', inv: 1 },
+    { l: 'Ausentismo', f: (s) => 1.9 + (s.n ? s.rows.filter((r) => r.cat === 'Incapacidad IMSS').length / s.n * 30 : 0), fmt: 'pct', inv: 1 },
+    { l: 'Rotación mensual', f: (s) => 1.2 + (s.n ? s.rows.filter((r) => r.cat === 'Finiquito').length / s.n * 60 : 0), fmt: 'pct', inv: 1 },
+    { l: 'Clima laboral (NOM-035)', f: (s) => 74 + (s.n ? s.ok.length / s.n * 10 : 0), fmt: 'pct' }],
+  charts: [
+    { t: 'line', titulo: 'Nómina pagada' },
+    { t: 'gauge', titulo: 'Clima laboral', k: 8 },
+    { t: 'bars', titulo: 'Costo por área y concepto', by: 'staff', stack: 'cat' },
+    { t: 'donut', titulo: 'Conceptos', by: 'cat' },
+    { t: 'heat', titulo: 'Registro de incidencias', sub: 'Hora y día' },
+    { t: 'radar', titulo: 'Comparativo por sede', by: 'suc' },
+    { t: 'tree', titulo: 'Nómina por sede', by: 'suc' },
+  ],
+  alertas: [['bad', 'Alta ante IMSS de Itzel Vargas vence mañana (5 días hábiles)'], ['warn', '3 solicitudes de vacaciones sin responder desde hace 4 días'], ['info', 'Faltan 12 días para el cierre de quincena']],
+  demo: [
+    { t: 'calc', titulo: 'Calculadora de nómina mensual', resultado: 'Recibo estimado', total: 'Neto a pagar',
+      campos: [{ id: 'sueldo', l: 'Sueldo mensual bruto', t: 'num', v: 18000, min: 7468, max: 200000 }, { id: 'faltas', l: 'Faltas injustificadas (días)', t: 'num', v: 0, min: 0, max: 15 }, { id: 'extra', l: 'Horas extra dobles', t: 'num', v: 4, min: 0, max: 36 }, { id: 'bono', l: 'Bono de puntualidad ($600)', t: 'chk', v: true }, { id: 'info', l: 'Crédito INFONAVIT (descuento mensual)', t: 'num', v: 0, min: 0, max: 20000 }],
+      formula: (v) => { const dia = v.sueldo / 30, base = v.sueldo - dia * v.faltas, ext = dia / 8 * 2 * v.extra, bono = v.bono && !v.faltas ? 600 : 0, grav = base + ext + bono; return [['Sueldo', v.sueldo], ...(v.faltas ? [['Faltas', -dia * v.faltas]] : []), ...(ext ? [['Horas extra dobles', ext]] : []), ...(bono ? [['Bono de puntualidad', bono]] : []), ['ISR retenido', -isr(grav)], ['IMSS (cuota obrera)', -grav * 0.02775], ...(v.info ? [['INFONAVIT', -v.info]] : [])]; },
+      nota: 'Cálculo ilustrativo con tarifa mensual de ISR y cuota obrera aproximada. El bono se pierde con cualquier falta.' },
+    { t: 'kanban', titulo: 'Solicitudes e incidencias de hoy', nuevo: 'Nueva solicitud', estados: ['Por aprobar', 'Aprobada', 'Pagada'], msg: '{c}, tu pago ya fue depositado. Consulta tu recibo en el portal.' },
+    { t: 'board', id: 'asis', modo: 'grid', titulo: 'Asistencia de hoy · Matriz CDMX', ayuda: 'Toca a un colaborador para cambiar su registro.',
+      estados: [['Presente', 'ok'], ['Retardo', 'pend'], ['Falta', 'bad'], ['Vacaciones', 'c2']],
+      items: [['Sofía H.', 0], ['Mateo G.', 0], ['Regina M.', 1], ['Diego L.', 0], ['Ximena P.', 0], ['Carlos R.', 2], ['Itzel V.', 0], ['Jorge S.', 3], ['Paola C.', 0], ['Héctor F.', 0], ['Lucía G.', 1], ['Arturo M.', 0]] },
+    { t: 'checklist', id: 'alta', titulo: 'Alta de empleado: Itzel Vargas', listo: 'Expediente completo. Alta lista para enviar.',
+      items: ['Identificación oficial (INE)', 'RFC con homoclave', 'CURP', 'Número de Seguridad Social', 'Comprobante de domicilio', 'Contrato firmado', 'Alta ante IMSS (IDSE)', 'Cuenta CLABE para pago', 'Cuestionario NOM-035'], hechos: ['Identificación oficial (INE)', 'RFC con homoclave', 'CURP', 'Contrato firmado'] },
+  ],
+});

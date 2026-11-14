@@ -1,0 +1,32 @@
+/* Navaja & Latón — Barbería vintage. Cuero, latón, rayas de poste, letrero pintado, balanceo de letrero. */
+:root{--bg:#2B1D14;--card:#36251A;--ink:#EDE0C8;--mut:#C2AE8E;--line:#5A4332;--c1:#B88A44;--c2:#A63D2F;--c3:#3F6C8C;--c4:#EDE0C8;--c5:#7A8B52;--c6:#8C5A3C;--on:#20140C;--ok:#9DB86A;--pend:#D9A84E;--bad:#E07860;--osc:1;
+  --r:4px;--rb:2px;--bd:1px solid #6E5238;--sh:inset 0 0 0 4px #36251A,inset 0 0 0 5px #6E523888;--fd:'Abril Fatface',serif;--fb:'Old Standard TT',serif;--hw:400;--hls:.01em;--max:1060px;--pad:22px;
+  --rv-y:0px;--rv-x:-30px;--rv-t:.8s;--rv-e:cubic-bezier(.3,1.4,.5,1);--rv-s:90ms;--ico-w:1.6;--ico-cap:butt;--ico-join:miter}
+body{font-size:1.08rem;background:repeating-linear-gradient(90deg,#00000014 0 2px,transparent 2px 9px),radial-gradient(900px 500px at 70% 0,#4A3222,transparent),var(--bg);padding-left:18px}
+body::before{content:"";position:fixed;z-index:60;inset:0 auto 0 0;width:18px;background:repeating-linear-gradient(135deg,#A63D2F 0 14px,#EDE0C8 14px 28px,#3F6C8C 28px 42px,#EDE0C8 42px 56px);background-size:100% 79px;animation:poste 3s linear infinite;box-shadow:inset -4px 0 6px #0006}
+@keyframes poste{to{background-position:0 79px}}
+h1 em{display:block;font-family:var(--fb);font-style:italic;font-size:.5em;color:var(--c1);margin-top:.4em;line-height:1.2}
+h2{text-align:center}h2::after{content:"✂ ─────── ✂";display:block;font-size:.9rem;color:var(--c1);letter-spacing:.2em;margin-top:.5em;font-family:var(--fb)}
+.nav{background:#20140C;border-bottom:3px double var(--c1)}
+.logo{border-radius:50%;border:2px solid #20140C;outline:2px solid var(--c1)}.brand-t b{font-family:var(--fd);font-size:1.2rem;font-weight:400}
+.tabs a{font-style:italic;font-weight:400;font-size:1.05rem}.tabs a[aria-current]{background:none;color:var(--c1);text-decoration:underline wavy;text-underline-offset:6px}
+.kicker{color:var(--c1);font-style:italic;text-transform:none;letter-spacing:.05em;font-size:1.05rem}
+.btn{text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;font-weight:700;border:2px solid #20140C;outline:1px solid var(--c1);background:linear-gradient(#D2A257,#A07530)}
+.btn-2{background:none;color:var(--ink);border-color:transparent}.btn:hover{rotate:-1.5deg;filter:none}
+.art{display:grid;place-items:center}
+.letrero{display:flex;gap:16px;align-items:stretch;transform-origin:50% -40px;animation:balanceo 5s ease-in-out infinite}
+.letrero>div{display:grid;gap:8px;text-align:center;padding:30px 34px;background:var(--ink);color:#20140C;border:3px solid #20140C;outline:2px solid var(--c1);outline-offset:4px;border-radius:8px}
+.letrero strong{font-family:var(--fd);font-weight:400;font-size:clamp(2.2rem,5vw,3.4rem);line-height:.95;color:var(--c2)}.letrero small{letter-spacing:.2em;text-transform:uppercase;font-size:.7rem}.letrero span{font-style:italic}
+.poste{width:16px;border-radius:8px;background:repeating-linear-gradient(135deg,#A63D2F 0 8px,#EDE0C8 8px 16px,#3F6C8C 16px 24px,#EDE0C8 24px 32px);border:2px solid var(--c1)}
+@keyframes balanceo{0%,100%{rotate:-2deg}50%{rotate:2deg}}
+.problema{text-align:center}.problema li{border-left:0;border-bottom:1px dashed var(--c2);font-style:italic}
+.feats ul{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.feats li b,.errores li b{font-family:var(--fd);font-weight:400;font-size:1.25rem;color:var(--c1)}
+.errores ol{grid-template-columns:1fr}.errores li{grid-template-columns:auto 1fr;column-gap:16px}.errores li::before{content:"N.º " counter(e);grid-row:span 2;font-family:var(--fd);color:var(--c2);font-size:1.4rem}
+.impacto li{text-align:center;background:var(--ink);color:#20140C;--mut:#5A4332;border-radius:50% / 14%}.impacto li b{color:var(--c2);font-weight:400}
+.chips{justify-content:center}.chips li{border-style:double;border-width:3px;border-color:var(--c1);border-radius:2px;font-style:italic}.tiempo,.cta{text-align:center}
+.ag-h{font-family:var(--fd);font-weight:400;font-size:1rem;color:var(--c1)}.ag-ev{border-radius:2px}
+.kpi{border-top:4px solid var(--c1)}.kpi-v{font-family:var(--fd);font-weight:400;color:var(--ink)}.spark{color:var(--c2)}
+.chart figcaption b,.w h3,.tb-bar h3{font-family:var(--fd);font-weight:400;font-size:1.2rem}
+th button{color:var(--c1);font-family:var(--fb)}.toast{background:var(--ink);color:#20140C;font-weight:700}
+.seg button[aria-pressed="true"],.logo{background:linear-gradient(#D2A257,#A07530)}
+@media(min-width:1100px){.chart-bars{grid-column:span 8}.chart-gauge{grid-column:span 4}.chart-line{grid-column:span 12}.chart-heat{grid-column:span 7}.chart-donut{grid-column:span 5}.chart-radar,.chart-funnel{grid-column:span 6}}

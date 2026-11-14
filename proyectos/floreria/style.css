@@ -1,0 +1,37 @@
+/* Flor de Mayo — Editorial crema con serif. Mucho aire, filetes finos, itálicas, barra inferior oscura, fundidos lentos. */
+:root{--bg:#F2EBDD;--card:#F8F3E8;--ink:#33401F;--mut:#6E7358;--line:#CFC5AE;--c1:#3D4A2A;--c2:#B5654A;--c3:#8A9A5B;--c4:#D9B26F;--c5:#7A5C3E;--c6:#A9B8A0;--on:#F2EBDD;--ok:#4F6B2F;--pend:#A8782A;--bad:#A8452F;
+  --r:2px;--rb:0px;--bd:1px solid var(--line);--sh:none;--fd:'Cormorant Garamond',serif;--fb:'Jost',sans-serif;--hw:500;--hls:0;--max:1180px;--pad:26px;--gap:22px;--toast-b:84px;
+  --rv-y:10px;--rv-t:1.4s;--rv-e:cubic-bezier(.25,.1,.25,1);--rv-s:140ms;--ico-w:1.2}
+body{font-weight:300;letter-spacing:.01em}
+h1{font-size:clamp(3rem,9vw,7rem);font-weight:400;line-height:.95}h1 em,h2 em{font-style:italic;color:var(--c2)}
+h2{font-size:clamp(1.9rem,4vw,3.2rem);font-weight:400}
+.nav{position:static;justify-content:space-between;padding-block:22px;border-bottom:1px solid var(--line)}
+.brand{margin:0;order:2;flex-direction:column;gap:2px;text-align:center}.logo{display:none}.brand-t{justify-items:center}.brand-t b{font-family:var(--fd);font-size:1.7rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase}.brand-t small{letter-spacing:.3em;text-transform:uppercase;font-size:.62rem}
+.volver{order:1;border:0;text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;padding-left:0}.tools{order:3}.ib{border:0;background:none}
+.tabs{position:fixed;z-index:35;left:0;right:0;bottom:0;width:100%;order:0;background:var(--c1);padding:8px max(12px,calc(50vw - 240px));justify-content:space-between}
+.tabs a{color:#D9D2BE;text-transform:uppercase;letter-spacing:.2em;font-size:.68rem;font-weight:400;flex-direction:column;gap:4px;min-height:52px}
+.tabs a::before{content:"";width:5px;height:5px;border-radius:50%;background:transparent;transition:background .6s}.tabs a[aria-current]{background:none;color:#fff}.tabs a[aria-current]::before{background:var(--c4)}
+.hero{min-height:auto;padding-block:clamp(20px,5vw,70px)}@media(min-width:900px){.hero{grid-template-columns:7fr 4fr}}
+.kicker{letter-spacing:.3em;font-size:.68rem}.lead{font-size:1.12rem;max-width:44ch}
+.btn{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:500;padding:16px 28px;transition:letter-spacing .6s,background .6s}.btn:hover{letter-spacing:.26em;filter:none}
+.btn-2{border:0;border-bottom:1px solid var(--ink);padding-inline:2px}
+.art{background:#E7DECB;display:grid;place-items:center;aspect-ratio:4/5;color:var(--c1);border-radius:200px 200px 2px 2px;overflow:hidden}
+.rama{height:86%;animation:mecer 9s ease-in-out infinite;transform-origin:50% 100%}@keyframes mecer{50%{rotate:2.5deg}}
+.pie-foto{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-family:var(--fd);font-style:italic;font-size:.95rem;margin:0}
+.blk{border-top:1px solid var(--line);padding-top:clamp(28px,4vw,56px)}
+@media(min-width:900px){.blk{display:grid;grid-template-columns:3fr 7fr;gap:10px 60px}.blk>h2{grid-row:span 4}}
+.problema p{font-family:var(--fd);font-size:clamp(1.3rem,2.2vw,1.8rem);line-height:1.3;font-style:italic}
+.problema li{border:0;border-top:1px solid var(--line);padding-left:0;font-size:.95rem}
+.feats ul{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 40px}.feats li,.errores li,.impacto li{background:none;border:0;border-top:1px solid var(--line);padding:18px 0}
+.feats li b,.errores li b{font-family:var(--fd);font-size:1.45rem;font-weight:500}
+.errores ol{gap:0 40px}.errores li::before{content:"N.º " counter(e,decimal-leading-zero);font-size:.66rem;letter-spacing:.24em;color:var(--c2)}
+.vs-grid>div{background:none;border:0;border-top:1px solid var(--ink);padding:18px 0}.vs-grid h3{font-style:italic;font-weight:400;font-size:1.5rem}
+.impacto li b{font-weight:400;font-style:italic;font-size:clamp(2.6rem,5vw,4rem)}
+.chips li{border-radius:0;text-transform:uppercase;letter-spacing:.16em;font-size:.68rem}
+.cta{background:var(--c1)!important;color:var(--on);display:block}.cta p{color:#CFC9B4}.cta .btn{background:var(--bg);color:var(--c1)}
+.w h3,.chart figcaption b,.tb-bar h3{font-family:var(--fd);font-size:1.5rem;font-weight:500}
+.kpi{border:0;border-top:1px solid var(--ink);background:none;padding:16px 0}.kpi-v{font-weight:400;font-size:clamp(1.8rem,3vw,2.6rem)}.kpi-l{text-transform:uppercase;letter-spacing:.18em;font-size:.64rem}.spark{color:var(--c2)}
+.kb-col{background:#EFE7D6}.kb-card{background:var(--card)}.badge{border-radius:0;text-transform:uppercase;letter-spacing:.1em;font-size:.66rem}
+th button{letter-spacing:.18em;font-weight:400}.toast{background:var(--c1);color:var(--on);border-radius:0}
+.seg button{text-transform:uppercase;letter-spacing:.12em;font-size:.68rem}.pie{padding-bottom:100px}
+@media(min-width:1100px){.chart-cal{grid-column:span 12}.chart-line{grid-column:span 8}.chart-tree{grid-column:span 4}.chart-map{grid-column:span 5}.chart-donut{grid-column:span 3}.chart-bars{grid-column:span 4}.chart-gauge{grid-column:span 12;--cv-h:200px}}

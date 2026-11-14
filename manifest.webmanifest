@@ -1,0 +1,1 @@
+{ "name": "NarIT · Digitalizamos tu negocio", "short_name": "NarIT", "start_url": "./index.html", "scope": "./", "display": "standalone", "background_color": "#EEF4EC", "theme_color": "#0F2A1D", "lang": "es-MX", "icons": [{ "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }] }

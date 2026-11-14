@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Página no encontrada</title>
+<meta name="robots" content="noindex">
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;text-align:center;background:#EEF4EC;color:#0F2A1D;font-family:system-ui,sans-serif;padding:24px}h1{font-size:clamp(4rem,18vw,10rem);margin:0;line-height:1;color:#0E8A45}a{display:inline-block;margin-top:20px;padding:12px 24px;border-radius:99px;background:#0F2A1D;color:#EEF4EC;font-weight:700;text-decoration:none}</style>
+</head>
+<body>
+<main><h1>404</h1><p>Esta página no existe o cambió de lugar.</p><a id="v" href="./">Volver al catálogo</a></main>
+<script>
+// En GitHub Pages el sitio vive en /repo/: se calcula la raíz para que el enlace funcione desde cualquier ruta.
+var p = location.pathname.split('/'); document.getElementById('v').href = location.hostname.endsWith('github.io') ? '/' + p[1] + '/' : '/';
+</script>
+</body>
+</html>
