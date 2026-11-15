@@ -14,7 +14,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Onest:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Caveat:wght@600&family=Onest:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="hub.css">
 </head>
 <body>
@@ -56,29 +56,29 @@
   <p class="lead evo-i" data-rv>La libreta se pierde y solo la entiende quien la escribió. El Excel ordena, pero hay que capturar todo a mano y casi nunca está al día. Con un sistema, cada cosa se registra una sola vez, en el momento, y lo demás pasa solo. Mira cinco ejemplos de todos los días:</p>
   <div class="evo">
     <article data-rv><h3>1. Un cliente te pide una cita</h3><ol>
-      <li><b>📒 Con libreta</b><p>La apuntas a mano. Si otra persona contesta el teléfono, se enciman dos citas, y el cliente no llega porque nadie le recordó.</p></li>
-      <li><b>📊 Con Excel</b><p>Ya está en la computadora, pero solo tú abres el archivo y los recordatorios los mandas uno por uno.</p></li>
-      <li><b>📱 Con tu sistema</b><p>El cliente aparta solo desde su celular, el horario queda bloqueado y un día antes le llega su recordatorio por WhatsApp.</p></li>
+      <li><div class="v v-lib" aria-hidden="true">Juan 4pm?? o era 5<br>Ana 4pm <u>← ¡encimadas!</u><br><s>Luis 6pm</s> no vino</div><b>📒 Con libreta</b><p>La apuntas a mano. Si otra persona contesta el teléfono, se enciman dos citas, y el cliente no llega porque nadie le recordó.</p></li>
+      <li><div class="v v-xls" aria-hidden="true"><span>Hora</span><span>Cliente</span><span>Aviso</span><span>4:00</span><span>Juan</span><span><u>falta</u></span><span>4:30</span><span>Ana</span><span><u>falta</u></span><span>6:00</span><span>Luis</span><span><u>falta</u></span></div><b>📊 Con Excel</b><p>Ya está en la computadora, pero solo tú abres el archivo y los recordatorios los mandas uno por uno.</p></li>
+      <li><div class="v v-cel" aria-hidden="true"><b>Juan · 4:00 pm</b><p>✅ Cita apartada por el cliente</p><p>💬 Recordatorio enviado</p></div><b>📱 Con tu sistema</b><p>El cliente aparta solo desde su celular, el horario queda bloqueado y un día antes le llega su recordatorio por WhatsApp.</p></li>
     </ol><a href="proyectos/barberia/index.html#demo">Pruébalo en la demo de barbería →</a></article>
     <article data-rv><h3>2. Cobras una venta</h3><ol>
-      <li><b>📒 Con libreta</b><p>Anotas cada venta y en la noche sumas con calculadora. Si la caja no cuadra, no sabes por qué.</p></li>
-      <li><b>📊 Con Excel</b><p>Capturas las notas al cerrar. Tienes totales, pero un día tarde y con errores de dedo.</p></li>
-      <li><b>📱 Con tu sistema</b><p>Tocas los productos, cobras y la venta queda guardada. El corte de caja sale solo, por turno y por empleado.</p></li>
+      <li><div class="v v-lib" aria-hidden="true">3 tacos 45 · 2 refr 40<br>orden 7... ¿ya pagó?<br>corte: <s>$1,240</s> <u>1,420?</u></div><b>📒 Con libreta</b><p>Anotas cada venta y en la noche sumas con calculadora. Si la caja no cuadra, no sabes por qué.</p></li>
+      <li><div class="v v-xls" aria-hidden="true"><span>Nota</span><span>Total</span><span>Pago</span><span>001</span><span>85</span><span>efectivo</span><span>002</span><span><u>12O</u></span><span>tarjeta</span><span>Suma</span><span><u>#¡VALOR!</u></span><span></span></div><b>📊 Con Excel</b><p>Capturas las notas al cerrar. Tienes totales, pero un día tarde y con errores de dedo.</p></li>
+      <li><div class="v v-cel" aria-hidden="true"><b>Total $85.00</b><p>✅ Cobrado · efectivo</p><p>🧾 Corte del turno: cuadra</p></div><b>📱 Con tu sistema</b><p>Tocas los productos, cobras y la venta queda guardada. El corte de caja sale solo, por turno y por empleado.</p></li>
     </ol><a href="proyectos/taqueria/index.html#demo">Pruébalo en la demo de taquería →</a></article>
     <article data-rv><h3>3. Se está acabando un producto</h3><ol>
-      <li><b>📒 Con libreta</b><p>Te enteras cuando el cliente lo pide y ya no hay.</p></li>
-      <li><b>📊 Con Excel</b><p>Tienes la lista, pero hay que descontar cada venta a mano y casi nunca coincide con el anaquel.</p></li>
-      <li><b>📱 Con tu sistema</b><p>Cada venta descuenta del inventario y te avisa antes de que algo se termine o caduque.</p></li>
+      <li><div class="v v-lib" aria-hidden="true">comprar... ¿qué faltaba?<br>refrescos <u>¿hay?</u><br>pan: se echó a perder</div><b>📒 Con libreta</b><p>Te enteras cuando el cliente lo pide y ya no hay.</p></li>
+      <li><div class="v v-xls" aria-hidden="true"><span>Producto</span><span>Hay</span><span>Al día</span><span>Refresco</span><span>24</span><span><u>¿?</u></span><span>Pan</span><span>10</span><span><u>¿?</u></span><span>Queso</span><span><u>-2</u></span><span><u>¿?</u></span></div><b>📊 Con Excel</b><p>Tienes la lista, pero hay que descontar cada venta a mano y casi nunca coincide con el anaquel.</p></li>
+      <li><div class="v v-cel" aria-hidden="true"><b>Inventario</b><p>⚠️ Quedan 3 refrescos</p><p>📦 Pedido sugerido listo</p></div><b>📱 Con tu sistema</b><p>Cada venta descuenta del inventario y te avisa antes de que algo se termine o caduque.</p></li>
     </ol><a href="proyectos/inventario/index.html#demo">Pruébalo en la demo de inventario →</a></article>
     <article data-rv><h3>4. Un cliente te queda a deber</h3><ol>
-      <li><b>📒 Con libreta</b><p>Está en una hoja que hay que buscar. A veces se pierde y a veces se olvida cobrar.</p></li>
-      <li><b>📊 Con Excel</b><p>Hay una lista de adeudos, pero nadie te avisa cuando uno ya se venció.</p></li>
-      <li><b>📱 Con tu sistema</b><p>Ves quién debe, cuánto y desde cuándo, y el recordatorio de pago se manda solo.</p></li>
+      <li><div class="v v-lib" aria-hidden="true">Sra. Lupe debe $350<br><u>¿o ya había pagado?</u><br>Don Beto $$ (hoja suelta)</div><b>📒 Con libreta</b><p>Está en una hoja que hay que buscar. A veces se pierde y a veces se olvida cobrar.</p></li>
+      <li><div class="v v-xls" aria-hidden="true"><span>Cliente</span><span>Debe</span><span>Desde</span><span>Lupe</span><span>350</span><span>marzo</span><span>Beto</span><span>120</span><span><u>¿?</u></span><span>Rosa</span><span>80</span><span><u>vencido</u></span></div><b>📊 Con Excel</b><p>Hay una lista de adeudos, pero nadie te avisa cuando uno ya se venció.</p></li>
+      <li><div class="v v-cel" aria-hidden="true"><b>Lupe debe $350</b><p>⏰ Venció hace 12 días</p><p>💬 Aviso de pago enviado</p></div><b>📱 Con tu sistema</b><p>Ves quién debe, cuánto y desde cuándo, y el recordatorio de pago se manda solo.</p></li>
     </ol><a href="proyectos/abarrotes/index.html#demo">Pruébalo en la demo de abarrotes →</a></article>
     <article data-rv><h3>5. Quieres saber cómo te fue en el mes</h3><ol>
-      <li><b>📒 Con libreta</b><p>Juntas hojas y haces cuentas todo un fin de semana.</p></li>
-      <li><b>📊 Con Excel</b><p>Armas fórmulas y gráficas, si tienes tiempo y sabes cómo.</p></li>
-      <li><b>📱 Con tu sistema</b><p>Abres tu celular y ves ventas, ganancia y lo más vendido, al día y sin hacer cuentas.</p></li>
+      <li><div class="v v-lib" aria-hidden="true">lun 1,240 + mar 980 +<br>mié <u>¿dónde quedó?</u><br>total mes = <u>???</u></div><b>📒 Con libreta</b><p>Juntas hojas y haces cuentas todo un fin de semana.</p></li>
+      <li><div class="v v-xls" aria-hidden="true"><span>Mes</span><span>Ventas</span><span>Gasto</span><span>Sept</span><span>184,2..</span><span><u>#¡REF!</u></span><span>Oct</span><span>=SUMA(</span><span><u>…</u></span><span>Total</span><span><u>#¡REF!</u></span><span></span></div><b>📊 Con Excel</b><p>Armas fórmulas y gráficas, si tienes tiempo y sabes cómo.</p></li>
+      <li><div class="v v-cel" aria-hidden="true"><b>Octubre $186,400</b><span class="bar"><i style="height:45%"></i><i style="height:60%"></i><i style="height:52%"></i><i style="height:80%"></i><i style="height:100%"></i></span><p>📈 12% más que septiembre</p></div><b>📱 Con tu sistema</b><p>Abres tu celular y ves ventas, ganancia y lo más vendido, al día y sin hacer cuentas.</p></li>
     </ol><a href="proyectos/restaurante/index.html#panel">Míralo en el panel del restaurante →</a></article>
   </div>
   <h3 class="evo-t" data-rv>Tu nuevo proceso, en tres pasos</h3>
