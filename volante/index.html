@@ -8,7 +8,7 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Onest:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Caveat:wght@600&family=Onest:wght@400;500;700&display=swap">
 <style>
 /* Volante media carta (5.5 × 8.5 in). Por defecto salen 2 por hoja carta horizontal, para cortar a la mitad. */
 @page{size:letter landscape;margin:0}
@@ -25,24 +25,34 @@ body{font-family:var(--fb);color:var(--t);background:#8a958c;line-height:1.3}
 .vol+.vol{border-left:1px dashed #9aa59c}
 body.carta .hoja{width:8.5in;height:11in;justify-content:center}body.carta .vol{zoom:1.28}body.carta .vol+.vol{display:none}
 
-.cab{flex:none;position:relative;background:var(--t);color:#fff;padding:.26in .36in .22in;overflow:hidden}
-.cab::after{content:"";position:absolute;right:-.7in;top:-.7in;width:2.3in;height:2.3in;border-radius:50%;border:.32in solid #1B4530}
-.marca{display:flex;align-items:center;gap:.1in;font-family:var(--fd);font-weight:800;font-size:.27in;position:relative;z-index:1}
-.marca img{height:.62in;width:auto;background:#EEF4EC;border-radius:.1in;padding:.04in .07in}
-.marca small{display:block;font-family:var(--fb);font-weight:500;font-size:.105in;color:var(--a2);letter-spacing:.08em;text-transform:uppercase}
-.gancho{font-size:.15in;color:var(--a2);font-weight:700;margin-top:.2in;position:relative;z-index:1}
-h1{font-family:var(--fd);font-weight:800;font-size:.47in;line-height:.95;letter-spacing:-.03em;margin-top:.05in;position:relative;z-index:1}
+.cab{flex:none;position:relative;background:var(--t);color:#fff;padding:.24in .36in .2in;overflow:hidden}
+.cab::after{content:"";position:absolute;right:-.9in;bottom:-1.3in;width:2.3in;height:2.3in;border-radius:50%;border:.3in solid #1B4530}
+.marca{display:flex;align-items:center;gap:.1in;font-family:var(--fd);font-weight:800;font-size:.25in;position:relative;z-index:1}
+.marca img{height:.56in;width:auto;background:#EEF4EC;border-radius:.1in;padding:.04in .07in}
+.marca small{display:block;font-family:var(--fb);font-weight:500;font-size:.1in;color:var(--a2);letter-spacing:.08em;text-transform:uppercase}
+.sello{position:absolute;z-index:2;right:.3in;top:.2in;width:1.02in;height:1.02in;border-radius:50%;background:var(--a2);color:var(--t);display:grid;place-content:center;text-align:center;font-family:var(--fd);font-weight:800;font-size:.15in;line-height:1;rotate:10deg;box-shadow:0 0 0 .03in var(--t),0 0 0 .05in var(--a2)}
+.sello small{display:block;font-family:var(--fb);font-size:.085in;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.03in}
+h1{font-family:var(--fd);font-weight:800;font-size:.5in;line-height:.93;letter-spacing:-.03em;margin-top:.17in;position:relative;z-index:1}
 h1 em{font-style:normal;color:var(--a2)}
-.sub{font-size:.14in;margin-top:.11in;max-width:4.2in;color:#DCEBDD;position:relative;z-index:1}
+.sub{font-size:.15in;margin-top:.1in;max-width:4.3in;color:#DCEBDD;position:relative;z-index:1}.sub b{color:#fff}
 
-.benef{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.1in;padding:.14in .36in 0}
-.benef li{border:1.5px solid var(--l);border-top:.05in solid var(--a);border-radius:.1in;padding:.1in .12in}
-.benef b{display:block;font-family:var(--fd);font-weight:800;font-size:.215in;line-height:1;letter-spacing:-.02em}
-.benef span{display:block;font-size:.118in;color:var(--m);margin-top:.04in}
-.que{padding:.15in .36in 0;font-size:.125in}
-.que h2{font-family:var(--fd);font-size:.15in;font-weight:800;margin-bottom:.06in}
-.que ul{list-style:none;display:flex;flex-wrap:wrap;gap:.05in}
-.que li{padding:.03in .09in;border-radius:99px;background:var(--p);border:1px solid var(--l);font-weight:500}
+/* Ilustración antes → ahora, dibujada con CSS para que imprima nítida */
+.viaje{flex:none;display:grid;grid-template-columns:1fr auto 1fr;gap:.12in;align-items:center;padding:.17in .36in 0}
+.viaje figure{display:grid;gap:.06in;justify-items:center}
+.viaje figcaption{font-size:.105in;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--m)}.viaje figure+i+figure figcaption{color:var(--a)}
+.viaje>i{font-style:normal;font-family:var(--fd);font-weight:800;font-size:.42in;color:var(--a);line-height:1}
+.lib{width:1.85in;height:1.32in;rotate:-3deg;background:repeating-linear-gradient(#FFF6CF 0 .2in,#B9C9E6 .2in .21in);border:1.5px solid #C9B56A;border-left:.14in solid #B4533A;border-radius:.04in .1in .1in .04in;padding:.03in .1in;font-family:'Caveat',cursive;font-size:.185in;line-height:.21in;color:#27356B;box-shadow:.03in .05in 0 #0001;overflow:hidden;white-space:nowrap}
+.lib s{color:#B4533A}.lib u{text-decoration:none;color:#B4533A}
+.cel{width:1.5in;height:1.32in;background:var(--t);border-radius:.16in .16in 0 0;padding:.08in .08in 0;rotate:2deg}
+.cel>div{height:100%;background:#fff;border-radius:.1in .1in 0 0;padding:.08in .09in 0;display:grid;gap:.045in;align-content:start;font-size:.09in;color:var(--m)}
+.cel b{display:block;font-family:var(--fd);font-weight:800;font-size:.2in;line-height:1;color:var(--t)}
+.cel .bar{display:flex;align-items:flex-end;gap:.03in;height:.3in}.cel .bar i{flex:1;background:var(--l);border-radius:.02in .02in 0 0}.cel .bar i:last-child{background:var(--a)}
+.cel p{display:flex;gap:.04in;align-items:center;background:var(--p);border-radius:.04in;padding:.025in .05in;font-weight:700;color:var(--t);white-space:nowrap}.cel p::before{content:"";width:.07in;height:.07in;border-radius:50%;background:var(--a);flex:none}.cel p+p::before{background:#E0A100}
+
+.benef{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.09in;padding:.16in .36in 0}
+.benef li{border:1.5px solid var(--l);border-left:.06in solid var(--a);border-radius:.1in;padding:.09in .11in}
+.benef b{display:block;font-family:var(--fd);font-weight:800;font-size:.19in;line-height:1;letter-spacing:-.02em}
+.benef span{display:block;font-size:.112in;color:var(--m);margin-top:.04in}
 .giros{padding:.1in .36in 0;font-size:.112in;color:var(--m)}.giros b{color:var(--t)}
 
 .accion{flex:none;margin-top:auto;display:grid;grid-template-columns:auto 1fr;gap:.2in;align-items:center;background:var(--p);padding:.14in .36in;border-top:.04in solid var(--a)}
@@ -75,29 +85,30 @@ h1 em{font-style:normal;color:var(--a2)}
 <article class="vol">
   <header class="cab">
     <div class="marca"><img src="../assets/favicon.svg" alt=""><span><span data-marca>NarIT</span><small>Digitalización de negocios</small></span></div>
-    <p class="gancho">¿Sigues con libreta, Excel y WhatsApp desordenado?</p>
-    <h1>Digitalizamos<br>tu <em>negocio.</em></h1>
-    <p class="sub">Citas, ventas, inventario y clientes en un solo sistema hecho a tu medida. Desde tu celular.</p>
+    <p class="sello"><small>Diagnóstico</small>GRATIS</p>
+    <h1>¿Tu negocio sigue<br>en una <em>libreta?</em></h1>
+    <p class="sub">Pásalo a tu celular. <b>Citas, ventas e inventario</b> en un sistema fácil, hecho a tu medida.</p>
   </header>
 
-  <ul class="benef">
-    <li><b>Ahorra tiempo</b><span>Deja de apuntar y sumar a mano. Corte de caja en minutos.</span></li>
-    <li><b>Vende más</b><span>Cero citas y pedidos perdidos. Tus clientes reservan solos.</span></li>
-    <li><b>Cuida tu dinero</b><span>Caja, fiado, merma e inventario bajo control.</span></li>
-    <li><b>Decide con datos</b><span>Ventas y ganancias claras en tu celular.</span></li>
-  </ul>
+  <div class="viaje" aria-hidden="true">
+    <figure><div class="lib">Juan 4pm?? o era 5<br><s>corte: $1,240</s> <u>1,420?</u><br>Sra. Lupe debe $350<br>comprar... ¿qué faltaba?<br>cita Ana - no vino<br>fiado Don Beto $$</div><figcaption>Antes: apuntes que se pierden</figcaption></figure>
+    <i>→</i>
+    <figure><div class="cel"><div>Ventas de hoy<b>$8,450</b><span class="bar"><i style="height:40%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:75%"></i><i style="height:100%"></i></span><p>12 citas confirmadas</p><p>Quedan 3 refrescos</p></div></div><figcaption>Ahora: todo en tu celular</figcaption></figure>
+  </div>
 
-  <section class="que">
-    <h2>Lo que hago por ti</h2>
-    <ul><li>Citas y reservas en línea</li><li>Punto de venta</li><li>Inventario</li><li>Recordatorios por WhatsApp</li><li>Cobranza y facturas</li><li>Reportes</li></ul>
-  </section>
+  <ul class="benef">
+    <li><b>Ni una cita perdida</b><span>Tus clientes apartan solos y les llega recordatorio por WhatsApp.</span></li>
+    <li><b>Caja en 5 minutos</b><span>El corte sale solo. Se acabó sumar notas en la noche.</span></li>
+    <li><b>Cobra lo que te deben</b><span>Fiado y adeudos a la vista, con aviso automático.</span></li>
+    <li><b>Todo en tu bolsillo</b><span>Ventas, inventario y ganancias desde tu celular.</span></li>
+  </ul>
   <p class="giros"><b>Para:</b> restaurantes · taquerías · barberías · estéticas · consultorios · tiendas · talleres · gimnasios · escuelas y más.</p>
 
   <section class="accion">
     <div class="qr"><div data-qr="sitio" role="img" aria-label="Código QR"></div><span data-qr-txt>Escanea y prueba</span></div>
     <div class="cta">
-      <h2>Mira cómo se vería en tu negocio</h2>
-      <p>24 ejemplos que puedes probar con el dedo. Diagnóstico sin costo.</p>
+      <h2>Pruébalo gratis hoy</h2>
+      <p>Escanea el código y juega con 24 ejemplos de negocios como el tuyo.</p>
       <div class="wa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.5-4.5A8 8 0 1 1 9 19z"/></svg><span><small>WhatsApp</small><b data-tel>56 3156 9317</b></span></div>
       <p class="url" data-url></p>
     </div>

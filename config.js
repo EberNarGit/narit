@@ -8,5 +8,5 @@ export const CONFIG = {
   marca: 'NarIT',
   nombre: 'NarIT',
   email: 'NarIT@gmail.com',
-  ciudad: 'Ciudad de México',
+  ciudad: 'México',
 };
