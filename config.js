@@ -6,7 +6,7 @@ export const CONFIG = {
   // Ejemplo: 'https://tu-usuario.github.io/narit/'. Si se deja vacía, el QR del volante lleva a WhatsApp.
   sitio: 'https://ebernargit.github.io/narit/',
   marca: 'NarIT',
-  nombre: 'Tu Nombre',
+  nombre: 'NarIT',
   email: 'NarIT@gmail.com',
   ciudad: 'Ciudad de México',
 };

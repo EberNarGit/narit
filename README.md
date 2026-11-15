@@ -41,7 +41,7 @@ export const CONFIG = {
   whatsapp: '525631569317',  // 52 + 10 dígitos, sin "+" ni espacios
   sitio: '',                 // dirección de GitHub Pages; el QR del volante apunta aquí
   marca: 'NarIT',
-  nombre: 'Tu Nombre',
+  nombre: 'NarIT',
   email: 'NarIT@gmail.com',
   ciudad: 'Ciudad de México',
 };
