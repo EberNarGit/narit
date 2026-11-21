@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Casa Olmo · Muebles que se quedan</title>
+<meta name="description" content="Ejemplo de tienda en línea para mueblería, hecho por NarIT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tienda.css">
+</head>
+<body>
+<div class="demo-bar">Ejemplo de tienda hecho por <a href="../../">NarIT</a> · <a href="admin.html" target="_blank" rel="noopener">Abrir el panel del dueño ↗</a> · <a href="guia.html">Guía</a></div>
+
+<header class="cab">
+  <a class="logo" href="#inicio" aria-label="Casa Olmo, inicio"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 34V16L20 6l12 10v18M15 34V22h10v12"/></svg><span>Casa Olmo<small>Muebles que se quedan</small></span></a>
+  <nav aria-label="Secciones"><a href="#catalogo">Catálogo</a><a href="#categorias">Categorías</a><a href="#promo">Ofertas</a><a href="#" data-abrir="rastreo">Mi pedido</a></nav>
+  <div class="cab-acc">
+    <button class="ico-btn" data-abrir="rastreo" aria-label="Mi pedido"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a2 2 0 1 0 0-.1M17 19a2 2 0 1 0 0-.1"/></svg></button>
+    <button class="ico-btn" data-abrir="fav" aria-label="Favoritos"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><b id="nFav" hidden></b></button>
+    <button class="ico-btn" data-abrir="carrito" aria-label="Carrito"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h11L21 8H6.2M9 20a1 1 0 1 0 0-.1M18 20a1 1 0 1 0 0-.1"/></svg><b id="nCar" hidden></b></button>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="hero-t">
+      <p class="eti">Hecho para tu casa</p>
+      <h1>Muebles que se <em>quedan</em> contigo.</h1>
+      <p>Salas, comedores y recámaras de madera real. Aparta con el 30% y paga el resto al recibir.</p>
+      <div class="hero-a"><a class="b b-osc" href="#catalogo">Ver catálogo →</a><a class="b b-lin" href="#promo">Ofertas de temporada</a></div>
+      <ul class="sellos"><li><b>+1,200</b> casas amuebladas</li><li><b>4.9 ★</b> en reseñas</li></ul>
+    </div>
+    <div class="hero-f"><img src="https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?w=1100&q=72&auto=format&fit=crop" alt="Sala con sofá claro y mesa de centro redonda" fetchpriority="high"></div>
+  </section>
+
+  <ul class="benef">
+    <li><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a2 2 0 1 0 0-.1M17 19a2 2 0 1 0 0-.1"/></svg><div><b>Envío a domicilio</b><span id="txtEnvio">Gratis en compras grandes</span></div></li>
+    <li><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><div><b>Compra segura</b><span>Confirmamos tu pedido por WhatsApp</span></div></li>
+    <li><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4zM8 7V5h8v2M4 12h16"/></svg><div><b>Aparta tu mueble</b><span id="txtAnticipo">Con anticipo</span></div></li>
+    <li><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/></svg><div><b>Garantía de 1 año</b><span>En estructura y mecanismos</span></div></li>
+  </ul>
+
+  <section id="categorias" class="sec">
+    <div class="sec-h"><h2>Compra por espacio</h2></div>
+    <div class="cats" id="cats"></div>
+  </section>
+
+  <section id="catalogo" class="sec">
+    <div class="sec-h"><h2>Catálogo</h2>
+      <div class="filtros"><input id="busca" type="search" placeholder="Buscar sofá, mesa, lámpara…" aria-label="Buscar en el catálogo">
+        <select id="orden" aria-label="Ordenar"><option value="">Destacados</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option><option value="nuevo">Más nuevos</option></select></div>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <div class="cinta" aria-hidden="true"><div>APARTA CON EL 30% · ENVÍO A TODA LA CIUDAD · MADERA REAL · GARANTÍA DE 1 AÑO · APARTA CON EL 30% · ENVÍO A TODA LA CIUDAD · MADERA REAL · GARANTÍA DE 1 AÑO ·</div></div>
+
+  <section id="promo" class="sec"></section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>Lo que dicen en casa</h2></div>
+    <div class="resenas">
+      <figure><blockquote>«Pedí el comedor por aquí, me avisaron cada paso y llegó el día que dijeron. Ni tuve que llamar.»</blockquote><figcaption><b>Patricia G.</b> · Comedor Roble</figcaption></figure>
+      <figure><blockquote>«Aparté la sala con el anticipo en aguinaldo y terminé de pagar al recibirla. Súper fácil.»</blockquote><figcaption><b>Daniel R.</b> · Sala modular Brisa</figcaption></figure>
+      <figure><blockquote>«Con el folio veía en qué iba mi pedido. La calidad del sillón es otra cosa.»</blockquote><figcaption><b>Sofía M.</b> · Sillón Nube</figcaption></figure>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div><a class="logo" href="#inicio"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 34V16L20 6l12 10v18M15 34V22h10v12"/></svg><span>Casa Olmo<small>Muebles que se quedan</small></span></a><p>Showroom: Av. Ejemplo 123, Ciudad de México.<br>Lunes a sábado de 10 a 19 h.</p></div>
+  <div><b>Tienda</b><a href="#catalogo">Catálogo</a><a href="#promo">Ofertas</a><a href="#" data-abrir="rastreo">Rastrear mi pedido</a></div>
+  <div><b>¿Dudas?</b><a id="waPie" target="_blank" rel="noopener" href="#">Escríbenos por WhatsApp</a><span>Este es un ejemplo: los pedidos no son reales.</span></div>
+</footer>
+
+<!-- Ficha de producto -->
+<dialog id="dlgProd" class="dlg-prod"></dialog>
+<!-- Carrito y pago -->
+<dialog id="dlgCar" class="lateral"></dialog>
+<!-- Favoritos -->
+<dialog id="dlgFav" class="lateral"></dialog>
+<!-- Rastreo -->
+<dialog id="dlgRas" class="dlg-ras"></dialog>
+
+<script type="module" src="tienda.js"></script>
+</body>
+</html>

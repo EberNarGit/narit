@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Guía · Sistema para mueblería</title>
+<link rel="stylesheet" href="../_base/guia.css">
+</head>
+<body>
+<header class="g-cab"><a href="../">← Sistemas NarIT</a><span>Guía interna · Mueblería</span></header>
+<main class="g">
+  <p class="eti">Bloque 1 · Mueblería</p>
+  <h1>Casa Olmo: tienda en línea + panel del dueño</h1>
+  <p class="lead">Un solo sistema con dos caras. El <b>cliente</b> ve los muebles, compra o aparta y rastrea su pedido con un folio. El <b>dueño</b> sube productos con foto, controla inventario y precios, y atiende pedidos y cobros desde el celular.</p>
+  <div class="botones"><a class="b" href="index.html" target="_blank" rel="noopener">Abrir la tienda (cliente) ↗</a><a class="b sec" href="admin.html" target="_blank" rel="noopener">Abrir el panel (dueño) ↗ · PIN 1234</a></div>
+
+  <nav class="indice" aria-label="Contenido"><a href="#demo">Demo en 5 minutos</a><a href="#problemas">Problemas del negocio</a><a href="#modulos">Módulos</a><a href="#flujo">Flujo de un pedido</a><a href="#reglas">Reglas que ya hace solo</a><a href="#real">Demo vs. sistema real</a><a href="#fases">Fases para vender</a><a href="#preguntas">Preguntas del dueño</a></nav>
+
+  <section id="demo"><h2>Demo en 5 minutos (lo que más vende)</h2>
+    <p>Abre la tienda y el panel <b>lado a lado</b> (dos pestañas o la tienda en el celular del dueño y el panel en tu laptop). Todo lo que pasa en uno aparece en el otro al momento.</p>
+    <ol class="pasos">
+      <li><b>Haz que él compre.</b> Dale tu celular con la tienda. Que agregue el Sillón Nube al carrito y haga el pedido como «Apartado con anticipo». Le sale un folio.</li>
+      <li><b>Enséñale que le llegó.</b> En el panel aparece el aviso «Nuevo pedido» y el contador rojo en Pedidos. Ábrelo: ve el cliente, la dirección, lo que debe y el anticipo.</li>
+      <li><b>Cambia el estado.</b> Pásalo a «Confirmado» y registra el anticipo. En su celular, en «Mi pedido», la línea de avance se mueve sola. Di: «Así tu cliente ya no te marca para preguntar».</li>
+      <li><b>Sube un mueble.</b> En Productos → Subir producto, toma una foto con la cámara de cualquier cosa, pon costo y precio. Mira cómo te dice cuánto ganas por pieza. Guárdalo y aparece en la tienda.</li>
+      <li><b>Cierra con el dinero.</b> En Inicio: ventas del mes, lo que te deben de apartados y cuánto dinero tienes parado en inventario. Pregunta: «¿Hoy sabes estos tres números?».</li>
+    </ol>
+  </section>
+
+  <section id="problemas"><h2>Problemas de una mueblería (y lo que cuestan)</h2>
+    <p>Una mueblería vende piezas caras, de compra pensada, que muchas veces se apartan y se pagan en partes. El cliente investiga en redes antes de ir; el dueño vende por WhatsApp mandando fotos una por una. El dinero se va en estos puntos:</p>
+    <div class="tarjetas">
+      <article><h3>Catálogo por WhatsApp, foto por foto</h3><p>El vendedor pasa el día reenviando fotos y precios. Los precios viejos circulan y el cliente reclama.</p><p class="sol">Tienda con catálogo siempre actualizado: mandas un enlace, no 20 fotos.</p></article>
+      <article><h3>Vender lo que ya no hay</h3><p>Se vendió el último sillón en tienda y alguien lo aparta por WhatsApp. Hay que devolver dinero y se pierde la venta y la confianza.</p><p class="sol">Inventario que se descuenta con cada pedido; la tienda no deja comprar sin piezas.</p></article>
+      <article><h3>Apartados y abonos en libreta</h3><p>«¿Cuánto me falta?» El dueño busca el recibo. Se olvidan saldos o se entrega sin liquidar.</p><p class="sol">Cada pedido guarda anticipo, pagos y saldo. El panel avisa si quieres entregar con saldo pendiente.</p></article>
+      <article><h3>Llamadas de «¿cuándo llega?»</h3><p>Cada cliente llama 3 o 4 veces entre que paga y recibe. Interrumpe ventas y da imagen de desorden.</p><p class="sol">Rastreo con folio: el cliente ve en qué va su pedido. El dueño avisa con un botón de WhatsApp.</p></article>
+      <article><h3>Precios que no siguen al proveedor</h3><p>El proveedor sube 8% y nadie actualiza 60 productos. Se vende con menos margen sin darse cuenta.</p><p class="sol">Cambio de precios por categoría en un paso, con vista previa del margen y alerta de margen bajo.</p></article>
+      <article><h3>Dinero parado en bodega</h3><p>Piezas que llevan meses sin venderse ocupan espacio y capital. No se sabe cuánto vale el inventario.</p><p class="sol">Valor del inventario a costo y a precio de venta; lo más vendido; ofertas por categoría para mover lo parado.</p></article>
+      <article><h3>Clientes que no regresan</h3><p>Quien compró una sala puede comprar el comedor el próximo año, pero nadie guarda su contacto.</p><p class="sol">Base de clientes automática con total comprado y botón para mandarles ofertas por WhatsApp.</p></article>
+      <article><h3>Temporadas mal aprovechadas</h3><p>Aguinaldo, Buen Fin, Hot Sale y mudanzas de verano concentran ventas, pero las ofertas se arman a mano.</p><p class="sol">Banner de oferta configurable y ofertas por categoría con un clic.</p></article>
+    </div>
+  </section>
+
+  <section id="modulos"><h2>Módulos del sistema</h2>
+    <h3 class="lado">Lo que ve el cliente (tienda)</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Portada</td><td>Héroe con foto, beneficios (envío, apartado, garantía) y reseñas.</td><td>Da confianza antes de pagar algo caro.</td></tr>
+      <tr><td>Categorías y catálogo</td><td>Fotos grandes, buscador, filtros por espacio, orden por precio o novedad. Etiquetas automáticas: «-15%», «Últimas 2», «Agotado».</td><td>El cliente encuentra solo; la urgencia de «últimas piezas» empuja la compra.</td></tr>
+      <tr><td>Ficha de producto</td><td>Medidas, material, color, garantía, existencias, cantidad y botón de pregunta por WhatsApp.</td><td>Responde lo que hoy preguntan por chat.</td></tr>
+      <tr><td>Favoritos</td><td>Guarda muebles con el corazón.</td><td>Compras pensadas: regresan por lo que guardaron.</td></tr>
+      <tr><td>Carrito y pedido</td><td>Envío gratis desde cierto monto, entrega o recoger, forma de pago (incluye apartado con anticipo), notas.</td><td>El pedido llega completo: dirección, pago y teléfono.</td></tr>
+      <tr><td>Mi pedido</td><td>Con folio + WhatsApp ve la línea de avance, lo pagado y lo que falta.</td><td>Elimina las llamadas de seguimiento.</td></tr>
+    </tbody></table>
+    <h3 class="lado">Lo que ve el dueño (panel)</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Inicio</td><td>Ventas del mes, pedidos por atender, saldo por cobrar, dinero en inventario, ventas de 14 días, lo más vendido, alertas de resurtido.</td><td>Los números del negocio en 10 segundos.</td></tr>
+      <tr><td>Pedidos</td><td>Por estado (recibido → confirmado → en preparación → en camino → entregado), pagos y abonos, cancelación que regresa piezas, aviso al cliente por WhatsApp.</td><td>Nada se olvida y cada peso queda registrado.</td></tr>
+      <tr><td>Productos</td><td>Alta con foto (desde la cámara), costo, precio, oferta, medidas, material, colores, visible u oculto, destacado. Calcula ganancia y margen al escribir.</td><td>El dueño actualiza su tienda sin depender de nadie.</td></tr>
+      <tr><td>Inventario</td><td>Entradas, salidas y ajustes por conteo, con motivo y fecha. Mínimos y alertas. Historial de todo movimiento, incluidas ventas.</td><td>Sabe qué hay, qué falta y quién movió qué.</td></tr>
+      <tr><td>Precios y ofertas</td><td>Subir o bajar precios por categoría, poner o quitar ofertas, redondeo, vista previa de margen, banner de la tienda, lista de márgenes bajos.</td><td>Reacciona al proveedor y a la temporada en minutos.</td></tr>
+      <tr><td>Clientes</td><td>Se arma solo con los pedidos: compras, total, saldo, última compra y botón de oferta por WhatsApp.</td><td>Vender otra vez a quien ya compró.</td></tr>
+      <tr><td>Ajustes</td><td>Nombre, WhatsApp, PIN, costo de envío, envío gratis, porcentaje de anticipo.</td><td>Las reglas del negocio las pone el dueño.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="flujo"><h2>Flujo de un pedido</h2>
+    <ol class="flujo">
+      <li><b>Cliente</b> hace el pedido → se aparta el inventario y se registra la venta.</li>
+      <li><b>Dueño</b> lo ve como «Recibido», confirma por WhatsApp y registra el anticipo.</li>
+      <li>«En preparación»: se arma o se saca de bodega.</li>
+      <li>«En camino»: sale el flete; el cliente lo ve en Mi pedido.</li>
+      <li>«Entregado»: se cobra el saldo. Si queda saldo, el panel pregunta antes de cerrar.</li>
+      <li>Si se cancela, las piezas regresan solas al inventario con registro del motivo.</li>
+    </ol>
+  </section>
+
+  <section id="reglas"><h2>Reglas que el sistema ya hace solo</h2>
+    <ul class="check">
+      <li>No deja comprar más piezas de las que hay, y vuelve a revisar al momento de pagar por si otro cliente compró antes.</li>
+      <li>Calcula envío gratis cuando el carrito supera el monto que pone el dueño; recoger en tienda no cobra envío.</li>
+      <li>Calcula el anticipo según el porcentaje configurado.</li>
+      <li>Marca «Últimas piezas» cuando quedan 2 o menos, y «Agotado» cuando no hay.</li>
+      <li>Avisa en el panel los productos por debajo del mínimo y los de margen menor a 25%.</li>
+      <li>No permite oferta mayor o igual al precio normal.</li>
+      <li>Reduce las fotos del celular (3-5 MB) a unos 100 KB para que la tienda cargue rápido.</li>
+    </ul>
+  </section>
+
+  <section id="real"><h2>Demo vs. sistema real (sé honesto con el cliente)</h2>
+    <p>Lo que enseñas funciona completo, pero <b>los datos viven en el navegador</b> donde se abre. Para entregarlo a un negocio real hace falta:</p>
+    <table class="tm"><thead><tr><th>Pieza</th><th>En el demo</th><th>En producción</th></tr></thead><tbody>
+      <tr><td>Datos</td><td>Navegador (localStorage)</td><td>Base de datos en la nube (por ejemplo Supabase o Firebase), con respaldo diario.</td></tr>
+      <tr><td>Acceso al panel</td><td>PIN 1234 visible</td><td>Usuario y contraseña por empleado, con permisos (vendedor no ve costos).</td></tr>
+      <tr><td>Fotos</td><td>Dentro del navegador, ~5 MB en total</td><td>Almacenamiento de archivos en la nube, sin límite práctico.</td></tr>
+      <tr><td>Pagos</td><td>Se registran a mano</td><td>Liga de pago o tarjeta con Mercado Pago, Clip o Stripe (cobran comisión por venta).</td></tr>
+      <tr><td>WhatsApp</td><td>Botón que abre el chat con el mensaje listo</td><td>Igual (gratis) o mensajes automáticos con WhatsApp Business API (costo por mensaje).</td></tr>
+      <tr><td>Dominio</td><td>ebernargit.github.io</td><td>casaolmo.mx o similar (costo anual del dominio).</td></tr>
+      <tr><td>Facturación</td><td>No incluida</td><td>Conexión con un proveedor de facturación (PAC) si el negocio factura.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="fases"><h2>Cómo venderlo por fases</h2>
+    <div class="fases">
+      <article><span>Fase 1 · Vender en línea</span><ul><li>Tienda con catálogo y fotos</li><li>Pedidos y apartados</li><li>Rastreo con folio</li><li>Panel: pedidos y productos</li></ul></article>
+      <article><span>Fase 2 · Controlar</span><ul><li>Inventario con movimientos y mínimos</li><li>Precios y ofertas por categoría</li><li>Clientes y ofertas por WhatsApp</li><li>Usuarios por empleado</li></ul></article>
+      <article><span>Fase 3 · Crecer</span><ul><li>Pago en línea con tarjeta</li><li>Varias sucursales o bodegas</li><li>Ventas a crédito con calendario de pagos</li><li>Rutas de entrega y evidencia con foto</li></ul></article>
+    </div>
+  </section>
+
+  <section id="preguntas"><h2>Preguntas que te va a hacer el dueño</h2>
+    <details><summary>¿Y si no sé subir fotos?</summary><p>Se sube desde el celular: tomas la foto, escribes nombre y precio, y listo. La primera carga de productos la hacemos juntos.</p></details>
+    <details><summary>¿Mis vendedores van a ver lo que me cuestan los muebles?</summary><p>En la versión real cada usuario tiene permisos; el vendedor ve precios y pedidos, no costos ni márgenes.</p></details>
+    <details><summary>Vendo más en la tienda física que en internet.</summary><p>Perfecto: el panel sirve igual para registrar ventas de mostrador y apartados. La tienda en línea es tu catálogo para mandar por WhatsApp en lugar de fotos sueltas.</p></details>
+    <details><summary>¿Qué pasa si se cae internet?</summary><p>El panel necesita internet para guardar. La información queda en la nube, no en un cuaderno o una computadora que se puede perder.</p></details>
+    <details><summary>¿Puedo vender sobre pedido (fabricación)?</summary><p>Sí, es un ajuste: producto «sobre pedido» con días de fabricación y anticipo obligatorio. Entra en fase 2.</p></details>
+  </section>
+</main>
+</body>
+</html>

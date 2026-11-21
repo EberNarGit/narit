@@ -1,0 +1,42 @@
+/* Guías internas de cada sistema (para el vendedor NarIT). */
+:root{--bg:#F3F7F2;--card:#fff;--ink:#12261C;--mut:#5A6E62;--ln:#D6E2D8;--g:#157347;--g2:#0B3D26;--lime:#C8F169}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{line-height:1.2;margin:0}
+a{color:var(--g)}
+.g-cab{display:flex;justify-content:space-between;gap:12px;padding:12px clamp(16px,4vw,40px);background:var(--g2);color:#E8F5EC;font-size:.9rem}
+.g-cab a{color:var(--lime);font-weight:700;text-decoration:none}
+.g{max-width:980px;margin:0 auto;padding:28px clamp(16px,4vw,40px) 80px}
+.eti{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--g);margin:0 0 6px}
+h1{font-size:clamp(1.8rem,4.5vw,2.8rem)}
+.lead{font-size:1.15rem;color:var(--mut);max-width:70ch}
+.botones{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.b{display:inline-block;background:var(--g);color:#fff;border-radius:12px;padding:11px 16px;font-weight:700;text-decoration:none}
+.b.sec{background:#fff;color:var(--g2);border:1px solid var(--ln)}
+.indice{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:2}
+.indice a{background:#fff;border:1px solid var(--ln);border-radius:99px;padding:6px 12px;text-decoration:none;color:var(--ink);font-size:.88rem}
+section{background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:clamp(16px,3vw,26px);margin-top:16px;scroll-margin-top:60px}
+section h2{font-size:1.4rem;margin-bottom:10px;color:var(--g2)}
+.lado{margin:18px 0 8px;font-size:1.05rem}
+.pasos li,.flujo li{margin:8px 0}
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.tarjetas article{border:1px solid var(--ln);border-radius:12px;padding:14px}
+.tarjetas h3{font-size:1rem;margin-bottom:6px}
+.tarjetas p{margin:0 0 8px;font-size:.93rem}
+.sol{color:var(--g);font-weight:600}
+.sol::before{content:"✓ "}
+.tm{width:100%;border-collapse:collapse;font-size:.92rem;display:block;overflow-x:auto}
+.tm th{text-align:left;background:var(--bg);padding:8px;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.tm td{padding:9px 8px;border-top:1px solid var(--ln);vertical-align:top}
+.tm td:first-child{font-weight:700;white-space:nowrap}
+.check{list-style:none;padding:0}
+.check li{padding-left:28px;position:relative;margin:8px 0}
+.check li::before{content:"✓";position:absolute;left:0;color:var(--g);font-weight:900}
+.fases{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.fases article{border:1px solid var(--ln);border-radius:12px;padding:14px}
+.fases span{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--g)}
+.fases ul{margin:8px 0 0;padding-left:18px}
+details{border-top:1px solid var(--ln);padding:10px 0}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 0;padding-left:14px;border-left:3px solid var(--lime)}
+@media(max-width:720px){.fases{grid-template-columns:1fr}.tm td:first-child{white-space:normal}}
