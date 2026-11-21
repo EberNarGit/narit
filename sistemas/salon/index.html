@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bella Alma · Salón de belleza</title>
+<meta name="description" content="Ejemplo de reservas, tienda y club de clientas para salón de belleza, hecho por NarIT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sitio.css">
+</head>
+<body>
+<div class="demo-bar">Ejemplo hecho por <a href="../../">NarIT</a> · <a href="admin.html" target="_blank" rel="noopener">Abrir el panel del salón ↗</a> · <a href="guia.html">Guía</a></div>
+
+<header class="cab">
+  <a class="logo" href="#" data-ir="sitio">Bella Alma<small>salón de belleza</small></a>
+  <nav aria-label="Secciones"><a href="#servicios" data-ir="sitio">Servicios</a><a href="#tienda" data-ir="sitio">Tienda</a><a href="#promos" data-ir="sitio">Promociones</a><a href="#club" data-ir="sitio">Club</a></nav>
+  <div class="cab-acc">
+    <button class="ico" data-bolsa aria-label="Mi bolsa">👜<b id="nBolsa" hidden></b></button>
+    <button class="b b-lin" data-portal>Mi espacio</button><button class="b b-osc" data-reservar>Reservar</button>
+  </div>
+</header>
+
+<main id="sitio">
+  <section class="hero">
+    <div class="hero-t">
+      <p class="eti">Cabello · Color · Uñas · Pestañas · Maquillaje</p>
+      <h1>Tu momento, <em>sin esperar</em> ni llamar.</h1>
+      <p>Reserva con tu estilista favorita, compra tus productos y lleva la cuenta de tus visitas en tu celular. A la décima, tu peinado es regalo.</p>
+      <div class="hero-a"><button class="b b-osc b-xl" data-reservar>Reservar mi cita</button><a class="b b-lin b-xl" href="#tienda">Ver productos</a></div>
+    </div>
+    <div class="hero-f">
+      <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=900&q=72&auto=format&fit=crop" alt="Estilista peinando con secadora y cepillo redondo" fetchpriority="high">
+      <div class="flota f1"><span>💗</span><div><b>9 de 10 visitas</b><small>¡Tu próximo peinado es regalo!</small></div></div>
+      <div class="flota f2"><span>✨</span><div><b>Nivel Oro</b><small>10% en productos</small></div></div>
+    </div>
+  </section>
+
+  <section id="servicios" class="sec">
+    <div class="sec-h"><h2>Servicios</h2><div class="chips" id="cats" role="group" aria-label="Categoría"></div></div>
+    <div class="servs" id="servs"></div>
+    <p class="nota" id="antNota" style="margin-top:12px"></p>
+  </section>
+
+  <section id="club" class="sec">
+    <div class="club">
+      <div><p class="eti">Club Bella Alma</p><h2>Cada visita cuenta</h2><p>Junta <b id="nVis">10</b> visitas y llévate un <b id="premio">peinado gratis</b>. Mientras más vienes, más ahorras en productos.</p>
+        <div class="tarjeta" id="tarjetaDemo"></div></div>
+      <div class="niveles" id="niveles"></div>
+    </div>
+  </section>
+
+  <section id="promos" class="sec">
+    <div class="sec-h"><h2>Promociones</h2><p class="mut">Usa el código al reservar.</p></div>
+    <div class="promos" id="promosL"></div>
+  </section>
+
+  <section id="tienda" class="sec">
+    <div class="sec-h"><h2>Tienda</h2><div class="chips" id="pcats" role="group" aria-label="Categoría de producto"></div></div>
+    <p class="mut" style="margin:-8px 0 16px">Pide en línea y recoge en el salón o en tu próxima cita. Las clientas Plata y Oro tienen descuento.</p>
+    <div class="prods" id="prods"></div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>Nuestro equipo</h2></div>
+    <div class="equipo" id="equipo"></div>
+  </section>
+</main>
+
+<main id="portal" hidden></main>
+
+<footer class="pie">
+  <div><span class="logo">Bella Alma<small>salón de belleza</small></span><p id="pieDir"></p></div>
+  <div><b>Clientas</b><button class="lnk" data-reservar>Reservar</button><button class="lnk" data-portal>Mi espacio</button><a href="#tienda" data-ir="sitio">Tienda</a></div>
+  <div><b>¿Dudas?</b><a id="waPie" target="_blank" rel="noopener" href="#">Escríbenos por WhatsApp</a><span>Ejemplo: las citas y pedidos no son reales.</span></div>
+</footer>
+
+<dialog id="dlg"></dialog>
+<script type="module" src="sitio.js"></script>
+</body>
+</html>

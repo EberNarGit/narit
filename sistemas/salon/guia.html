@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Guía · Sistema para salón de belleza</title>
+<link rel="stylesheet" href="../_base/guia.css">
+</head>
+<body>
+<header class="g-cab"><a href="../">← Sistemas NarIT</a><span>Guía interna · Salón de belleza</span></header>
+<main class="g">
+  <p class="eti">Bloque 6 · Salón de belleza</p>
+  <h1>Bella Alma: reservas + tienda + «Mi espacio» + panel</h1>
+  <p class="lead">La <b>clienta</b> ve los servicios con precio, reserva con su estilista, usa códigos de promoción, compra productos para recoger y en «Mi espacio» lleva su tarjeta de visitas (a la décima, peinado gratis), su nivel con descuento, sus pedidos y sus promociones. El <b>salón</b> ve la agenda de cada estilista, la fórmula de color y alergias antes de atender, cobra con regalo, cupón y anticipo, crea promociones y las manda a cada grupo de clientas.</p>
+  <div class="botones"><a class="b" href="index.html" target="_blank" rel="noopener">Abrir sitio y portal ↗</a><a class="b sec" href="admin.html" target="_blank" rel="noopener">Abrir el panel ↗ · PIN 1234</a></div>
+
+  <nav class="indice" aria-label="Contenido"><a href="#demo">Demo en 5 minutos</a><a href="#problemas">Problemas del negocio</a><a href="#modulos">Módulos</a><a href="#lealtad">Lealtad y promociones</a><a href="#reglas">Reglas automáticas</a><a href="#numeros">El número que vende</a><a href="#real">Demo vs. real</a><a href="#fases">Fases</a><a href="#preguntas">Preguntas</a></nav>
+
+  <section id="demo"><h2>Demo en 5 minutos</h2>
+    <ol class="pasos">
+      <li><b>Su vitrina.</b> En el celular, enseña Servicios (con precio y duración) y la Tienda: «Tus productos con su precio, y la clienta los aparta desde su casa».</li>
+      <li><b>Que reserve ella.</b> Manicure en gel → «la primera libre» → hora → código <b>MANOS100</b>: el precio baja $100. En el panel salta «Reserva en línea» y aparece en la columna de la estilista.</li>
+      <li><b>Antes de atender.</b> En la agenda abre a Mariana: alergias en rojo, su fórmula de color y lo que le gusta. «Aunque la atienda otra estilista, sale igual».</li>
+      <li><b>El regalo.</b> Abre a Gabriela (10/10 visitas): pásala a atención y cobra. El peinado sale gratis, el aceite tiene 10% por ser nivel Oro y su tarjeta vuelve a 1/10. En su portal (5512340006) lo ve.</li>
+      <li><b>Promociones.</b> Crea un código para nivel Oro y enseña las listas: inactivas, cerca del regalo y cumpleañeras, con mensaje listo y el código incluido.</li>
+      <li><b>Pedidos.</b> Pedidos tienda: márcalo listo, avisa por WhatsApp, entrega y cobra.</li>
+    </ol>
+  </section>
+
+  <section id="problemas"><h2>Problemas de un salón de belleza</h2>
+    <p>El salón vende servicios largos y caros (color, keratina, pestañas) y productos con buen margen. La clienta es fiel cuando se siente recordada, y se va cuando la olvidan.</p>
+    <div class="tarjetas">
+      <article><h3>Citas largas que no llegan</h3><p>Un balayage cancelado el mismo día son 3 horas de silla perdidas.</p><p class="sol">Anticipo automático en servicios caros, que se descuenta al cobrar.</p></article>
+      <article><h3>Fórmulas en la cabeza de una estilista</h3><p>Si falta o se va, el color no sale igual y la clienta no regresa.</p><p class="sol">Ficha con fórmula, alergias y preferencias visible en la agenda.</p></article>
+      <article><h3>Productos que nadie ve</h3><p>Están en la repisa, pero la clienta no sabe qué hay ni cuánto cuesta.</p><p class="sol">Tienda en línea con precio, existencias y pedido para recoger.</p></article>
+      <article><h3>Promociones al aire</h3><p>Un post en redes llega a todos y a nadie; no se mide quién lo usó.</p><p class="sol">Códigos por grupo (inactivas, cumpleañeras, Oro) con vigencia y usos contados.</p></article>
+      <article><h3>Tarjeta de sellos de papel</h3><p>Se pierde, se olvida, se falsifica.</p><p class="sol">Visitas que se suman solas al cobrar y regalo con un clic.</p></article>
+      <article><h3>Clientas que dejan de venir</h3><p>Nadie se da cuenta hasta que ya se fueron con otra.</p><p class="sol">Lista de inactivas con mensaje y código de regreso.</p></article>
+      <article><h3>Comisiones y caja a mano</h3><p>Cupones, regalos y anticipos complican las cuentas.</p><p class="sol">Comisiones sobre lo cobrado y corte del día por método de pago.</p></article>
+    </div>
+  </section>
+
+  <section id="modulos"><h2>Módulos</h2>
+    <h3 class="lado">Lo que ve la clienta</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Servicios</td><td>Por categoría (cabello, color, uñas, pestañas y cejas, maquillaje) con precio, duración y aviso de anticipo.</td><td>Precios claros sin preguntar.</td></tr>
+      <tr><td>Reservar</td><td>Servicio → estilista que lo hace (o la primera libre) → día → hora que cabe → código de promoción.</td><td>Reserva a cualquier hora, sin llamar.</td></tr>
+      <tr><td>Tienda</td><td>Productos con foto, precio, existencias y descuento por nivel; bolsa y pedido para recoger.</td><td>Ventas extra sin vendedor.</td></tr>
+      <tr><td>Promociones</td><td>Códigos activos con vigencia.</td><td>Razón para reservar hoy.</td></tr>
+      <tr><td>Mi espacio</td><td>Tarjeta de visitas, nivel, promociones que le aplican, citas con anticipo, pedidos, ficha (alergias, cómo le gusta, cumpleaños) e historial.</td><td>Se siente atendida y vuelve.</td></tr>
+    </tbody></table>
+    <h3 class="lado">Lo que ve el salón</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Agenda</td><td>Columna por estilista con bloques del tamaño del servicio; alergias y regalo visibles; anticipos pendientes; clienta sin cita.</td><td>Sin empalmes y sin sorpresas.</td></tr>
+      <tr><td>Cobrar</td><td>Regalo, cupón, productos con descuento de nivel, propina y anticipo ya pagado; suma visita.</td><td>Un cobro correcto en segundos.</td></tr>
+      <tr><td>Clientas</td><td>Grupos: inactivas, cerca del regalo, cumpleañeras, Oro. Ficha con fórmula, alergias, notas, historial y gasto.</td><td>La cartera es del salón.</td></tr>
+      <tr><td>Promociones</td><td>Crear códigos (% o $, categoría, grupo, vigencia, usos) y mandarlos a cada grupo por WhatsApp.</td><td>Promociones medibles.</td></tr>
+      <tr><td>Pedidos tienda</td><td>Por preparar, listos (aviso), entregar y cobrar, cancelar (regresa inventario).</td><td>Nada apartado se pierde.</td></tr>
+      <tr><td>Productos</td><td>Alta con foto, precio, costo, margen, existencias, visible o no en la tienda; venta de mostrador.</td><td>La tienda se actualiza sola.</td></tr>
+      <tr><td>Comisiones y caja</td><td>Por estilista y semana; corte del día por método, incluye anticipos y pedidos.</td><td>Cuentas claras.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="lealtad"><h2>Lealtad y promociones (lo que pidió el negocio)</h2>
+    <ul class="check">
+      <li><b>Tarjeta de visitas:</b> cada servicio cobrado suma una visita. A las 10 (configurable) el regalo es un peinado gratis, o su valor en otro servicio.</li>
+      <li><b>Niveles:</b> Rosa (bienvenida), Plata desde 5 visitas con 5% en productos y Oro desde 15 con 10%. Se configuran en Ajustes.</li>
+      <li><b>Códigos:</b> por porcentaje o monto, para una categoría o para todo, con fecha de vencimiento y límite de usos. Se validan solos al reservar y al cobrar.</li>
+      <li><b>Grupos:</b> todas, inactivas (más de 45 días sin venir), cumpleañeras del mes y nivel Oro. Un código para inactivas no lo puede usar una clienta frecuente.</li>
+      <li><b>Campañas:</b> lista por grupo con el mensaje y el código listos para mandar por WhatsApp, y marca de enviado.</li>
+    </ul>
+  </section>
+
+  <section id="reglas"><h2>Reglas que hace solo</h2>
+    <ul class="check">
+      <li>Cada estilista solo aparece para los servicios que hace (Fer no hace color; Valeria no hace uñas).</li>
+      <li>Solo ofrece horas donde cabe el servicio completo: un balayage de 3 horas bloquea 6 espacios.</li>
+      <li>Servicios desde $1,000 piden 30% de anticipo; el anticipo se descuenta al cobrar.</li>
+      <li>El descuento de nivel aplica en productos de la tienda y del mostrador.</li>
+      <li>Un pedido en línea separa las piezas del inventario; si se cancela, regresan.</li>
+      <li>No vende productos agotados ni más piezas de las que hay.</li>
+      <li>La comisión se calcula sobre lo cobrado después de cupones y regalos, más su parte de productos y el 100% de propinas.</li>
+    </ul>
+  </section>
+
+  <section id="numeros"><h2>El número que vende</h2>
+    <p>Pregunta: «¿Cuántas clientas atendiste el año pasado que no han regresado?». Si son 80 y con un mensaje y un código regresa 1 de cada 4, son 20 servicios; con un ticket de $900, <b>$18,000</b> de una sola campaña. Y si cada clienta que reserva en línea agrega un producto de $400 una de cada 5 veces, con 300 citas al mes son <b>$24,000 al mes</b> más en productos.</p>
+  </section>
+
+  <section id="real"><h2>Demo vs. sistema real</h2>
+    <table class="tm"><thead><tr><th>Pieza</th><th>En el demo</th><th>En producción</th></tr></thead><tbody>
+      <tr><td>Datos</td><td>En el navegador</td><td>Base de datos en la nube con respaldo.</td></tr>
+      <tr><td>Entrar a «Mi espacio»</td><td>Solo el teléfono</td><td>Código de un solo uso por WhatsApp.</td></tr>
+      <tr><td>Anticipo</td><td>Se marca a mano al recibir la transferencia</td><td>Liga de pago con tarjeta que confirma sola (con comisión del procesador).</td></tr>
+      <tr><td>Tienda</td><td>Pedido para recoger, pago en el salón</td><td>También pago en línea y envío a domicilio.</td></tr>
+      <tr><td>Campañas</td><td>Mensaje listo, uno por uno</td><td>Envío automático con WhatsApp Business API (costo por mensaje).</td></tr>
+      <tr><td>Estilistas</td><td>Un panel con PIN</td><td>Cada estilista ve su agenda y su comisión.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="fases"><h2>Cómo venderlo por fases</h2>
+    <div class="fases">
+      <article><span>Fase 1 · Agenda y fichas</span><ul><li>Reservas en línea por estilista</li><li>Fichas con fórmula y alergias</li><li>Anticipos</li><li>Recordatorios</li></ul></article>
+      <article><span>Fase 2 · Lealtad</span><ul><li>Tarjeta de visitas y regalo</li><li>Niveles</li><li>Códigos y campañas</li><li>Portal «Mi espacio»</li></ul></article>
+      <article><span>Fase 3 · Tienda</span><ul><li>Tienda en línea</li><li>Pago en línea</li><li>Envío a domicilio</li><li>Varias sucursales</li></ul></article>
+    </div>
+  </section>
+
+  <section id="preguntas"><h2>Preguntas que te harán</h2>
+    <details><summary>¿Y si la clienta no paga el anticipo?</summary><p>La cita aparece «sin anticipo» en la agenda y en Hoy. Puedes recordarle con un toque o liberar el horario. Tú decides desde qué precio se pide y qué porcentaje.</p></details>
+    <details><summary>No quiero regalar tanto.</summary><p>Tú pones cuántas visitas y qué se regala: 12 visitas y un diseño de cejas, por ejemplo. Los niveles también se ajustan.</p></details>
+    <details><summary>¿Cómo sé si una promoción funcionó?</summary><p>Cada código cuenta sus usos. Si mandaste 40 mensajes y se usó 12 veces, sabes que funcionó.</p></details>
+    <details><summary>Mis productos cambian de precio seguido.</summary><p>Se cambian en Productos y la tienda se actualiza al instante. Los pedidos ya hechos conservan su precio.</p></details>
+  </section>
+</main>
+</body>
+</html>

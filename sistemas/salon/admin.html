@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel · Bella Alma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_base/admin.css">
+<style>
+:root{--a:#8E3B5F;--a2:#F3D3D6;--bg:#FBF5F2;--side:#2E1B2A;--sidei:#F3D3D6;--ln:#EFDFE0;--fd:"Cormorant Garamond",Georgia,serif}
+body{font-family:"Jost",system-ui,sans-serif}
+.top h1{font-size:2.4rem}
+.top h1,.kpi b{letter-spacing:.01em}
+.agenda{display:grid;gap:3px;overflow-x:auto;background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:10px}
+.agenda .hd{font-weight:800;display:flex;align-items:center;gap:8px;padding:4px 6px;position:sticky;top:0;background:var(--card)}
+.agenda .hd img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.agenda .hr{font-size:.75rem;color:var(--mut);text-align:right;padding-right:6px;font-variant-numeric:tabular-nums}
+.agenda .libre{border:1px dashed var(--ln);border-radius:8px;background:none;cursor:pointer;font-size:.72rem;color:transparent}
+.agenda .libre:hover{border-color:var(--a);color:var(--a)}
+.agenda .pasado{background:#00000006;border-radius:8px}
+.blq{border-radius:10px;padding:6px 8px;font-size:.8rem;line-height:1.25;cursor:pointer;border:0;text-align:left;overflow:hidden;background:#FBE9EA;color:#4a1a33;border-left:4px solid var(--a)}
+.blq b{display:block;font-size:.86rem}
+.blq.llego,.blq.atencion{background:#FFF1C2;border-left-color:#B98A00}
+.blq.terminada{background:#E1F2E7;border-left-color:#1E7B46;color:#11401f}
+.blq.falto{background:#FBE3E1;border-left-color:var(--bad);color:#6b1510}
+.blq .tg{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.sellos{display:flex;gap:4px;flex-wrap:wrap}
+.sellos i{width:18px;height:18px;border-radius:50%;border:1.5px dashed #bbb}
+.sellos i.si{background:var(--a);border:1.5px solid var(--a)}
+.ini{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#F3D3D6;color:#8E3B5F;font-weight:800;margin-right:8px;vertical-align:middle;font-size:.85rem}
+.cant{display:inline-flex;align-items:center;gap:6px}.cant button{width:30px;height:30px;border-radius:50%;border:1px solid var(--ln);background:#fff;cursor:pointer}
+dialog.ancho{width:min(860px,calc(100vw - 24px))}
+</style>
+</head>
+<body>
+<div class="adm" hidden id="app">
+  <nav class="side" aria-label="Panel">
+    <div class="marca"><span style="font-family:var(--fd);font-size:1.7rem;font-style:italic;color:#F3D3D6">B</span><div>Bella Alma<small>Panel del salón</small></div></div>
+    <a href="#inicio"><svg viewBox="0 0 24 24"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg>Agenda<span class="n" id="nHoy" hidden></span></a>
+    <a href="#clientes"><svg viewBox="0 0 24 24"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg>Clientas</a>
+    <a href="#promos"><svg viewBox="0 0 24 24"><path d="M3 11l15-6v14L3 13zM7 12v5a2 2 0 0 0 4 0v-3"/></svg>Promociones<span class="n" id="nPro" hidden></span></a>
+    <a href="#pedidos"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"/></svg>Pedidos tienda<span class="n" id="nPed" hidden></span></a>
+    <a href="#comisiones"><svg viewBox="0 0 24 24"><path d="M12 3v18M17 7H9.5a3 3 0 0 0 0 6h5a3 3 0 0 1 0 6H6"/></svg>Comisiones</a>
+    <a href="#productos"><svg viewBox="0 0 24 24"><path d="M8 3h8v4H8zM6 7h12v14H6zM10 12h4"/></svg>Productos<span class="n" id="nProd" hidden></span></a>
+    <a href="#caja"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 10h18M7 15h3"/></svg>Caja</a>
+    <a href="#ajustes"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M16 4v4M10 10v4M18 16v4"/></svg>Ajustes</a>
+    <a href="index.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>Ver sitio y portal</a>
+    <a href="guia.html"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM8 7h7"/></svg>Guía NarIT</a>
+    <p class="pie">Demo de NarIT. Los datos se guardan solo en este navegador.</p>
+  </nav>
+  <main class="cont" id="vista"></main>
+</div>
+<dialog id="dlg"></dialog>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
