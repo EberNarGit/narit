@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel · Alba Dental</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_base/admin.css">
+<style>
+:root{--a:#0E3B33;--a2:#1EC59A;--bg:#F5F3EE;--side:#0E3B33;--sidei:#DDF7EE;--ln:#E4E0D6;--fd:"DM Serif Display",Georgia,serif}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif}
+.btn{background:var(--a)}
+.agenda{display:grid;gap:8px}
+.cita{display:grid;grid-template-columns:58px 1fr;gap:6px 12px;align-items:center;background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:10px 12px}
+.cita .h{font-family:var(--fd);font-size:1.3rem}
+.cita .acc{grid-column:2;align-items:center}
+.cita.pendiente{border-left:5px solid #2F6FED}.cita.en-curso,.cita.en-sala{border-left:5px solid #F5B83D}.cita.completada{opacity:.7}
+.pacs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.pac{display:block;background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:12px 14px;cursor:pointer;text-align:left;width:100%}
+.pac:hover{border-color:var(--a)}
+.ini{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--sidei);color:var(--a);font-weight:800;margin-right:8px;vertical-align:middle}
+.tabs-mini{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.tabs-mini button{border:1px solid var(--ln);background:var(--card);border-radius:99px;padding:6px 12px;cursor:pointer;font-weight:700}
+.tabs-mini button[aria-pressed=true]{background:var(--ink);color:#fff}
+dialog.ancho{width:min(920px,calc(100vw - 24px))}
+.paso{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--ln)}
+.paso:last-child{border:0}
+.embudo{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:700px){.embudo{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="adm" hidden id="app">
+  <nav class="side" aria-label="Panel">
+    <div class="marca"><span style="display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#1EC59A;color:#0E3B33;font-family:var(--fd);font-size:1.3rem">A</span><div>Alba Dental<small>Panel del consultorio</small></div></div>
+    <a href="#inicio"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/></svg>Hoy</a>
+    <a href="#agenda"><svg viewBox="0 0 24 24"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg>Agenda<span class="n" id="nAge" hidden></span></a>
+    <a href="#pacientes"><svg viewBox="0 0 24 24"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg>Pacientes</a>
+    <a href="#presupuestos"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h5"/></svg>Presupuestos<span class="n" id="nPre" hidden></span></a>
+    <a href="#cobranza"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 10h18M7 15h3"/></svg>Cobranza<span class="n" id="nCob" hidden></span></a>
+    <a href="#recall"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4M12 8v4l3 2"/></svg>Limpiezas<span class="n" id="nRec" hidden></span></a>
+    <a href="#ajustes"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M16 4v4M10 10v4M18 16v4"/></svg>Ajustes</a>
+    <a href="index.html#portal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>Ver sitio y portal</a>
+    <a href="guia.html"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM8 7h7"/></svg>Guía NarIT</a>
+    <p class="pie">Demo de NarIT. Los datos se guardan solo en este navegador.</p>
+  </nav>
+  <main class="cont" id="vista"></main>
+</div>
+<dialog id="dlg"></dialog>
+<script type="module" src="admin.js"></script>
+</body>
+</html>

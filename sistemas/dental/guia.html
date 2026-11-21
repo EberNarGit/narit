@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Guía · Sistema para consultorio dental</title>
+<link rel="stylesheet" href="../_base/guia.css">
+</head>
+<body>
+<header class="g-cab"><a href="../">← Sistemas NarIT</a><span>Guía interna · Consultorio dental</span></header>
+<main class="g">
+  <p class="eti">Bloque 3 · Consultorio dental</p>
+  <h1>Alba Dental: sitio + portal del paciente + panel del consultorio</h1>
+  <p class="lead">El <b>paciente</b> agenda en línea, ve su odontograma y su plan de tratamiento, <b>acepta su presupuesto desde el celular eligiendo a cuántos meses</b> y consulta su calendario de pagos. El <b>consultorio</b> maneja agenda de dos sillones, expediente con odontograma, presupuestos con seguimiento, cobranza de planes y recordatorio de limpiezas.</p>
+  <div class="botones"><a class="b" href="index.html" target="_blank" rel="noopener">Abrir sitio y portal ↗</a><a class="b sec" href="admin.html" target="_blank" rel="noopener">Abrir el panel ↗ · PIN 1234</a></div>
+
+  <nav class="indice" aria-label="Contenido"><a href="#demo">Demo en 5 minutos</a><a href="#problemas">Problemas del negocio</a><a href="#modulos">Módulos</a><a href="#flujo">Flujo del dinero</a><a href="#reglas">Reglas automáticas</a><a href="#numeros">El número que vende</a><a href="#real">Demo vs. real</a><a href="#fases">Fases</a><a href="#preguntas">Preguntas</a></nav>
+
+  <section id="demo"><h2>Demo en 5 minutos</h2>
+    <p>El dentista vende tratamientos caros que el paciente piensa mucho. Tu demo debe enseñar que <b>el sistema cierra presupuestos y cobra mensualidades solo</b>.</p>
+    <ol class="pasos">
+      <li><b>Diagnóstico en el odontograma.</b> En el panel → Pacientes → Sofía, toca «Caries» y luego un diente. Di: «Así marcas lo que encuentras».</li>
+      <li><b>Presupuesto en un clic.</b> «Generar presupuesto»: salen los tratamientos con precio y la opción a 12 meses. Guárdalo y envíalo por WhatsApp.</li>
+      <li><b>El paciente acepta solo.</b> En el celular, entra al portal como Daniel (5522233344) → Presupuestos. Elige 12 meses y acepta. En el panel salta: «Daniel aceptó su presupuesto de $16,900». Di: «Ese paciente lo aceptó a las 11 de la noche, en su casa, sin presión».</li>
+      <li><b>Su calendario de pagos.</b> En el portal, Pagos: enganche y 12 mensualidades con fechas. En el panel, Cobranza: Valeria debe una mensualidad vencida, con botón de recordatorio.</li>
+      <li><b>Avance del tratamiento.</b> En Agenda, termina la cita de Sofía: marca «Resina en 26» y cobra el abono. El diente se pinta de azul y en su portal la barra de avance sube.</li>
+      <li><b>Cierra con dinero.</b> Presupuestos: «$X por cerrar». Limpiezas: los pacientes que llevan más de 6 meses sin venir. Pregunta: «¿Cuánto tienes hoy en presupuestos que nadie siguió?».</li>
+    </ol>
+  </section>
+
+  <section id="problemas"><h2>Problemas de un consultorio dental</h2>
+    <p>El consultorio gana por hora de sillón y por tratamientos grandes (endodoncias, coronas, implantes, ortodoncia) que casi siempre se pagan en partes. El paciente tiene miedo al dolor y al costo, y pospone. Ahí se va el dinero:</p>
+    <div class="tarjetas">
+      <article><h3>Presupuestos que se van a casa y no regresan</h3><p>El paciente se lleva una hoja, lo platica, lo pospone. Nadie le da seguimiento y el tratamiento se hace en otro lado o nunca.</p><p class="sol">Presupuesto en el portal, aceptación en línea con plazo y lista de seguimiento a los 5 días.</p></article>
+      <article><h3>Pagos a plazos en la libreta</h3><p>No se sabe quién va atrasado. Cobrar da pena y se deja pasar. El consultorio financia sin intereses y sin control.</p><p class="sol">Calendario de mensualidades por paciente, vencidos marcados en rojo y recordatorio por WhatsApp.</p></article>
+      <article><h3>Citas que no llegan</h3><p>Una hora de sillón vacía no se recupera. Los tratamientos largos necesitan varias citas seguidas.</p><p class="sol">Confirmación por WhatsApp, citas en línea y registro de «No llegó» para ver quién falla.</p></article>
+      <article><h3>Expediente en papel</h3><p>El odontograma se dibuja a mano y no se actualiza. Las alergias y enfermedades no se ven a tiempo. Riesgo legal (NOM-013 y NOM-004).</p><p class="sol">Odontograma digital que cambia al terminar cada tratamiento y alergias visibles en la agenda.</p></article>
+      <article><h3>El paciente no sabe en qué va</h3><p>«¿Cuántas citas me faltan? ¿Cuánto debo?» Llama a preguntar o desconfía.</p><p class="sol">Portal con avance del plan, saldo, próxima cita y próximo pago.</p></article>
+      <article><h3>Limpiezas que nadie recuerda</h3><p>La limpieza semestral es la puerta a nuevos tratamientos. Sin recordatorio, el paciente vuelve hasta que le duele.</p><p class="sol">Lista de pacientes con más de 6 meses sin limpieza y mensaje listo.</p></article>
+    </div>
+  </section>
+
+  <section id="modulos"><h2>Módulos</h2>
+    <h3 class="lado">Lo que ve el paciente</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Sitio</td><td>Tratamientos con precio de referencia, calculadora de mensualidades, equipo y reseñas.</td><td>Quita el miedo al costo antes de la primera cita.</td></tr>
+      <tr><td>Agendar</td><td>Solo horarios libres de los dos sillones, sin domingos; registro de paciente nuevo; opción «Continuar mi tratamiento».</td><td>Citas sin llamar.</td></tr>
+      <tr><td>Inicio</td><td>Próxima cita, saldo, pago vencido, presupuesto por revisar, avance del plan, aviso de limpieza.</td><td>Todo lo importante en una pantalla.</td></tr>
+      <tr><td>Mi tratamiento</td><td>Odontograma de solo lectura y plan con pasos terminados y pendientes.</td><td>Entiende qué le hacen y por qué.</td></tr>
+      <tr><td>Presupuestos</td><td>Detalle con precios y 4 formas de pago (contado con 5% de descuento, 3, 6 o 12 meses); aceptar con un botón.</td><td>Cierra ventas sin presión.</td></tr>
+      <tr><td>Pagos</td><td>Calendario de enganche y mensualidades con estado; historial; pedir datos para transferir.</td><td>Paga a tiempo porque sabe cuánto y cuándo.</td></tr>
+      <tr><td>Citas e historial</td><td>Próximas y anteriores, cancelar; notas de cada visita.</td><td>Transparencia y confianza.</td></tr>
+    </tbody></table>
+    <h3 class="lado">Lo que ve el consultorio</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Hoy</td><td>Citas, cobrado hoy y del mes, presupuestos sin respuesta, pagos vencidos, pendientes del día.</td><td>Dónde está el dinero hoy.</td></tr>
+      <tr><td>Agenda</td><td>Por día; solicitudes en línea; estados: confirmada → llegó → en sillón → terminar y cobrar; «No llegó».</td><td>Sala de espera ordenada.</td></tr>
+      <tr><td>Terminar cita</td><td>En un paso: nota de evolución, tratamientos del plan terminados (pinta el odontograma) y cobro o abono.</td><td>Nada queda sin registrar ni cobrar.</td></tr>
+      <tr><td>Expediente</td><td>Odontograma editable con 9 estados, plan, presupuestos, pagos, notas y citas.</td><td>Historia clínica completa.</td></tr>
+      <tr><td>Presupuestos</td><td>Embudo enviado / aceptado / rechazado, días sin respuesta, seguimiento por WhatsApp, tasa de aceptación.</td><td>Convierte diagnósticos en ingresos.</td></tr>
+      <tr><td>Cobranza</td><td>Cartera, vencidos con días, próximos 15 días, abonos del mes.</td><td>Cobrar sin pena: el mensaje ya está escrito.</td></tr>
+      <tr><td>Limpiezas</td><td>Pacientes sin limpieza en 6 meses (configurable), con aviso y marca de avisado.</td><td>Agenda llena en temporadas bajas.</td></tr>
+      <tr><td>Ajustes</td><td>Precios de tratamientos, enganche, meses de recordatorio, datos, PIN.</td><td>El sitio y los presupuestos usan estos precios.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="flujo"><h2>Flujo del dinero</h2>
+    <ol class="flujo">
+      <li>Valoración → el dentista marca hallazgos en el odontograma.</li>
+      <li>«Generar presupuesto» → el paciente lo ve en su portal y recibe WhatsApp.</li>
+      <li>El paciente acepta y elige plazo → se crean enganche y mensualidades con fecha.</li>
+      <li>Cada cita del plan: «Terminar y cobrar» marca el tratamiento, pinta el diente y abona a la mensualidad más antigua.</li>
+      <li>Si no paga a tiempo → aparece en Cobranza con botón de recordatorio.</li>
+      <li>Al terminar el plan → 6 meses después aparece en Limpiezas para volver.</li>
+    </ol>
+  </section>
+
+  <section id="reglas"><h2>Reglas que hace solo</h2>
+    <ul class="check">
+      <li>Cada hallazgo del odontograma se convierte en su tratamiento: caries → resina, lesión → endodoncia, extracción indicada → extracción, pieza ausente → implante.</li>
+      <li>Al terminar un tratamiento el diente cambia: resina (azul), endodoncia (cian), corona (amarillo), implante (verde); una extracción lo deja ausente.</li>
+      <li>De contado: 5% de descuento. A plazos: enganche configurable (30%) y mensualidades iguales; el último pago ajusta los centavos para que la suma sea exacta.</li>
+      <li>Los abonos se aplican a la mensualidad más antigua y nunca cobran de más.</li>
+      <li>Una mensualidad sin pagar después de su fecha cuenta como vencida.</li>
+      <li>Dos citas por horario (dos sillones); sábado solo hasta las 14:00; sin domingos.</li>
+      <li>Las alergias y enfermedades del paciente aparecen en rojo en la agenda.</li>
+    </ul>
+  </section>
+
+  <section id="numeros"><h2>El número que vende</h2>
+    <p>Pregunta: «De cada 10 presupuestos que entregas, ¿cuántos se aceptan?». Si son 4 y con seguimiento suben a 5, en un consultorio que entrega 20 presupuestos al mes de $8,000 en promedio son <b>2 tratamientos más al mes: $16,000 mensuales, casi $200,000 al año</b>. La pantalla de Presupuestos enseña cuánto dinero tiene hoy «por cerrar».</p>
+  </section>
+
+  <section id="real"><h2>Demo vs. sistema real</h2>
+    <table class="tm"><thead><tr><th>Pieza</th><th>En el demo</th><th>En producción</th></tr></thead><tbody>
+      <tr><td>Datos</td><td>En el navegador</td><td>Base de datos en la nube con respaldo; el expediente clínico se conserva mínimo 5 años (NOM-004).</td></tr>
+      <tr><td>Entrada al portal</td><td>Solo el teléfono</td><td>Código de un solo uso por WhatsApp o SMS.</td></tr>
+      <tr><td>Aceptar presupuesto</td><td>Botón</td><td>Botón con registro de fecha y hora; consentimiento informado firmado en el consultorio.</td></tr>
+      <tr><td>Pagos</td><td>Se registran a mano</td><td>Liga de pago o domiciliación con tarjeta (con comisión del procesador).</td></tr>
+      <tr><td>Radiografías</td><td>No incluido</td><td>Subir imágenes al expediente.</td></tr>
+      <tr><td>Facturación</td><td>No incluido</td><td>Conexión con proveedor de facturación (PAC).</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="fases"><h2>Cómo venderlo por fases</h2>
+    <div class="fases">
+      <article><span>Fase 1 · Agenda y expediente</span><ul><li>Agenda con citas en línea</li><li>Expediente y odontograma</li><li>Notas de evolución</li><li>Recordatorio de limpiezas</li></ul></article>
+      <article><span>Fase 2 · Dinero</span><ul><li>Presupuestos con seguimiento</li><li>Aceptación en el portal</li><li>Planes de pago y cobranza</li><li>Portal del paciente completo</li></ul></article>
+      <article><span>Fase 3 · Crecer</span><ul><li>Pago en línea y domiciliación</li><li>Radiografías en el expediente</li><li>Varios doctores con comisiones</li><li>Campañas (blanqueamiento, ortodoncia)</li></ul></article>
+    </div>
+  </section>
+
+  <section id="preguntas"><h2>Preguntas que te harán</h2>
+    <details><summary>¿Mis pacientes van a aceptar presupuestos por celular?</summary><p>Los que iban a decir «lo pienso» sí: lo revisan en casa con calma, ven la mensualidad y aceptan. Los que deciden en el sillón también pueden aceptar en consultorio con un botón.</p></details>
+    <details><summary>¿Y si no me paga las mensualidades?</summary><p>El riesgo existe hoy también; la diferencia es que ahora lo ves el mismo día y el recordatorio sale sin pena. Puedes subir el enganche en Ajustes.</p></details>
+    <details><summary>Ya uso un software dental.</summary><p>Si ya te da odontograma y agenda, lo que te falta suele ser el portal del paciente, la aceptación en línea y la cobranza. Podemos empezar solo con eso.</p></details>
+    <details><summary>¿Es legal tener el expediente digital?</summary><p>Sí. La norma pide que sea confiable, con acceso controlado y que se conserve. La versión real incluye usuarios, respaldo y aviso de privacidad.</p></details>
+  </section>
+</main>
+</body>
+</html>

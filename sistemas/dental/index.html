@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alba Dental · Tu sonrisa, con plan y sin sorpresas</title>
+<meta name="description" content="Ejemplo de sitio y portal de pacientes para consultorio dental, hecho por NarIT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sitio.css">
+</head>
+<body>
+<div class="demo-bar">Ejemplo hecho por <a href="../../">NarIT</a> · <a href="admin.html" target="_blank" rel="noopener">Abrir el panel del consultorio ↗</a> · <a href="guia.html">Guía</a></div>
+
+<header class="cab">
+  <a class="logo" href="#" data-ir="sitio"><span class="marca" aria-hidden="true">A</span><span>Alba Dental<small>Odontología integral</small></span></a>
+  <nav aria-label="Secciones"><a href="#tratamientos" data-ir="sitio">Tratamientos</a><a href="#pagos" data-ir="sitio">Pagos a meses</a><a href="#equipo" data-ir="sitio">Equipo</a></nav>
+  <div class="cab-acc"><button class="b b-lin" data-portal>Mi sonrisa</button><button class="b b-menta" data-agendar>Agendar cita</button></div>
+</header>
+
+<main id="sitio">
+  <section class="hero">
+    <div class="hero-t">
+      <span class="eti">Odontología con plan claro</span>
+      <h1>Tu sonrisa, con un plan <em>y sin sorpresas.</em></h1>
+      <p>Presupuesto por escrito, pagos a meses y tu tratamiento siempre a la vista desde tu celular: qué llevas, qué sigue y cuánto falta.</p>
+      <div class="hero-a"><button class="b b-menta b-xl" data-agendar="valoracion">Agendar valoración →</button><button class="b b-claro b-xl" data-portal>Entrar a Mi sonrisa</button></div>
+      <ul class="cifras"><li><b>12,500+</b>pacientes</li><li><b>5.0★</b>en reseñas</li><li><b>0%</b>intereses a 12 meses</li></ul>
+    </div>
+    <div class="hero-f">
+      <img src="https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?w=900&q=72&auto=format&fit=crop" alt="Mujer sonriendo" fetchpriority="high">
+      <div class="flota f1"><b>Tu tratamiento</b><div class="barra"><i style="width:50%"></i></div><small>2 de 4 listos · siguiente: jueves 11:00</small></div>
+      <div class="flota f2"><span class="ico">🦷</span><div><b>Limpieza</b><small>Te toca en 2 semanas</small></div></div>
+    </div>
+  </section>
+
+  <ul class="tira">
+    <li><b>Presupuesto por escrito</b><small>Lo aceptas desde tu celular</small></li>
+    <li><b>Hasta 12 meses</b><small>Sin intereses, con enganche</small></li>
+    <li><b>Urgencias el mismo día</b><small>Si te duele, te atendemos hoy</small></li>
+    <li><b>Te recordamos tu limpieza</b><small>Cada 6 meses, sin que lo pienses</small></li>
+  </ul>
+
+  <section id="tratamientos" class="sec">
+    <div class="sec-h"><h2>Tratamientos</h2><p>Precios de referencia. Tu presupuesto exacto sale en la valoración.</p></div>
+    <div class="trats" id="trats"></div>
+  </section>
+
+  <section id="pagos" class="sec">
+    <div class="calc">
+      <div><span class="eti">Paga a tu ritmo</span><h2>¿Cuánto pagarías al mes?</h2><p>Elige un tratamiento y el plazo. Enganche del <span id="eng">30</span>% y el resto en mensualidades iguales, sin intereses.</p></div>
+      <form class="calc-f" id="fCalc">
+        <label>Tratamiento<select name="t" id="calcT"></select></label>
+        <div class="plazos" role="radiogroup" aria-label="Plazo"></div>
+        <div class="calc-r" id="calcR" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="equipo" class="sec">
+    <div class="sec-h"><h2>Quién te atiende</h2></div>
+    <div class="equipo">
+      <article><img src="https://images.unsplash.com/photo-1777331903190-341a3dd0441b?w=700&q=70&auto=format&fit=crop" alt="Dentista platicando con paciente" loading="lazy"><div><h3>Dra. Alba Treviño</h3><p>Odontología general y estética · 15 años de experiencia</p></div></article>
+      <article><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=700&q=70&auto=format&fit=crop" alt="Dentista sonriendo" loading="lazy"><div><h3>Dr. Luis Ochoa</h3><p>Endodoncia, implantes y ortodoncia</p></div></article>
+      <article><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&q=70&auto=format&fit=crop" alt="Consultorio dental moderno" loading="lazy"><div><h3>Consultorio</h3><p>Dos sillones, radiografía digital y esterilización certificada</p></div></article>
+    </div>
+    <div class="resenas">
+      <blockquote>«Acepté mi presupuesto desde el celular y elegí 6 meses. Siempre sé cuánto me falta.»<cite>Sofía R. · Endodoncia y corona</cite></blockquote>
+      <blockquote>«Me llegó el recordatorio de limpieza. Llevaba dos años sin ir.»<cite>Miguel S.</cite></blockquote>
+      <blockquote>«Fui por una urgencia y me atendieron el mismo día. Cero dolor.»<cite>Jorge L.</cite></blockquote>
+    </div>
+  </section>
+</main>
+
+<main id="portal" hidden></main>
+
+<footer class="pie">
+  <div><span class="logo"><span class="marca" aria-hidden="true">A</span><span>Alba Dental<small>Odontología integral</small></span></span><p id="pieDir"></p></div>
+  <div><b>Pacientes</b><button class="lnk" data-agendar>Agendar cita</button><button class="lnk" data-portal>Mi sonrisa</button><a href="#pagos" data-ir="sitio">Pagos a meses</a></div>
+  <div><b>¿Te duele?</b><a id="waPie" target="_blank" rel="noopener" href="#">Escríbenos por WhatsApp</a><span>Ejemplo: las citas no son reales.</span></div>
+</footer>
+
+<dialog id="dlg"></dialog>
+<script type="module" src="sitio.js"></script>
+</body>
+</html>
