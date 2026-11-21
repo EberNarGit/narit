@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Guía · Sistema para taller mecánico</title>
+<link rel="stylesheet" href="../_base/guia.css">
+</head>
+<body>
+<header class="g-cab"><a href="../">← Sistemas NarIT</a><span>Guía interna · Taller mecánico</span></header>
+<main class="g">
+  <p class="eti">Bloque 7 · Taller mecánico</p>
+  <h1>Motor Sur: sitio + portal «Mi auto» + panel del taller</h1>
+  <p class="lead">El <b>cliente</b> sigue su auto con la placa y el folio: ve en qué paso va, los avances con fotos del mecánico, si <b>requiere su atención</b> (aprobar la cotización concepto por concepto) y si falta una refacción y cuándo llega. También ve su cuenta, su historial por placa, su garantía y su próximo servicio. El <b>taller</b> recibe autos con inventario de entrada, arma la cotización, controla refacciones, publica avances, cobra y entrega con garantía.</p>
+  <div class="botones"><a class="b" href="index.html" target="_blank" rel="noopener">Abrir sitio y portal ↗</a><a class="b sec" href="admin.html" target="_blank" rel="noopener">Abrir el panel ↗ · PIN 1234</a></div>
+
+  <nav class="indice" aria-label="Contenido"><a href="#demo">Demo en 5 minutos</a><a href="#problemas">Problemas del negocio</a><a href="#modulos">Módulos</a><a href="#flujo">Flujo de una orden</a><a href="#reglas">Reglas automáticas</a><a href="#numeros">El número que vende</a><a href="#real">Demo vs. real</a><a href="#fases">Fases</a><a href="#preguntas">Preguntas</a></nav>
+
+  <section id="demo"><h2>Demo en 5 minutos</h2>
+    <ol class="pasos">
+      <li><b>El cliente que no llama.</b> En el celular, en el sitio escribe placa <b>MXA-123-B</b> y folio <b>MS-1201</b>. Aparece en rojo «Requiere tu atención»: la cotización de frenos con fotos del mecánico.</li>
+      <li><b>Aprueba concepto por concepto.</b> Dile que diga «No» al rectificado y «Sí» a lo demás. El total cambia al momento. Envía.</li>
+      <li><b>El taller se entera solo.</b> En el panel salta «Laura respondió la cotización». La orden pasó sola a «Esperando refacción» porque las balatas no están en el taller.</li>
+      <li><b>La refacción.</b> En Refacciones (o en la orden) pon la fecha de llegada: el cliente la ve. Marca «Llegó» y la orden pasa sola a reparación.</li>
+      <li><b>Avance con foto.</b> En la bitácora sube una foto desde el celular: «La ve el cliente». En el portal aparece.</li>
+      <li><b>Entrega.</b> Pasa a pruebas y a listo, cobra el saldo y entrega con kilometraje: se activa la garantía y se programa el próximo servicio.</li>
+    </ol>
+  </section>
+
+  <section id="problemas"><h2>Problemas de un taller mecánico</h2>
+    <p>El taller vende confianza: el cliente no sabe de mecánica y teme que le cobren de más. El tiempo se va en llamadas, autorizaciones de palabra y refacciones que no llegan.</p>
+    <div class="tarjetas">
+      <article><h3>«¿Ya está mi carro?»</h3><p>Cada cliente llama 3 o 4 veces. El mecánico deja la herramienta para contestar.</p><p class="sol">Portal con estado, fotos y fecha prometida; avisos por WhatsApp con un botón.</p></article>
+      <article><h3>Autorizaciones de palabra</h3><p>«Yo no autoricé eso». Discusiones al cobrar y clientes que no regresan.</p><p class="sol">Cotización que el cliente aprueba o rechaza por concepto, con registro.</p></article>
+      <article><h3>Autos parados esperando respuesta</h3><p>El cliente no contesta y el auto ocupa una bahía días.</p><p class="sol">Columna «Espera al cliente» en el tablero y recordatorio con un toque.</p></article>
+      <article><h3>Refacciones sin control</h3><p>No se sabe qué se pidió, a quién ni cuándo llega. El cliente se entera del retraso al venir.</p><p class="sol">Proveedor y fecha por refacción; vencidas en rojo; al llegar todas, el auto sigue solo.</p></article>
+      <article><h3>Hallazgos a mitad del trabajo</h3><p>Al desarmar aparece otra falla y hay que localizar al cliente.</p><p class="sol">Agregar el concepto y pedir autorización: el cliente lo ve en su celular.</p></article>
+      <article><h3>Sin historial por placa</h3><p>No se sabe qué se le hizo ni si está en garantía.</p><p class="sol">Historial por placa con km, trabajos, montos y garantía vigente.</p></article>
+      <article><h3>Clientes que no vuelven</h3><p>Nadie les recuerda su servicio.</p><p class="sol">Próximo servicio por meses o km y lista de recordatorios.</p></article>
+    </div>
+  </section>
+
+  <section id="modulos"><h2>Módulos</h2>
+    <h3 class="lado">Lo que ve el cliente</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Rastreo rápido</td><td>Placa + folio desde la portada, sin registrarse.</td><td>Cero fricción.</td></tr>
+      <tr><td>Estado del auto</td><td>8 pasos (recibido → entregado), mecánico asignado, entrega estimada y aviso de retraso.</td><td>Ya no llama para preguntar.</td></tr>
+      <tr><td>Requiere tu atención</td><td>Cotización con Sí/No por concepto, total en vivo, botón de dudas.</td><td>Decide rápido; el auto no se detiene.</td></tr>
+      <tr><td>Refacciones</td><td>Pedida, fecha de llegada o ya en el taller.</td><td>Entiende la espera.</td></tr>
+      <tr><td>Avances</td><td>Notas y fotos del mecánico (solo las públicas).</td><td>Confianza: ve lo que se hizo.</td></tr>
+      <tr><td>Cuenta, historial y garantía</td><td>Lo autorizado, lo rechazado, pagado y saldo; servicios por placa; garantía vigente; próximo servicio.</td><td>Sin sorpresas al pagar.</td></tr>
+    </tbody></table>
+    <h3 class="lado">Lo que ve el taller</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Tablero</td><td>Columnas: recibido/diagnóstico, espera al cliente, espera refacción, reparación, pruebas, listo. Retrasos en rojo.</td><td>El taller completo en una pantalla.</td></tr>
+      <tr><td>Recibir auto</td><td>Cliente y auto (o nuevos con foto), km, gasolina, inventario de entrada, daños, motivo, mecánico, fecha prometida. Da folio por WhatsApp.</td><td>Protege al taller ante reclamos.</td></tr>
+      <tr><td>Orden</td><td>Cotización (mano de obra y refacciones con costo), pedir autorización, fecha de llegada y «Llegó», bitácora con fotos pública o interna, pagos y anticipos, entrega con km.</td><td>Todo el trabajo en un lugar.</td></tr>
+      <tr><td>Citas</td><td>En línea o por teléfono; «Recibir» abre la recepción con sus datos.</td><td>Bahías organizadas.</td></tr>
+      <tr><td>Refacciones</td><td>Pendientes por llegar, vencidas, sin fecha; margen de refacciones del mes.</td><td>Presionar al proveedor a tiempo.</td></tr>
+      <tr><td>Clientes y autos</td><td>Búsqueda por placa, km, próximo servicio e historial.</td><td>Garantías y ventas repetidas.</td></tr>
+      <tr><td>Recordatorios</td><td>Cotizaciones sin respuesta, listos sin recoger, servicios que tocan.</td><td>Destrabar autos y traer clientes.</td></tr>
+      <tr><td>Mecánicos y caja</td><td>Comisión sobre mano de obra entregada; corte del día por método.</td><td>Cuentas claras.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="flujo"><h2>Flujo de una orden</h2>
+    <ol class="flujo">
+      <li>Recibir auto → folio por WhatsApp.</li>
+      <li>Diagnóstico → agregar conceptos → «Pedir autorización».</li>
+      <li>El cliente aprueba o rechaza en su celular → el panel avisa.</li>
+      <li>Si falta refacción: «Esperando refacción» con fecha; al llegar todas → «En reparación».</li>
+      <li>Si aparece algo más: se agrega y se pide autorización otra vez.</li>
+      <li>Pruebas y lavado → Listo (aviso) → cobro → entrega con km: garantía y próximo servicio.</li>
+    </ol>
+  </section>
+
+  <section id="reglas"><h2>Reglas que hace solo</h2>
+    <ul class="check">
+      <li>Solo se cobra lo autorizado; lo rechazado se ve tachado en la cuenta del cliente.</li>
+      <li>La orden espera a que el cliente decida todos los conceptos; luego pasa sola a refacción o reparación.</li>
+      <li>Cuando llegan todas las refacciones autorizadas, pasa sola a reparación y avisa en la bitácora.</li>
+      <li>No entrega un auto con saldo pendiente ni con un kilometraje menor al registrado.</li>
+      <li>Al entregar: garantía de 90 días (configurable), km del auto actualizado y próximo servicio a los 6 meses o 10,000 km.</li>
+      <li>Cambiar la fecha prometida deja una nota visible para el cliente.</li>
+      <li>Un auto no puede tener dos órdenes abiertas; una placa no se registra dos veces.</li>
+      <li>Las notas internas no las ve el cliente.</li>
+    </ul>
+  </section>
+
+  <section id="numeros"><h2>El número que vende</h2>
+    <p>Pregunta: «¿Cuántas llamadas de clientes contestas al día?». Si son 25 de 3 minutos, son más de <b>6 horas a la semana</b> de un mecánico o recepcionista. Y: «¿Cuántos días se queda un auto parado esperando que el cliente autorice?». Si cada auto pierde un día y atiendes 60 al mes, liberas bahías para <b>8 a 10 autos más al mes</b>. Las cotizaciones con fotos también suben lo que el cliente aprueba.</p>
+  </section>
+
+  <section id="real"><h2>Demo vs. sistema real</h2>
+    <table class="tm"><thead><tr><th>Pieza</th><th>En el demo</th><th>En producción</th></tr></thead><tbody>
+      <tr><td>Datos y fotos</td><td>En el navegador (espacio limitado)</td><td>Base de datos y almacenamiento de fotos en la nube.</td></tr>
+      <tr><td>Acceso del cliente</td><td>Placa + folio o teléfono</td><td>Igual, con enlace único por orden enviado por WhatsApp.</td></tr>
+      <tr><td>Autorización</td><td>Botón en el portal</td><td>Igual, con fecha, hora y registro como respaldo.</td></tr>
+      <tr><td>Avisos</td><td>Botón con mensaje listo</td><td>Automáticos con WhatsApp Business API (costo por mensaje).</td></tr>
+      <tr><td>Pagos</td><td>Registro manual</td><td>Liga de pago con tarjeta; facturación con proveedor autorizado (PAC).</td></tr>
+      <tr><td>Mecánicos</td><td>Un panel con PIN</td><td>Usuario por mecánico para subir fotos desde su celular.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="fases"><h2>Cómo venderlo por fases</h2>
+    <div class="fases">
+      <article><span>Fase 1 · Órdenes</span><ul><li>Recepción con inventario</li><li>Tablero</li><li>Portal con estado y fotos</li><li>Historial por placa</li></ul></article>
+      <article><span>Fase 2 · Autorización y refacciones</span><ul><li>Cotización con aprobación en línea</li><li>Control de refacciones</li><li>Pagos y entrega con garantía</li><li>Recordatorios</li></ul></article>
+      <article><span>Fase 3 · Crecer</span><ul><li>Pago en línea</li><li>Facturación</li><li>Inventario de refacciones</li><li>Flotillas de empresas</li></ul></article>
+    </div>
+  </section>
+
+  <section id="preguntas"><h2>Preguntas que te harán</h2>
+    <details><summary>Mis mecánicos no van a subir fotos.</summary><p>Basta con una foto al diagnosticar y otra al terminar, desde su celular. Esas dos fotos venden la reparación y evitan reclamos.</p></details>
+    <details><summary>¿Y si el cliente rechaza todo?</summary><p>Queda registrado y solo se cobra el diagnóstico autorizado. Mejor eso que una discusión al entregar.</p></details>
+    <details><summary>Mis clientes son mayores y no usan portales.</summary><p>El aviso les llega por WhatsApp de todos modos y pueden autorizar por teléfono; tú lo marcas en el panel. El portal es un extra que la mayoría sí usa.</p></details>
+    <details><summary>¿Sirve para flotillas?</summary><p>Sí: un cliente puede tener varios autos y ver todos en «Mi auto». Las flotillas con facturación mensual entran en la fase 3.</p></details>
+  </section>
+</main>
+</body>
+</html>

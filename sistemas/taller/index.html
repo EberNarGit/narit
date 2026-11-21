@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Motor Sur · Taller mecánico</title>
+<meta name="description" content="Ejemplo de seguimiento de reparaciones y cotizaciones en línea para talleres mecánicos, hecho por NarIT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sitio.css">
+</head>
+<body>
+<div class="demo-bar">Ejemplo hecho por <a href="../../">NarIT</a> · <a href="admin.html" target="_blank" rel="noopener">Abrir el panel del taller ↗</a> · <a href="guia.html">Guía</a></div>
+
+<header class="cab">
+  <a class="logo" href="#" data-ir="sitio"><span class="marca" aria-hidden="true">⚙</span>MOTOR SUR<small>Servicio automotriz</small></a>
+  <nav aria-label="Secciones"><a href="#servicios" data-ir="sitio">Servicios</a><a href="#como" data-ir="sitio">Cómo trabajamos</a><a href="#garantia" data-ir="sitio">Garantía</a></nav>
+  <div class="cab-acc"><button class="b b-lin" data-portal>Mi auto</button><button class="b b-amar" data-agendar>Agendar</button></div>
+</header>
+
+<main id="sitio">
+  <section class="hero">
+    <div class="hero-t">
+      <p class="eti">Taller mecánico · Ciudad de México</p>
+      <h1>Sabe qué tiene tu auto <span>sin llamarle al mecánico.</span></h1>
+      <p>Ves el avance con fotos, apruebas la cotización desde tu celular y te avisamos si falta una refacción. Sin sorpresas al pagar.</p>
+      <form class="rastreo" id="fRastreo"><label>Placa<input name="placa" required placeholder="MXA-123-B" autocomplete="off"></label><label>Folio<input name="folio" required placeholder="MS-1201" autocomplete="off"></label><button class="b b-amar">Ver mi auto</button></form>
+      <p class="demo-tip">Demo: placa <b>MXA-123-B</b>, folio <b>MS-1201</b> (espera tu autorización)</p>
+    </div>
+    <div class="hero-f"><img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=900&q=72&auto=format&fit=crop" alt="Mecánico revisando el motor de un auto" fetchpriority="high">
+      <div class="flota"><span class="pt"></span><div><b>Versa · MS-1201</b><small>Esperando tu autorización</small></div></div></div>
+  </section>
+
+  <ul class="cifras"><li><b>+6,500</b>autos atendidos</li><li><b>90 días</b>de garantía</li><li><b>4.8★</b>en reseñas</li><li><b>0</b>cobros sin tu permiso</li></ul>
+
+  <section id="servicios" class="sec">
+    <div class="sec-h"><h2>SERVICIOS</h2><p>Precios desde. Tu cotización exacta sale en el diagnóstico.</p></div>
+    <div class="servs" id="servs"></div>
+  </section>
+
+  <section id="como" class="sec">
+    <div class="sec-h"><h2>CÓMO TRABAJAMOS</h2><p>Así sigues tu auto desde que lo dejas.</p></div>
+    <ol class="pasos">
+      <li><b>1</b><h3>Recepción con fotos</h3><p>Anotamos kilometraje, gasolina y cómo llega tu auto.</p></li>
+      <li><b>2</b><h3>Diagnóstico</h3><p>El mecánico revisa y te explica con fotos qué encontró.</p></li>
+      <li><b>3</b><h3>Tú apruebas</h3><p>Ves la cotización concepto por concepto y apruebas solo lo que quieras.</p></li>
+      <li><b>4</b><h3>Avances en vivo</h3><p>Si falta una refacción, te decimos cuándo llega.</p></li>
+      <li><b>5</b><h3>Entrega con garantía</h3><p>Te avisamos cuando está listo y te recordamos tu próximo servicio.</p></li>
+    </ol>
+  </section>
+
+  <section id="garantia" class="sec">
+    <div class="garantia">
+      <img src="https://images.unsplash.com/photo-1727893119356-1702fe921cf9?w=900&q=70&auto=format&fit=crop" alt="Taller mecánico amplio y ordenado" loading="lazy">
+      <div><p class="eti">Garantía por escrito</p><h2 id="garTxt">90 DÍAS O 5,000 KM</h2><p>En mano de obra y refacciones que instalamos. La consultas en «Mi auto» con tu historial completo por placa.</p>
+        <button class="b b-amar" data-agendar>Agendar servicio</button></div>
+    </div>
+  </section>
+</main>
+
+<main id="portal" hidden></main>
+
+<footer class="pie">
+  <div><span class="logo"><span class="marca" aria-hidden="true">⚙</span>MOTOR SUR</span><p id="pieDir"></p></div>
+  <div><b>Clientes</b><button class="lnk" data-portal>Mi auto</button><button class="lnk" data-agendar>Agendar servicio</button></div>
+  <div><b>¿Urgencia?</b><a id="waPie" target="_blank" rel="noopener" href="#">Escríbenos por WhatsApp</a><span>Ejemplo: las órdenes no son reales.</span></div>
+</footer>
+
+<dialog id="dlg"></dialog>
+<script type="module" src="sitio.js"></script>
+</body>
+</html>
