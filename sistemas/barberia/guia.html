@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Guía · Sistema para barbería</title>
+<link rel="stylesheet" href="../_base/guia.css">
+</head>
+<body>
+<header class="g-cab"><a href="../">← Sistemas NarIT</a><span>Guía interna · Barbería</span></header>
+<main class="g">
+  <p class="eti">Bloque 5 · Barbería</p>
+  <h1>Filo Barber Club: reservas + «Mi club» + panel</h1>
+  <p class="lead">El <b>cliente</b> reserva con su barbero en 30 segundos, junta sellos en su celular (el décimo corte es gratis), ve si es socio del club, invita amigos con su código y deja escrito cómo le gusta el corte. La <b>barbería</b> ve la agenda de todos los barberos en una pantalla, cobra con sellos y premios automáticos, sabe qué clientes dejaron de venir y calcula las comisiones solas.</p>
+  <div class="botones"><a class="b" href="index.html" target="_blank" rel="noopener">Abrir sitio y club ↗</a><a class="b sec" href="admin.html" target="_blank" rel="noopener">Abrir el panel ↗ · PIN 1234</a></div>
+
+  <nav class="indice" aria-label="Contenido"><a href="#demo">Demo en 5 minutos</a><a href="#problemas">Problemas del negocio</a><a href="#modulos">Módulos</a><a href="#flujo">Flujo de un corte</a><a href="#reglas">Reglas automáticas</a><a href="#numeros">El número que vende</a><a href="#real">Demo vs. real</a><a href="#fases">Fases</a><a href="#preguntas">Preguntas</a></nav>
+
+  <section id="demo"><h2>Demo en 5 minutos</h2>
+    <ol class="pasos">
+      <li><b>Que reserve él.</b> Dale tu celular con el sitio. «Reservar» → Fade → «El primero libre» → hora. En el panel (laptop) salta el aviso y la cita aparece en la columna del barbero. Di: «Así ya nadie te escribe mientras cortas».</li>
+      <li><b>La agenda de todos.</b> En el panel: una columna por barbero, colores por estado, ocupación del día. Toca un espacio libre para agendar o «Cliente sin cita» para quien llega sin reservar.</li>
+      <li><b>Cobrar con premio.</b> Abre la cita de Diego: aparece «cómo le gusta» y 10/10 sellos. Pásalo a la silla y cobra: el fade sale gratis por premio, se agrega una pomada y la propina, y se suma el sello de hoy.</li>
+      <li><b>El cliente lo ve.</b> En el celular, «Mi club» como Diego (5511223344): su tarjeta de sellos y su historial.</li>
+      <li><b>Recuperar clientes.</b> Lealtad y promos: clientes que no vienen hace más de 30 días, con mensaje listo y el dinero que representan.</li>
+      <li><b>El sábado sin pleitos.</b> Comisiones: cuánto le toca a cada barbero por servicios, productos y propinas.</li>
+    </ol>
+  </section>
+
+  <section id="problemas"><h2>Problemas de una barbería</h2>
+    <p>Una barbería vende tiempo de silla. Cada barbero suele tener su clientela y cobra por comisión. El cliente bueno viene cada 2 o 3 semanas; si se va con otro, se pierden más de 20 cortes al año.</p>
+    <div class="tarjetas">
+      <article><h3>Citas en el WhatsApp de cada barbero</h3><p>El dueño no ve la agenda, se enciman citas y el barbero contesta mensajes con la máquina en la mano.</p><p class="sol">Reserva en línea por barbero; agenda de todos en una pantalla.</p></article>
+      <article><h3>Los clientes son del barbero</h3><p>Si el barbero se va, se lleva los contactos y la cartera.</p><p class="sol">Base de clientes de la barbería con historial, preferencias y frecuencia.</p></article>
+      <article><h3>Citas que no llegan</h3><p>Media hora de silla vacía, varias veces al día.</p><p class="sol">Recordatorio por WhatsApp, cancelación desde el celular que libera el lugar, conteo de «no llegó».</p></article>
+      <article><h3>Tarjeta de sellos de cartón</h3><p>Se pierde, se olvida o se falsifica, y no dice quién es el cliente.</p><p class="sol">Sellos digitales que se suman solos al cobrar y premio con un clic.</p></article>
+      <article><h3>Comisiones en libreta</h3><p>Cada semana hay discusiones y errores al pagar.</p><p class="sol">Comisión por barbero calculada con cada cobro: servicio, productos y propinas.</p></article>
+      <article><h3>Clientes que dejan de venir</h3><p>Nadie se da cuenta hasta que ya se fueron.</p><p class="sol">Lista de inactivos con mensaje de regreso, cumpleaños y «te falta un sello».</p></article>
+      <article><h3>Ingreso que sube y baja</h3><p>Martes vacíos y sábados llenos; ingreso impredecible.</p><p class="sol">Club mensual: ingreso fijo y clientes que vienen más seguido.</p></article>
+    </div>
+  </section>
+
+  <section id="modulos"><h2>Módulos</h2>
+    <h3 class="lado">Lo que ve el cliente</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Sitio</td><td>Servicios con precio y duración, barberos con horarios libres de hoy, club, productos.</td><td>Precios claros y reserva inmediata.</td></tr>
+      <tr><td>Reservar</td><td>Servicio → barbero o «el primero libre» → día → hora (solo las que caben según la duración) → datos y código de amigo.</td><td>30 segundos, a cualquier hora.</td></tr>
+      <tr><td>Tarjeta de sellos</td><td>Sellos actuales, cuántos faltan, aviso de premio.</td><td>Razón para volver aquí y no con otro.</td></tr>
+      <tr><td>Club</td><td>Estado de socio, vigencia o cuánto ahorra.</td><td>Convierte clientes en ingreso mensual.</td></tr>
+      <tr><td>Invita a un amigo</td><td>Código propio para compartir por WhatsApp; los dos ganan un sello.</td><td>Clientes nuevos casi gratis.</td></tr>
+      <tr><td>Citas, historial y «cómo me gusta»</td><td>Cancelar, ver visitas anteriores y dejar su preferencia de corte.</td><td>Siempre le cortan igual, aunque cambie de barbero.</td></tr>
+    </tbody></table>
+    <h3 class="lado">Lo que ve la barbería</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Agenda</td><td>Columna por barbero, bloques según la duración, estados (reservada → llegó → en la silla → terminada), no llegó, cancelar, cliente sin cita, ocupación del día.</td><td>Todo el día en una pantalla.</td></tr>
+      <tr><td>Cobrar</td><td>Muestra preferencia y sellos; canje de premio; club; productos; propina; método. Suma sello y descuenta inventario.</td><td>Nada se cobra mal ni se olvida.</td></tr>
+      <tr><td>Clientes</td><td>Grupos: inactivos, club, cerca del premio, cumpleaños. Visitas, frecuencia, barbero favorito, gasto; activar club, sello manual.</td><td>La cartera es del negocio.</td></tr>
+      <tr><td>Lealtad y promos</td><td>Listas con mensaje listo por WhatsApp y marca de enviado; socios, premios y referidos.</td><td>Traer clientes de vuelta sin gastar en anuncios.</td></tr>
+      <tr><td>Comisiones</td><td>Por semana y por barbero; marcar como pagada.</td><td>Sábados sin discusiones.</td></tr>
+      <tr><td>Productos y caja</td><td>Inventario, venta de mostrador, corte del día por método y gráfica de 14 días.</td><td>Cuadrar la caja en un minuto.</td></tr>
+      <tr><td>Ajustes</td><td>Horario, servicios (precio y duración), comisiones por barbero, sellos, premio, club, días de inactividad.</td><td>Las reglas las pone el dueño.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="flujo"><h2>Flujo de un corte</h2>
+    <ol class="flujo"><li>El cliente reserva → aparece en la columna del barbero con aviso en el panel.</li><li>Llega → «Llegó» → «Pasar a la silla». El barbero ve cómo le gusta.</li><li>«Terminar y cobrar»: servicio (o premio, o club), productos, propina → suma sello, descuenta inventario y entra a la comisión del barbero.</li><li>Si pasan 30 días sin volver, aparece en Lealtad y promos con mensaje de regreso.</li></ol>
+  </section>
+
+  <section id="reglas"><h2>Reglas que hace solo</h2>
+    <ul class="check">
+      <li>Solo ofrece horas donde cabe el servicio completo (un combo de 60 minutos ocupa dos espacios) y que terminen antes del cierre.</li>
+      <li>Si el cliente elige «el primero libre», se asigna al barbero disponible a esa hora.</li>
+      <li>No permite dos citas encimadas en la misma silla; si alguien ganó el horario, avisa y pide otro.</li>
+      <li>Cada cobro suma un sello; al canjear el premio se descuentan los sellos y se suma el de esa visita.</li>
+      <li>Los socios del club no pagan los servicios incluidos (corte, fade, combo, niño); la barba y la navaja sí se cobran.</li>
+      <li>Comisión = % del servicio cobrado + % de productos + 100% de propinas. Lo gratis (premio o club) no genera comisión.</li>
+      <li>Un código de amigo válido da un sello al nuevo y otro al que lo invitó.</li>
+      <li>Domingo cerrado.</li>
+    </ul>
+  </section>
+
+  <section id="numeros"><h2>El número que vende</h2>
+    <p>Pregunta: «¿Cuántas citas no llegan a la semana?». Si son 8 y el corte cuesta $250, son $2,000 por semana, <b>más de $100,000 al año</b>. Y por cada 10 clientes inactivos que regresan una vez al mes, son $2,500 al mes más. El club: 30 socios a $799 son <b>$24,000 fijos cada mes</b>, cobrados aunque llueva.</p>
+  </section>
+
+  <section id="real"><h2>Demo vs. sistema real</h2>
+    <table class="tm"><thead><tr><th>Pieza</th><th>En el demo</th><th>En producción</th></tr></thead><tbody>
+      <tr><td>Datos</td><td>En el navegador</td><td>Base de datos en la nube con respaldo.</td></tr>
+      <tr><td>Entrar a «Mi club»</td><td>Solo el teléfono</td><td>Código de un solo uso por WhatsApp.</td></tr>
+      <tr><td>Recordatorios</td><td>Botón con mensaje listo</td><td>Igual, o automáticos con WhatsApp Business API (costo por mensaje).</td></tr>
+      <tr><td>Club</td><td>Se cobra a mano cada mes</td><td>Cargo automático a tarjeta (con comisión del procesador).</td></tr>
+      <tr><td>Barberos</td><td>Un solo panel con PIN</td><td>Cada barbero ve solo su agenda y su comisión; el dueño ve todo.</td></tr>
+      <tr><td>Anticipo</td><td>No incluido</td><td>Anticipo con tarjeta para horarios pico, para reducir faltas.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="fases"><h2>Cómo venderlo por fases</h2>
+    <div class="fases">
+      <article><span>Fase 1 · Agenda</span><ul><li>Reservas en línea por barbero</li><li>Agenda de todos</li><li>Base de clientes y preferencias</li><li>Recordatorios</li></ul></article>
+      <article><span>Fase 2 · Lealtad y dinero</span><ul><li>Sellos y premios</li><li>Cobro y caja</li><li>Comisiones</li><li>Clientes inactivos</li></ul></article>
+      <article><span>Fase 3 · Crecer</span><ul><li>Club con cargo automático</li><li>Referidos</li><li>Anticipo en horas pico</li><li>Varias sucursales</li></ul></article>
+    </div>
+  </section>
+
+  <section id="preguntas"><h2>Preguntas que te harán</h2>
+    <details><summary>Mis barberos no quieren que vea su agenda.</summary><p>Les conviene: se les llena la agenda sola, no contestan mensajes mientras cortan y la comisión sale exacta. Empieza con el barbero que sí quiera; los demás se suman al ver su agenda llena.</p></details>
+    <details><summary>Aquí llegan sin cita.</summary><p>Y pueden seguir llegando: el botón «Cliente sin cita» los acomoda en el primer barbero libre. La reserva es para que el que sí aparta no espere.</p></details>
+    <details><summary>¿Regalar el décimo corte no me cuesta?</summary><p>Te cuesta un corte; a cambio, el cliente vuelve 9 veces contigo y no con la competencia. Puedes poner 12 sellos o que el premio sea la barba.</p></details>
+    <details><summary>¿Y si el cliente no sabe usar el portal?</summary><p>No lo necesita: tú le sumas el sello al cobrar y le mandas el aviso por WhatsApp. El portal es un extra para el que lo quiere.</p></details>
+  </section>
+</main>
+</body>
+</html>

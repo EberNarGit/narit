@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Filo Barber Club · Reserva tu corte</title>
+<meta name="description" content="Ejemplo de reservas, lealtad y club para barberías, hecho por NarIT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sitio.css">
+</head>
+<body>
+<div class="demo-bar">Ejemplo hecho por <a href="../../">NarIT</a> · <a href="admin.html" target="_blank" rel="noopener">Abrir el panel de la barbería ↗</a> · <a href="guia.html">Guía</a></div>
+
+<header class="cab">
+  <a class="logo" href="#" data-ir="sitio">FILO<small>Barber Club</small></a>
+  <nav aria-label="Secciones"><a href="#servicios" data-ir="sitio">Servicios</a><a href="#barberos" data-ir="sitio">Barberos</a><a href="#club" data-ir="sitio">Club</a><a href="#productos" data-ir="sitio">Productos</a></nav>
+  <div class="cab-acc"><button class="b b-lin" data-portal>Mi club</button><button class="b b-cobre" data-reservar>Reservar</button></div>
+</header>
+
+<main id="sitio">
+  <section class="hero">
+    <div class="hero-t">
+      <p class="eti">Barbería · Ciudad de México</p>
+      <h1>RESERVA.<br>LLEGA.<br><span>SAL FILO.</span></h1>
+      <p>Elige a tu barbero y tu hora en 30 segundos. Sin esperar, sin mensajes. Cada corte suma a tu tarjeta: el décimo va por nuestra cuenta.</p>
+      <div class="hero-a"><button class="b b-cobre b-xl" data-reservar>Reservar mi corte ↗</button><button class="b b-lin b-xl" data-portal>Ver mis sellos</button></div>
+      <div class="social"><span class="caras" id="caras"></span><span><b>+2,400</b> cortes al mes<br><small>4.9 ★ en reseñas</small></span></div>
+    </div>
+    <div class="hero-f"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=72&auto=format&fit=crop" alt="Barbero haciendo un detalle a navaja" fetchpriority="high">
+      <div class="flota"><b>Hoy quedan</b><span id="quedan">—</span><small>horarios libres</small></div></div>
+  </section>
+
+  <div class="cinta" aria-hidden="true"><div>FADES · BARBA · NAVAJA · CLUB DE CORTES ILIMITADOS · 10° CORTE GRATIS · FADES · BARBA · NAVAJA · CLUB DE CORTES ILIMITADOS · 10° CORTE GRATIS ·</div></div>
+
+  <section id="servicios" class="sec">
+    <div class="sec-h"><h2>SERVICIOS</h2><p>Precios fijos. Lo que ves es lo que pagas.</p></div>
+    <div class="menu" id="menu"></div>
+  </section>
+
+  <section id="barberos" class="sec">
+    <div class="sec-h"><h2>BARBEROS</h2><p>Reserva con el que ya te conoce.</p></div>
+    <div class="barbs" id="barbs"></div>
+  </section>
+
+  <section id="club" class="sec">
+    <div class="club">
+      <div><p class="eti">Lealtad</p><h2>CADA CORTE<br>SUMA.</h2><p>Junta <b id="nSellos">10</b> sellos y tu siguiente servicio es gratis. Sin tarjetas de cartón: todo en tu celular.</p>
+        <div class="sellos demo" id="sellosDemo"></div></div>
+      <div class="planes">
+        <article><span class="eti">Club Filo</span><h3 id="precioClub">$799</h3><small>al mes</small><ul><li>Cortes ilimitados (corte, fade, combo, niño)</li><li>Reserva prioritaria</li><li>10% en productos</li></ul><button class="b b-cobre b-full" data-unirme>Quiero el club</button></article>
+        <article><span class="eti">Invita a un amigo</span><h3>+1 sello</h3><small>para cada uno</small><p>Comparte tu código desde «Mi club». Cuando tu amigo venga, los dos ganan un sello.</p><button class="b b-lin b-full" data-portal>Ver mi código</button></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="productos" class="sec">
+    <div class="sec-h"><h2>PRODUCTOS</h2><p>Lo que usamos en la silla, para que lo repitas en casa.</p></div>
+    <div class="prods" id="prods"></div>
+  </section>
+</main>
+
+<main id="portal" hidden></main>
+
+<footer class="pie">
+  <div><span class="logo">FILO<small>Barber Club</small></span><p id="pieDir"></p></div>
+  <div><b>Reservas</b><button class="lnk" data-reservar>Reservar</button><button class="lnk" data-portal>Mi club</button></div>
+  <div><b>¿Dudas?</b><a id="waPie" target="_blank" rel="noopener" href="#">Escríbenos por WhatsApp</a><span>Ejemplo: las reservas no son reales.</span></div>
+</footer>
+
+<dialog id="dlg"></dialog>
+<script type="module" src="sitio.js"></script>
+</body>
+</html>
