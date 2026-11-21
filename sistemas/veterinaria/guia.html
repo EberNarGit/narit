@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Guía · Sistema para veterinaria</title>
+<link rel="stylesheet" href="../_base/guia.css">
+</head>
+<body>
+<header class="g-cab"><a href="../">← Sistemas NarIT</a><span>Guía interna · Veterinaria</span></header>
+<main class="g">
+  <p class="eti">Bloque 2 · Veterinaria</p>
+  <h1>Colita Feliz: sitio + portal del dueño + panel de la clínica</h1>
+  <p class="lead">El <b>dueño de la mascota</b> agenda en línea y entra con su WhatsApp a «Mi mascota»: ve si está en consulta, lista para recoger u hospitalizada (con noticias del equipo), su cartilla de vacunas, su historial clínico, sus citas y su saldo. La <b>clínica</b> maneja agenda, expedientes, vacunas, hospital, recordatorios, farmacia y cobros.</p>
+  <div class="botones"><a class="b" href="index.html" target="_blank" rel="noopener">Abrir sitio y portal ↗</a><a class="b sec" href="admin.html" target="_blank" rel="noopener">Abrir el panel ↗ · PIN 1234</a></div>
+
+  <nav class="indice" aria-label="Contenido"><a href="#demo">Demo en 5 minutos</a><a href="#problemas">Problemas del negocio</a><a href="#modulos">Módulos</a><a href="#flujos">Flujos</a><a href="#reglas">Reglas automáticas</a><a href="#numeros">El número que vende</a><a href="#real">Demo vs. real</a><a href="#fases">Fases</a><a href="#preguntas">Preguntas</a></nav>
+
+  <section id="demo"><h2>Demo en 5 minutos</h2>
+    <p>Abre el <b>portal en tu celular</b> y el <b>panel en tu laptop</b>. Lo que hace uno lo ve el otro al instante.</p>
+    <ol class="pasos">
+      <li><b>El momento que enamora.</b> En el portal toca «Mi mascota» y entra como Mariana (5512345678). Max está hospitalizado: «Mejorando», con las notas del equipo. Ahora en el panel → Hospital, escribe «Ya comió y salió a caminar» y publica. En el celular aparece sola. Di: «Así ningún dueño te vuelve a llamar a las 11 de la noche».</li>
+      <li><b>Lista para recoger.</b> Entra como Carlos (5545678901): Toby aparece «¡Listo para recoger!» con botón de «voy en camino». En el panel es un solo botón en la agenda.</li>
+      <li><b>Cartilla.</b> En Luna (de Mariana) abre Vacunas: semáforo verde, amarillo y rojo. En el panel, termina la cita de vacuna de Luna y elige «Triple felina»: la cartilla se actualiza y el refuerzo se programa solo a un año.</li>
+      <li><b>Agenda en línea.</b> Sal del portal, toca «Agendar» y regístrate con un número nuevo. En el panel salta el aviso «Cita en línea» y queda «Por confirmar».</li>
+      <li><b>Cierra con dinero.</b> Panel → Recordatorios: «10 vacunas por avisar, $3,800 en juego». Pregunta: «¿Hoy quién le avisa a esos dueños?».</li>
+    </ol>
+  </section>
+
+  <section id="problemas"><h2>Problemas de una veterinaria</h2>
+    <p>Una veterinaria vive de tres ingresos: consulta, medicina preventiva (vacunas y desparasitación que se repiten) y tienda o farmacia. El dueño de la mascota es emocional: valora que lo tengan informado. El dinero y la confianza se van aquí:</p>
+    <div class="tarjetas">
+      <article><h3>Vacunas que nadie recuerda</h3><p>El refuerzo anual depende de que el dueño se acuerde. La mayoría no regresa a tiempo y ese ingreso se pierde.</p><p class="sol">Cartilla digital con semáforo y lista de recordatorios con mensaje de WhatsApp listo.</p></article>
+      <article><h3>Llamadas de dueños angustiados</h3><p>Con una mascota internada, el dueño llama varias veces al día. Interrumpe al médico y aun así se queda con dudas.</p><p class="sol">Hospital con notas que el dueño ve al momento en su portal.</p></article>
+      <article><h3>«¿Ya está listo?»</h3><p>Estética y cirugías: el dueño llama para saber si ya puede pasar. Las mascotas listas esperan horas.</p><p class="sol">Estado «Lista para recoger» que aparece en el portal y aviso por WhatsApp.</p></article>
+      <article><h3>Expedientes en papel</h3><p>En una urgencia no se encuentra el historial, la alergia o el peso anterior. Riesgo médico y legal.</p><p class="sol">Expediente por mascota: consultas, peso, temperatura, diagnóstico, tratamiento, receta y alergias visibles.</p></article>
+      <article><h3>Agenda en libreta o WhatsApp</h3><p>Citas encimadas, huecos y mensajes perdidos entre chats personales.</p><p class="sol">Agenda con cupo por horario y citas en línea que llegan para confirmar.</p></article>
+      <article><h3>Medicamento caducado</h3><p>Farmacia sin control de lote ni caducidad: se tira dinero o se vende vencido.</p><p class="sol">Lotes, caducidad con alertas a 60 días, bloqueo de venta de caducados.</p></article>
+      <article><h3>Cuentas de hospital mal sumadas</h3><p>Días, sueros y medicamentos que no se cargan. Discusiones al dar de alta.</p><p class="sol">Cuenta abierta por internamiento: se carga cada día y cada insumo, con pagos parciales.</p></article>
+      <article><h3>Clientes que se van</h3><p>Sin datos de contacto ordenados, no hay forma de invitar a volver ni de felicitar.</p><p class="sol">Base de dueños y mascotas con WhatsApp; portal que el dueño quiere usar.</p></article>
+    </div>
+  </section>
+
+  <section id="modulos"><h2>Módulos</h2>
+    <h3 class="lado">Lo que ve el dueño de la mascota</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Sitio</td><td>Servicios con precio y duración, equipo, reseñas, urgencias 24 h.</td><td>Precios claros generan confianza y citas.</td></tr>
+      <tr><td>Agendar</td><td>Elige mascota, servicio, día y solo horas libres. Registro en un minuto si es nuevo.</td><td>Citas a cualquier hora sin contestar el teléfono.</td></tr>
+      <tr><td>Mi mascota · Ahora</td><td>Hospitalizado con estado y noticias; en atención; lista para recoger; próxima cita; vacunas pendientes.</td><td>Tranquilidad para el dueño; menos llamadas.</td></tr>
+      <tr><td>Vacunas</td><td>Cartilla con semáforo, fechas de refuerzo y lotes.</td><td>Sustituye la cartilla de papel que se pierde.</td></tr>
+      <tr><td>Historial clínico</td><td>Consultas con diagnóstico, tratamiento y receta; gráfica de peso.</td><td>El dueño sigue indicaciones; otro médico puede consultarlo.</td></tr>
+      <tr><td>Citas y cuenta</td><td>Próximas y anteriores, cancelar; saldo y conceptos cobrados.</td><td>Transparencia: sin sorpresas al pagar.</td></tr>
+    </tbody></table>
+    <h3 class="lado">Lo que ve la clínica</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Hoy</td><td>Citas del día, hospitalizados, vacunas por avisar, cobrado hoy y del mes, gráfica de 14 días.</td><td>El día completo en una pantalla.</td></tr>
+      <tr><td>Agenda</td><td>Por día, solicitudes en línea por confirmar, estados (confirmada → en atención → lista → terminada), cancelar, WhatsApp con mensaje listo.</td><td>Cada cambio lo ve el dueño.</td></tr>
+      <tr><td>Pacientes</td><td>Búsqueda por mascota, dueño o teléfono; alta con foto; expediente con consultas, vacunas, citas y cuentas.</td><td>Información médica completa en segundos.</td></tr>
+      <tr><td>Hospital</td><td>Internar, publicar notas y estado, cobrar día, ver cuenta, avisar, dar de alta.</td><td>El servicio que más fideliza.</td></tr>
+      <tr><td>Recordatorios</td><td>Vacunas vencidas y por vencer con mensaje de WhatsApp listo y marca de «avisado»; citas de mañana.</td><td>Convierte la cartilla en ingresos.</td></tr>
+      <tr><td>Farmacia</td><td>Lote, caducidad, mínimos, entradas, venta de mostrador, movimientos. Las vacunas aplicadas descuentan dosis.</td><td>No tirar ni vender caducado.</td></tr>
+      <tr><td>Cobros</td><td>Cuentas abiertas, pagos parciales, cargos extra, envío de saldo por WhatsApp.</td><td>Todo lo atendido se cobra.</td></tr>
+      <tr><td>Ajustes</td><td>Datos, PIN, precio por día de hospital y precios de servicios.</td><td>El sitio se actualiza al guardar.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="flujos"><h2>Flujos principales</h2>
+    <h3 class="lado">Cita en línea</h3>
+    <ol class="flujo"><li>El dueño agenda → «Por confirmar» en el panel (aviso en vivo).</li><li>Recepción confirma y manda WhatsApp → el dueño la ve confirmada.</li><li>Al llegar: «Iniciar atención» → el portal dice «En atención».</li><li>Estética, dental o cirugía: «Lista para recoger» → aviso en el portal.</li><li>«Terminar y cobrar»: se registra vacuna, diagnóstico o producto usado y se abre la cuenta.</li></ol>
+    <h3 class="lado">Hospitalización</h3>
+    <ol class="flujo"><li>Internar: motivo, jaula, estado y primera nota → cuenta abierta con día 1.</li><li>Cada turno: nota + estado → el dueño la lee al instante.</li><li>Cada día: «Cobrar día»; insumos como cargos.</li><li>Alta → mensaje de alta en el portal; la cuenta queda en Cobros.</li></ol>
+  </section>
+
+  <section id="reglas"><h2>Reglas que el sistema hace solo</h2>
+    <ul class="check">
+      <li>Calcula el refuerzo de cada vacuna (anual, cachorro a 21 días, desparasitación a 90) y la marca verde, amarilla (30 días) o roja (vencida).</li>
+      <li>Muestra solo las vacunas que corresponden a la especie (perro o gato).</li>
+      <li>Cupo de 2 citas por horario; no ofrece horas pasadas ni domingos en línea.</li>
+      <li>Al aplicar una vacuna descuenta la dosis del inventario.</li>
+      <li>Al terminar una cita abre la cuenta con el servicio y lo usado.</li>
+      <li>Alerta productos bajo mínimo, por caducar en 60 días y caducados; los caducados no se pueden vender.</li>
+      <li>Muestra la alergia de la mascota en rojo en su ficha y en su expediente.</li>
+      <li>El dueño solo ve sus mascotas; entra con su WhatsApp.</li>
+    </ul>
+  </section>
+
+  <section id="numeros"><h2>El número que vende</h2>
+    <p>Pregunta al dueño de la clínica: «¿Cuántos pacientes activos tienes?». Supón 600. Si 1 de cada 3 no regresa a su refuerzo anual porque nadie le avisa, son 200 vacunas al año. A $380 son <b>$76,000 al año</b> que hoy no entran, sin contar la consulta que suele acompañar a la vacuna. La pantalla de Recordatorios enseña ese número con sus propios datos.</p>
+  </section>
+
+  <section id="real"><h2>Demo vs. sistema real</h2>
+    <table class="tm"><thead><tr><th>Pieza</th><th>En el demo</th><th>En producción</th></tr></thead><tbody>
+      <tr><td>Datos</td><td>En el navegador</td><td>Base de datos en la nube con respaldo; los expedientes son datos sensibles.</td></tr>
+      <tr><td>Entrada al portal</td><td>Solo el teléfono</td><td>Código de un solo uso por WhatsApp o SMS.</td></tr>
+      <tr><td>Panel</td><td>PIN 1234</td><td>Usuarios por persona con permisos (recepción, médico, estética, administración).</td></tr>
+      <tr><td>Avisos</td><td>Botón que abre WhatsApp con el mensaje listo</td><td>Igual (gratis) o envío automático con WhatsApp Business API (costo por mensaje).</td></tr>
+      <tr><td>Fotos de estudios</td><td>No incluido</td><td>Subir radiografías y análisis al expediente.</td></tr>
+      <tr><td>Privacidad</td><td>—</td><td>Aviso de privacidad y consentimiento informado para cirugías.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="fases"><h2>Cómo venderlo por fases</h2>
+    <div class="fases">
+      <article><span>Fase 1 · Ordenar</span><ul><li>Agenda con citas en línea</li><li>Pacientes y expediente</li><li>Cartilla y recordatorios</li><li>Portal: ahora, vacunas, citas</li></ul></article>
+      <article><span>Fase 2 · Fidelizar</span><ul><li>Hospital con noticias al dueño</li><li>Lista para recoger</li><li>Cobros y cuentas</li><li>Farmacia con lotes y caducidad</li></ul></article>
+      <article><span>Fase 3 · Crecer</span><ul><li>Planes de salud anuales con pago mensual</li><li>Tienda en línea de alimento</li><li>Fotos del internado al dueño</li><li>Varias sucursales</li></ul></article>
+    </div>
+  </section>
+
+  <section id="preguntas"><h2>Preguntas que te harán</h2>
+    <details><summary>¿Los dueños de verdad van a usar el portal?</summary><p>Lo usan cuando les importa: con su mascota internada o esperando que salga de estética. Esas dos situaciones bastan para que lo guarden en el celular.</p></details>
+    <details><summary>No tengo tiempo de escribir notas del hospital.</summary><p>Es una línea y un estado, como un mensaje de WhatsApp, pero llega a todos los interesados y queda en el expediente. Ahorra las llamadas que hoy contestas.</p></details>
+    <details><summary>Ya tengo mis expedientes en papel.</summary><p>No se pasan todos: los pacientes se dan de alta conforme vienen. En pocos meses están los activos.</p></details>
+    <details><summary>¿Puede ver el dueño cosas que no quiero?</summary><p>Solo ve diagnóstico, tratamiento, receta, vacunas, citas y su cuenta. Las notas internas pueden quedarse ocultas en la versión real.</p></details>
+    <details><summary>¿Sirve para varios médicos?</summary><p>Sí: cada consulta guarda quién atendió y la agenda tiene cupo para varios a la misma hora.</p></details>
+  </section>
+</main>
+</body>
+</html>

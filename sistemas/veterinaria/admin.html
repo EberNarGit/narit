@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel · Colita Feliz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_base/admin.css">
+<style>
+:root{--a:#1F7A57;--a2:#F6C445;--bg:#FBF6EC;--side:#2B1E12;--sidei:#FBE3A0;--ln:#EFE3CF;--fd:"Bricolage Grotesque",system-ui,sans-serif}
+body{font-family:"Nunito Sans",system-ui,sans-serif}
+.agenda{display:grid;gap:8px}
+.cita .acc{grid-column:2/-1;align-items:center}
+.cita{display:grid;grid-template-columns:58px 52px 1fr;gap:8px 12px;align-items:center;background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:10px 12px}
+.cita .h{font-family:var(--fd);font-size:1.2rem}
+.cita img,.pac img{width:52px;height:52px;border-radius:12px;object-fit:cover}
+.cita.pendiente{border-left:5px solid #2F6FED}.cita.lista{border-left:5px solid var(--ok)}.cita.en-curso{border-left:5px solid var(--a2)}
+.pacs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.pac{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:10px;cursor:pointer;text-align:left;width:100%}
+.pac:hover{border-color:var(--a)}
+.hosp{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.hcard{background:var(--card);border:1px solid var(--ln);border-radius:16px;overflow:hidden}
+.hcard>img{width:100%;height:150px;object-fit:cover}
+.hcard .c{padding:14px}
+.sem{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.sem.ok{background:var(--ok)}.sem.pronto{background:var(--a2)}.sem.vencida{background:var(--bad)}
+.exp-cab{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.exp-cab img{width:84px;height:84px;border-radius:18px;object-fit:cover}
+.tabs-mini{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.tabs-mini button{border:1px solid var(--ln);background:var(--card);border-radius:99px;padding:6px 12px;cursor:pointer;font-weight:700}
+.tabs-mini button[aria-pressed=true]{background:var(--ink);color:#fff}
+dialog.ancho{width:min(860px,calc(100vw - 24px))}
+@media(max-width:700px){.cita{grid-template-columns:52px 1fr}.cita img{display:none}.cita .acc{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="adm" hidden id="app">
+  <nav class="side" aria-label="Panel">
+    <div class="marca"><span style="font-size:1.6rem">🐾</span><div>Colita Feliz<small>Panel de la clínica</small></div></div>
+    <a href="#inicio"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/></svg>Hoy</a>
+    <a href="#agenda"><svg viewBox="0 0 24 24"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg>Agenda<span class="n" id="nAge" hidden></span></a>
+    <a href="#pacientes"><svg viewBox="0 0 24 24"><path d="M8 7a2 2 0 1 0 0-.1M16 7a2 2 0 1 0 0-.1M5 12a2 2 0 1 0 0-.1M19 12a2 2 0 1 0 0-.1M12 13c-3 0-5 3-5 5 0 1.5 1.5 2 2.5 2 1 0 1.5-.5 2.5-.5s1.5.5 2.5.5 2.5-.5 2.5-2c0-2-2-5-5-5z"/></svg>Pacientes</a>
+    <a href="#hospital"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M10 20v-5h4v5M12 8v4M10 10h4"/></svg>Hospital<span class="n" id="nHos" hidden></span></a>
+    <a href="#recordatorios"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/></svg>Recordatorios<span class="n" id="nRec" hidden></span></a>
+    <a href="#farmacia"><svg viewBox="0 0 24 24"><path d="M10 3h4v4h4v4h-4v4h-4v-4H6V7h4zM5 20h14"/></svg>Farmacia<span class="n" id="nFar" hidden></span></a>
+    <a href="#cobros"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 10h18M7 15h3"/></svg>Cobros</a>
+    <a href="#ajustes"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0M16 4v4M10 10v4M18 16v4"/></svg>Ajustes</a>
+    <a href="index.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>Ver sitio y portal</a>
+    <a href="guia.html"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM8 7h7"/></svg>Guía NarIT</a>
+    <p class="pie">Demo de NarIT. Los datos se guardan solo en este navegador.</p>
+  </nav>
+  <main class="cont" id="vista"></main>
+</div>
+<dialog id="dlg"></dialog>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
