@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel · Óptica Mirada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_base/admin.css">
+<style>
+:root{--a:#4B4FD1;--a2:#B9BBFF;--bg:#F2F3F8;--side:#1C1F33;--sidei:#E8E9FB;--ln:#E2E4EE;--fd:"Instrument Serif",Georgia,serif}
+body{font-family:"Inter",system-ui,sans-serif}
+.top h1,.kpi b{font-weight:400}
+.tablero{display:grid;grid-template-columns:repeat(5,minmax(200px,1fr));gap:10px;overflow-x:auto;padding-bottom:6px}
+.col{background:#E9EAF2;border-radius:14px;padding:10px;min-height:120px}
+.col h2{font:700 .78rem system-ui;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:2px 4px 10px;display:flex;justify-content:space-between}
+.ord{background:var(--card);border-radius:12px;padding:10px;margin-bottom:8px;cursor:pointer;border:1px solid transparent;display:block;width:100%;text-align:left}
+.ord:hover{border-color:var(--a)}
+.ord.tarde{border-left:4px solid var(--bad)}
+.ord b{display:block}.ord small{color:var(--mut);display:block}
+.grad{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.92rem}
+.grad th,.grad td{padding:6px;text-align:center;border:1px solid var(--ln)}
+.grad th{font-size:.72rem;color:var(--mut);text-transform:uppercase}
+.grad input{width:100%;max-width:80px;padding:6px;border:1px solid var(--ln);border-radius:8px;text-align:center}
+.arms{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;max-height:260px;overflow:auto}
+.arms label{border:1px solid var(--ln);border-radius:12px;padding:6px;cursor:pointer;font-size:.8rem;display:grid;gap:4px;background:#fff}
+.arms label:has(input:checked){border-color:var(--a);box-shadow:0 0 0 2px var(--a2)}
+.arms img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.arms input{position:absolute;opacity:0}
+.tot{font-size:1.3rem}
+dialog.ancho{width:min(920px,calc(100vw - 24px))}
+@media print{body *{visibility:hidden}#imprimir,#imprimir *{visibility:visible}#imprimir{position:fixed;inset:0;padding:20px;background:#fff}}
+</style>
+</head>
+<body>
+<div class="adm" hidden id="app">
+  <nav class="side" aria-label="Panel">
+    <div class="marca"><span style="font-family:var(--fd);font-size:1.6rem">M</span><div>Óptica Mirada<small>Panel de la óptica</small></div></div>
+    <a href="#inicio"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/></svg>Hoy</a>
+    <a href="#venta"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Nueva venta</a>
+    <a href="#ordenes"><svg viewBox="0 0 24 24"><path d="M4 5h4v14H4zM10 5h4v10h-4zM16 5h4v6h-4z"/></svg>Órdenes<span class="n" id="nOrd" hidden></span></a>
+    <a href="#examenes"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>Exámenes<span class="n" id="nEx" hidden></span></a>
+    <a href="#clientes"><svg viewBox="0 0 24 24"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg>Clientes</a>
+    <a href="#armazones"><svg viewBox="0 0 24 24"><path d="M3 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0M15 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0M9 12h6M3 12H1M21 12h2"/></svg>Armazones<span class="n" id="nArm" hidden></span></a>
+    <a href="#recordatorios"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/></svg>Recordatorios<span class="n" id="nRec" hidden></span></a>
+    <a href="#ajustes"><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M16 4v4M10 10v4M18 16v4"/></svg>Ajustes</a>
+    <a href="index.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>Ver catálogo y portal</a>
+    <a href="guia.html"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM8 7h7"/></svg>Guía NarIT</a>
+    <p class="pie">Demo de NarIT. Los datos se guardan solo en este navegador.</p>
+  </nav>
+  <main class="cont" id="vista"></main>
+</div>
+<dialog id="dlg"></dialog>
+<script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Guía · Sistema para óptica</title>
+<link rel="stylesheet" href="../_base/guia.css">
+</head>
+<body>
+<header class="g-cab"><a href="../">← Sistemas NarIT</a><span>Guía interna · Óptica</span></header>
+<main class="g">
+  <p class="eti">Bloque 4 · Óptica</p>
+  <h1>Óptica Mirada: catálogo + portal «Mis lentes» + panel</h1>
+  <p class="lead">El <b>cliente</b> ve los armazones, los aparta para probárselos, calcula cuánto le cuestan sus lentes, agenda su examen y sigue su pedido paso a paso (laboratorio, montaje, listo). También ve su graduación con el cambio contra el año anterior y sus garantías. La <b>óptica</b> vende con graduación, controla las órdenes de laboratorio en un tablero, el inventario de armazones y los recordatorios.</p>
+  <div class="botones"><a class="b" href="index.html" target="_blank" rel="noopener">Abrir catálogo y portal ↗</a><a class="b sec" href="admin.html" target="_blank" rel="noopener">Abrir el panel ↗ · PIN 1234</a></div>
+
+  <nav class="indice" aria-label="Contenido"><a href="#demo">Demo en 5 minutos</a><a href="#problemas">Problemas del negocio</a><a href="#modulos">Módulos</a><a href="#flujo">Flujo de una venta</a><a href="#reglas">Reglas automáticas</a><a href="#numeros">El número que vende</a><a href="#real">Demo vs. real</a><a href="#fases">Fases</a><a href="#preguntas">Preguntas</a></nav>
+
+  <section id="demo"><h2>Demo en 5 minutos</h2>
+    <ol class="pasos">
+      <li><b>«¿Ya están mis lentes?»</b> Entra al portal como Andrea (5510101010): ve su pedido en «En laboratorio» con fecha estimada. Di: «Esta es la llamada que hoy te hacen 3 veces por cliente».</li>
+      <li><b>Mueve la orden.</b> En el panel → Órdenes, abre la de Andrea y pásala a «Montaje». En el celular, la línea de avance se mueve sola.</li>
+      <li><b>Atrasos a la vista.</b> En el tablero, la orden de Ricardo está en rojo: pasó su fecha prometida con el laboratorio. «Antes de que te reclame, ya sabes que tienes que llamar al laboratorio».</li>
+      <li><b>Venta con graduación.</b> Nueva venta → elige a Mónica: su graduación ya está cargada. Elige armazón con foto, progresivo y antirreflejante: total, anticipo y fecha de entrega salen solos. Imprime la orden para el laboratorio.</li>
+      <li><b>Graduación que se entiende.</b> En el portal de Andrea → Mi graduación: su miopía subió, con el cambio en rojo contra el año pasado. «Esto le da confianza y la hace volver cada año».</li>
+      <li><b>Dinero olvidado.</b> Recordatorios: lentes listos sin recoger (dinero parado), clientes a los que les toca examen y lentes de contacto por terminarse.</li>
+    </ol>
+  </section>
+
+  <section id="problemas"><h2>Problemas de una óptica</h2>
+    <p>La óptica vende un producto hecho a la medida que depende de un laboratorio externo. Cada venta tiene graduación, armazón, mica, tratamientos, anticipo y una fecha prometida. El cliente regresa cada año o dos, si alguien le avisa.</p>
+    <div class="tarjetas">
+      <article><h3>Llamadas de «¿ya están?»</h3><p>Entre que paga y recoge, el cliente llama varias veces. Nadie sabe en qué paso va el trabajo.</p><p class="sol">Portal con la línea de avance y fecha estimada; tablero de órdenes en la óptica.</p></article>
+      <article><h3>Atrasos del laboratorio</h3><p>La óptica se entera del atraso cuando el cliente llega y sus lentes no están.</p><p class="sol">Fecha prometida por orden; las atrasadas se marcan en rojo en el tablero y en «Hoy».</p></article>
+      <article><h3>Graduaciones en tarjetas</h3><p>Se pierden, no se pueden comparar, y una mala captura arruina un trabajo de miles de pesos.</p><p class="sol">Historial de graduaciones por cliente, orden de laboratorio impresa desde el sistema.</p></article>
+      <article><h3>Lentes listos que nadie recoge</h3><p>Trabajos terminados con saldo pendiente se acumulan en el cajón.</p><p class="sol">Lista de «sin recoger» con días y saldo, y aviso por WhatsApp.</p></article>
+      <article><h3>Armazones parados</h3><p>Modelos que llevan meses en la vitrina son dinero detenido.</p><p class="sol">«Días sin venta» por modelo y el valor de lo parado; se ocultan o se ponen en promoción.</p></article>
+      <article><h3>Clientes que no vuelven</h3><p>El examen anual y los lentes de contacto son ventas seguras si alguien avisa.</p><p class="sol">Recordatorios de examen a los 12 meses y de lentes de contacto a los 5½ meses.</p></article>
+      <article><h3>Cotizar es lento</h3><p>Sumar armazón, mica y tratamientos a mano en mostrador da errores y desconfianza.</p><p class="sol">«Arma tus lentes» en el sitio y en la venta: el total y el anticipo salen solos.</p></article>
+    </div>
+  </section>
+
+  <section id="modulos"><h2>Módulos</h2>
+    <h3 class="lado">Lo que ve el cliente</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Catálogo</td><td>Armazones con foto, filtros por forma, material y género; etiquetas Nuevo, Más vendido, Últimas piezas, Agotado.</td><td>El cliente llega sabiendo lo que quiere.</td></tr>
+      <tr><td>Apartar</td><td>Aparta un armazón 3 días para probárselo; descuenta de lo disponible.</td><td>Convierte visitas al sitio en visitas a la tienda.</td></tr>
+      <tr><td>Arma tus lentes</td><td>Armazón + mica + tratamientos = total y anticipo.</td><td>Precio claro antes de venir.</td></tr>
+      <tr><td>Examen</td><td>Agenda en horarios libres; queda registrado como cliente.</td><td>Llena la agenda del optometrista.</td></tr>
+      <tr><td>Mi pedido</td><td>6 pasos con fecha, entrega estimada, aviso de atraso, «listos», total, pagado y saldo.</td><td>Elimina llamadas y genera confianza.</td></tr>
+      <tr><td>Mi graduación</td><td>Valores actuales, cambio contra el examen anterior, historial y próximo examen.</td><td>Hace visible el valor del examen anual.</td></tr>
+      <tr><td>Compras y garantías</td><td>Cada compra con su garantía vigente.</td><td>Menos discusiones en mostrador.</td></tr>
+    </tbody></table>
+    <h3 class="lado">Lo que ve la óptica</h3>
+    <table class="tm"><thead><tr><th>Módulo</th><th>Qué hace</th><th>Por qué importa</th></tr></thead><tbody>
+      <tr><td>Hoy</td><td>Órdenes en proceso, atrasadas, listas sin recoger, cobrado, exámenes y apartados.</td><td>Lo urgente primero.</td></tr>
+      <tr><td>Nueva venta</td><td>Cliente, graduación (la guardada o una nueva), mica, armazón con foto, tratamientos, laboratorio, notas, anticipo.</td><td>Una venta completa en un minuto.</td></tr>
+      <tr><td>Órdenes</td><td>Tablero por paso, fecha prometida editable, cobros, orden imprimible para el laboratorio, aviso al cliente, cancelación que regresa el armazón.</td><td>Control del laboratorio externo.</td></tr>
+      <tr><td>Exámenes</td><td>Agenda, solicitudes en línea, registrar graduación y pasar directo a la venta.</td><td>Del examen a la venta sin perder al cliente.</td></tr>
+      <tr><td>Clientes</td><td>Graduaciones, órdenes y garantías por cliente.</td><td>Historia completa al instante.</td></tr>
+      <tr><td>Armazones</td><td>Inventario con foto, margen, stock, días sin venta, visibilidad en catálogo, apartados.</td><td>Saber qué comprar y qué rematar.</td></tr>
+      <tr><td>Recordatorios</td><td>Sin recoger, examen anual, lentes de contacto, con mensaje listo y marca de avisado.</td><td>Ventas que regresan solas.</td></tr>
+      <tr><td>Ajustes</td><td>Precios de micas y tratamientos, examen, anticipo, garantía, datos, PIN.</td><td>Precios iguales en sitio y mostrador.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="flujo"><h2>Flujo de una venta</h2>
+    <ol class="flujo">
+      <li>El cliente ve el catálogo, aparta un armazón y agenda examen (aviso en el panel).</li>
+      <li>Examen → «Registrar graduación» → pasa directo a Nueva venta con la graduación cargada.</li>
+      <li>Se arma la venta, se cobra el anticipo y se imprime la orden para el laboratorio. El armazón sale del inventario.</li>
+      <li>Laboratorio → montaje → control de calidad: cada paso lo ve el cliente.</li>
+      <li>«Lista para entregar» → aviso por WhatsApp; si no recoge en 3 días aparece en Recordatorios.</li>
+      <li>Entregada → se activa la garantía. A los 12 meses aparece para examen.</li>
+    </ol>
+  </section>
+
+  <section id="reglas"><h2>Reglas que hace solo</h2>
+    <ul class="check">
+      <li>La fecha prometida depende de la mica (monofocal 4 días, bifocal 6, progresivo 8, contacto 2) y nunca cae en domingo.</li>
+      <li>No vende un armazón sin piezas; los apartados vigentes descuentan lo disponible en el catálogo.</li>
+      <li>Los lentes de contacto no llevan armazón ni tratamientos.</li>
+      <li>El anticipo sugerido es el porcentaje configurado; no se cobra de más.</li>
+      <li>Avisa antes de entregar con saldo pendiente.</li>
+      <li>Al entregar se calcula la garantía (12 meses configurable).</li>
+      <li>Compara cada graduación con la anterior y marca si subió.</li>
+    </ul>
+  </section>
+
+  <section id="numeros"><h2>El número que vende</h2>
+    <p>Pregunta: «¿Cuántos clientes atendiste el año pasado?». Si fueron 800 y solo 1 de cada 4 regresó a su examen, avisar a los demás para que regrese otro 15% son 120 ventas más. Con un ticket promedio de $3,500 son <b>$420,000 al año</b>. Además, los lentes listos sin recoger son dinero que ya ganaste y no has cobrado: la pantalla de Hoy lo suma.</p>
+  </section>
+
+  <section id="real"><h2>Demo vs. sistema real</h2>
+    <table class="tm"><thead><tr><th>Pieza</th><th>En el demo</th><th>En producción</th></tr></thead><tbody>
+      <tr><td>Datos</td><td>En el navegador</td><td>Base de datos en la nube con respaldo.</td></tr>
+      <tr><td>Portal</td><td>Entra con el teléfono</td><td>Código de un solo uso por WhatsApp o SMS.</td></tr>
+      <tr><td>Laboratorio</td><td>Orden impresa y estados a mano</td><td>Igual, o conexión con el sistema del laboratorio si lo ofrece.</td></tr>
+      <tr><td>Inventario</td><td>Un registro por modelo</td><td>Código de barras por pieza y varias sucursales.</td></tr>
+      <tr><td>Pagos</td><td>Se registran a mano</td><td>Liga de pago para el anticipo (con comisión del procesador).</td></tr>
+      <tr><td>Probador virtual</td><td>No incluido</td><td>Probar armazones con la cámara (fase avanzada, costo adicional).</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="fases"><h2>Cómo venderlo por fases</h2>
+    <div class="fases">
+      <article><span>Fase 1 · Ordenar</span><ul><li>Clientes y graduaciones</li><li>Nueva venta y orden de laboratorio</li><li>Tablero de órdenes</li><li>Portal «Mi pedido»</li></ul></article>
+      <article><span>Fase 2 · Vender más</span><ul><li>Catálogo con apartado</li><li>Arma tus lentes</li><li>Examen en línea</li><li>Recordatorios</li></ul></article>
+      <article><span>Fase 3 · Crecer</span><ul><li>Código de barras</li><li>Varias sucursales</li><li>Convenios con empresas</li><li>Pago en línea del anticipo</li></ul></article>
+    </div>
+  </section>
+
+  <section id="preguntas"><h2>Preguntas que te harán</h2>
+    <details><summary>Mis clientes no van a entrar a un portal.</summary><p>Entran cuando tienen dudas: ¿ya están mis lentes? Esa es justo la llamada que te ahorras. Y el aviso de «listos» les llega por WhatsApp de todos modos.</p></details>
+    <details><summary>Tengo cientos de armazones, no los voy a fotografiar todos.</summary><p>No hace falta: el catálogo en línea puede tener tus 30 o 40 modelos estrella. El inventario completo puede ir sin foto.</p></details>
+    <details><summary>¿Y si el laboratorio no cumple la fecha?</summary><p>El sistema te lo marca en rojo antes de que el cliente llegue. Puedes cambiar la fecha y el cliente la ve actualizada, con un mensaje amable de retraso.</p></details>
+    <details><summary>¿Sirve si hago exámenes gratis?</summary><p>Sí: el precio del examen se configura en Ajustes, incluso en $0.</p></details>
+  </section>
+</main>
+</body>
+</html>

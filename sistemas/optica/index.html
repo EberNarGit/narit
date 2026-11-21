@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Óptica Mirada · Encuentra los lentes que van contigo</title>
+<meta name="description" content="Ejemplo de catálogo, apartado y seguimiento de lentes para ópticas, hecho por NarIT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sitio.css">
+</head>
+<body>
+<div class="demo-bar">Ejemplo hecho por <a href="../../">NarIT</a> · <a href="admin.html" target="_blank" rel="noopener">Abrir el panel de la óptica ↗</a> · <a href="guia.html">Guía</a></div>
+
+<header class="cab">
+  <a class="logo" href="#" data-ir="sitio">Mirada<small>óptica</small></a>
+  <nav aria-label="Secciones"><a href="#armazones" data-ir="sitio">Armazones</a><a href="#arma" data-ir="sitio">Arma tus lentes</a><a href="#examen" data-ir="sitio">Examen de la vista</a></nav>
+  <div class="cab-acc"><button class="b b-lin" data-portal>Mis lentes</button><button class="b b-osc" data-examen>Agendar examen</button></div>
+</header>
+
+<main id="sitio">
+  <section class="hero">
+    <div class="hero-t">
+      <h1>Encuentra los lentes que <em>van contigo</em></h1>
+      <p>Examen de la vista, más de 100 armazones y tus lentes listos en días. Sigue tu pedido desde el celular, sin llamar.</p>
+      <div class="hero-a"><a class="b b-osc" href="#armazones">Ver armazones</a><button class="b b-lin" data-examen>Agendar examen</button></div>
+      <div class="social"><span class="caras"><img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=80&q=60&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1525786210598-d527194d3e9a?w=80&q=60&auto=format&fit=crop" alt=""></span><span><b>8,000+</b> clientes · <span class="estrellas">★★★★★</span> 4.9</span></div>
+    </div>
+    <div class="hero-f">
+      <figure><img src="https://images.unsplash.com/photo-1525786210598-d527194d3e9a?w=600&q=72&auto=format&fit=crop" alt="Mujer con lentes de armazón negro" fetchpriority="high"><figcaption>Kora<br>Lía</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=600&q=72&auto=format&fit=crop" alt="Hombre sonriente con lentes"><figcaption>Norte<br>Bruno</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1581915649317-41fc6eb9597d?w=600&q=72&auto=format&fit=crop" alt="Mujer con lentes de armazón blanco"><figcaption>Ámbar<br>Sol</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="armazones" class="sec">
+    <div class="sec-h"><h2>Armazones</h2><span id="nArm" class="mut"></span></div>
+    <div class="filtros">
+      <div class="chips" id="fForma" role="group" aria-label="Forma"></div>
+      <select id="fMat" aria-label="Material"><option value="">Todos los materiales</option></select>
+      <select id="fGen" aria-label="Para"><option value="">Mujer, hombre y unisex</option><option>Mujer</option><option>Hombre</option><option>Unisex</option></select>
+      <select id="fOrd" aria-label="Ordenar"><option value="">Destacados</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option></select>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="arma" class="sec">
+    <div class="arma">
+      <div><span class="eti">Arma tus lentes</span><h2>Sabe cuánto pagas antes de venir</h2><p class="mut">Armazón + tipo de mica + tratamientos. Apartas con el <span id="antTxt">50</span>% y liquidas al recoger.</p></div>
+      <form id="fArma" class="arma-f">
+        <label>Armazón<select name="arm" id="aArm"></select></label>
+        <fieldset><legend>Tipo de mica</legend><div class="ops" id="aMica"></div></fieldset>
+        <fieldset><legend>Tratamientos</legend><div class="ops" id="aTrat"></div></fieldset>
+        <div class="tot" id="aTot" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="examen" class="sec">
+    <div class="exa">
+      <img src="https://images.unsplash.com/photo-1758656321505-95bf802f9a4c?w=900&q=70&auto=format&fit=crop" alt="Optometrista examinando a un paciente" loading="lazy">
+      <div><span class="eti">Examen de la vista</span><h2>Tu graduación, medida con calma</h2>
+        <ul class="lista"><li>Examen computarizado y con foróptero, 30 minutos</li><li>Tu graduación queda guardada y la ves en «Mis lentes»</li><li>Te avisamos cuando toque el siguiente, cada año</li><li id="exTxt"></li></ul>
+        <button class="b b-osc" data-examen>Agendar examen</button></div>
+    </div>
+  </section>
+</main>
+
+<main id="portal" hidden></main>
+
+<footer class="pie">
+  <div><span class="logo">Mirada<small>óptica</small></span><p id="pieDir"></p></div>
+  <div><b>Tienda</b><a href="#armazones" data-ir="sitio">Armazones</a><button class="lnk" data-examen>Agendar examen</button><button class="lnk" data-portal>¿Ya están mis lentes?</button></div>
+  <div><b>¿Dudas?</b><a id="waPie" target="_blank" rel="noopener" href="#">Escríbenos por WhatsApp</a><span>Ejemplo: los pedidos no son reales.</span></div>
+</footer>
+
+<dialog id="dlg"></dialog>
+<script type="module" src="sitio.js"></script>
+</body>
+</html>
